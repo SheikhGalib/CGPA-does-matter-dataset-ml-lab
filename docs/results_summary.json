@@ -1,0 +1,70 @@
+{
+  "n_respondents": 230,
+  "n_features": 22,
+  "zeror_baseline": 0.2739,
+  "best_primary": {
+    "model": "Random Forest",
+    "accuracy": 0.5101,
+    "macro_F1": 0.4994,
+    "kappa": 0.3509,
+    "within_1_band": 0.813
+  },
+  "best_behaviour": {
+    "model": "Gradient Boosting",
+    "accuracy": 0.3449,
+    "macro_F1": 0.3202,
+    "kappa": 0.0926,
+    "within_1_band": 0.6739
+  },
+  "top_features": [
+    {
+      "feature": "topic_clarity",
+      "spearman_rho": -0.1614,
+      "mean_rank": 3.0,
+      "votes": 0
+    },
+    {
+      "feature": "support_level",
+      "spearman_rho": 0.0913,
+      "mean_rank": 4.0,
+      "votes": 0
+    },
+    {
+      "feature": "desired_department_match",
+      "spearman_rho": 0.1107,
+      "mean_rank": 4.5,
+      "votes": 0
+    },
+    {
+      "feature": "stress_frequency",
+      "spearman_rho": 0.1189,
+      "mean_rank": 5.25,
+      "votes": 0
+    },
+    {
+      "feature": "admission_satisfaction",
+      "spearman_rho": -0.0959,
+      "mean_rank": 5.25,
+      "votes": 0
+    },
+    {
+      "feature": "academic_progress",
+      "spearman_rho": -0.0189,
+      "mean_rank": 6.25,
+      "votes": 0
+    },
+    {
+      "feature": "career_expectation",
+      "spearman_rho": 0.0874,
+      "mean_rank": 7.5,
+      "votes": 0
+    },
+    {
+      "feature": "study_style",
+      "spearman_rho": -0.035,
+      "mean_rank": 8.25,
+      "votes": 0
+    }
+  ],
+  "significant_feature_count": 0
+}
