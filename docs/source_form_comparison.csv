@@ -1,0 +1,17 @@
+feature,mean_KUET,mean_multi,cliffs_delta,p,magnitude
+admission_satisfaction,1.57,2.48,-0.34,1.3691447347592282e-16,medium
+result_satisfaction,1.44,2.07,-0.253,7.019383565347315e-10,small
+topic_clarity,1.78,2.22,-0.204,1.0160119380077453e-06,small
+academic_progress,0.77,0.85,-0.156,2.0168153817612318e-05,small
+career_expectation,2.02,2.3,-0.125,0.002645047047408447,negligible
+attendance,3.02,3.22,-0.106,0.008792488916258,negligible
+sleep_duration,1.76,1.93,-0.098,0.01825417625734911,negligible
+routine_manageability,1.85,2.0,-0.078,0.06011912544137119,negligible
+stress_frequency,2.1,2.23,-0.058,0.16165310943792244,negligible
+weekly_study_time,1.74,1.88,-0.057,0.1712770803738618,negligible
+weekly_responsibilities,1.68,1.8,-0.054,0.19528675962625286,negligible
+study_style,1.62,1.65,-0.028,0.4990165952504366,negligible
+study_environment,2.15,2.21,-0.028,0.4977889070884176,negligible
+desired_department_match,2.56,2.62,-0.019,0.6498832764722824,negligible
+support_level,2.21,2.24,-0.006,0.8914032515302424,negligible
+distraction_frequency,2.33,2.34,-0.003,0.936231605634263,negligible

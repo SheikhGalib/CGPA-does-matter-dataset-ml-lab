@@ -1,0 +1,16 @@
+feature,rho_multi_only_n230,p_multi,rho_kuet_only_n896,p_kuet,rho_merged,p_merged,same_sign_in_both
+desired_department_match,0.144,0.0291,0.113,0.0008,0.119,7e-05,True
+attendance,-0.054,0.4191,0.123,0.0003,0.09,0.002624,False
+weekly_responsibilities,-0.08,0.2287,-0.089,0.0085,-0.086,0.004048,True
+weekly_study_time,-0.006,0.9311,0.089,0.008,0.069,0.020726,False
+academic_progress,-0.059,0.3721,-0.08,0.0178,-0.057,0.055832,True
+support_level,0.051,0.4411,0.055,0.1035,0.054,0.069796,True
+career_expectation,0.136,0.039,0.032,0.3369,0.054,0.074524,True
+routine_manageability,-0.021,0.7473,0.052,0.1216,0.04,0.186056,False
+topic_clarity,-0.013,0.8451,0.053,0.1196,0.039,0.194092,False
+sleep_duration,-0.032,0.624,0.04,0.2374,0.027,0.360965,False
+distraction_frequency,0.053,0.4209,-0.048,0.1539,-0.026,0.378218,False
+study_environment,-0.015,0.8205,0.025,0.4537,0.017,0.57096,False
+admission_satisfaction,-0.088,0.1817,0.039,0.2517,0.016,0.599897,False
+stress_frequency,0.031,0.6393,-0.016,0.6459,-0.005,0.863549,False
+study_style,-0.016,0.8058,-0.0,0.9907,-0.002,0.946458,True

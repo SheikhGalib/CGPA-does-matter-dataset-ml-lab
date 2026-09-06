@@ -1,0 +1,181 @@
+{
+  "n_raw_multi": 230,
+  "n_raw_kuet": 896,
+  "n_raw_merged": 1126,
+  "n_clean": 1108,
+  "n_dropped": 18,
+  "n_features": 25,
+  "n_departments_raw": 110,
+  "n_departments_canonical": 24,
+  "universities": {
+    "KUET": 878,
+    "BUET": 104,
+    "BRAC": 101,
+    "CUET": 25
+  },
+  "target_distribution": {
+    "C0_below_3_20": 236,
+    "C1_3_20_to_3_49": 321,
+    "C2_3_50_to_3_74": 303,
+    "C3_3_75_plus": 248
+  },
+  "zeror_baseline": 0.2897,
+  "best_primary": {
+    "model": "Gradient Boosting",
+    "accuracy": 0.4341,
+    "macro_F1": 0.4315,
+    "kappa": 0.2375,
+    "within_1_band": 0.7807
+  },
+  "best_behaviour": {
+    "model": "SVM (RBF)",
+    "accuracy": 0.312,
+    "macro_F1": 0.2839,
+    "kappa": 0.0536,
+    "within_1_band": 0.7148
+  },
+  "prior_sgpa_lift_pts": 12.21,
+  "significant_feature_count": 3,
+  "top_features": [
+    {
+      "feature": "desired_department_match",
+      "spearman_rho": 0.1192,
+      "q_spearman": 0.001,
+      "mean_rank": 3.0,
+      "votes": 2
+    },
+    {
+      "feature": "academic_progress",
+      "spearman_rho": -0.0575,
+      "q_spearman": 0.1597,
+      "mean_rank": 3.25,
+      "votes": 0
+    },
+    {
+      "feature": "weekly_responsibilities",
+      "spearman_rho": -0.0863,
+      "q_spearman": 0.0202,
+      "mean_rank": 5.5,
+      "votes": 1
+    },
+    {
+      "feature": "support_level",
+      "spearman_rho": 0.0545,
+      "q_spearman": 0.1597,
+      "mean_rank": 6.0,
+      "votes": 0
+    },
+    {
+      "feature": "attendance",
+      "spearman_rho": 0.0903,
+      "q_spearman": 0.0197,
+      "mean_rank": 7.5,
+      "votes": 1
+    },
+    {
+      "feature": "career_expectation",
+      "spearman_rho": 0.0536,
+      "q_spearman": 0.1597,
+      "mean_rank": 7.75,
+      "votes": 0
+    },
+    {
+      "feature": "routine_manageability",
+      "spearman_rho": 0.0398,
+      "q_spearman": 0.3235,
+      "mean_rank": 8.0,
+      "votes": 0
+    },
+    {
+      "feature": "weekly_study_time",
+      "spearman_rho": 0.0695,
+      "q_spearman": 0.0777,
+      "mean_rank": 8.25,
+      "votes": 0
+    }
+  ],
+  "cronbach_alpha": {
+    "discipline_index": 0.273,
+    "wellbeing_index": 0.152,
+    "environment_index": 0.054,
+    "motivation_index": 0.256
+  },
+  "hidden_feature_mean_acc_delta": -0.0109,
+  "learning_curve": {
+    "n_start": 99,
+    "acc_start": 0.2698,
+    "n_end": 997,
+    "acc_end": 0.2996
+  },
+  "regression": {
+    "mae": 0.2591,
+    "baseline_mae": 0.2654,
+    "r2": -0.0007
+  },
+  "source_lift_check": [
+    {
+      "subset": "KUET only (CGPA includes that semester)",
+      "n": 878,
+      "behaviour_acc": 0.313,
+      "primary_acc": 0.437,
+      "lift_pts": 12.4
+    },
+    {
+      "subset": "multi-uni only (no overlap)",
+      "n": 230,
+      "behaviour_acc": 0.326,
+      "primary_acc": 0.461,
+      "lift_pts": 13.5
+    }
+  ],
+  "gap_analysis": [
+    {
+      "experiment": "Primary",
+      "gap": 0,
+      "n": 480,
+      "pct": 43.3
+    },
+    {
+      "experiment": "Primary",
+      "gap": 1,
+      "n": 385,
+      "pct": 34.7
+    },
+    {
+      "experiment": "Primary",
+      "gap": 2,
+      "n": 176,
+      "pct": 15.9
+    },
+    {
+      "experiment": "Primary",
+      "gap": 3,
+      "n": 67,
+      "pct": 6.0
+    },
+    {
+      "experiment": "Behaviour",
+      "gap": 0,
+      "n": 335,
+      "pct": 30.2
+    },
+    {
+      "experiment": "Behaviour",
+      "gap": 1,
+      "n": 457,
+      "pct": 41.2
+    },
+    {
+      "experiment": "Behaviour",
+      "gap": 2,
+      "n": 241,
+      "pct": 21.8
+    },
+    {
+      "experiment": "Behaviour",
+      "gap": 3,
+      "n": 75,
+      "pct": 6.8
+    }
+  ]
+}

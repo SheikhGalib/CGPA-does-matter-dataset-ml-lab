@@ -86,7 +86,7 @@ def two_col(s, total, figs):
         <div class="note">{s["note"]}</div>
       </div>
     </div>
-    {_foot("Scope")}
+    {_foot(s.get("foot", "Scope"))}
   </div>
 </section>'''
 
@@ -162,7 +162,7 @@ def integrity(s, total, figs):
     {_chrome(s, total)}
     <div class="s-body">
       <div class="s-head-block tight">
-        <div class="s-kicker warn-kicker">{s["kicker"]}</div>
+        <div class="s-kicker {s.get("kicker_cls", "warn-kicker")}">{s["kicker"]}</div>
         <h2 class="s-head">{s["head"]}</h2>
         <p class="s-lead">{s["lead"]}</p>
       </div>
@@ -172,7 +172,7 @@ def integrity(s, total, figs):
         <div class="verdict"><div class="v-tag">What we did</div><p>{s["action"]}</p></div>
       </div>
     </div>
-    {_foot("Data integrity")}
+    {_foot(s.get("foot", "Data integrity"))}
   </div>
 </section>'''
 
@@ -229,7 +229,7 @@ def evidence(s, total, figs):
           <figcaption>{s["cap"]}</figcaption></figure>
       </div>
     </div>
-    {_foot("Preprocessing evidence")}
+    {_foot(s.get("foot", "Preprocessing evidence"))}
   </div>
 </section>'''
 
@@ -291,7 +291,7 @@ def counter(s, total, figs):
           <figcaption>{s["caveat"]}</figcaption></figure>
       </div>
     </div>
-    {_foot("Pipeline A &mdash; sanity checks")}
+    {_foot(s.get("foot", "Pipeline A &mdash; sanity checks"))}
   </div>
 </section>'''
 

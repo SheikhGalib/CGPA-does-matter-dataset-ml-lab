@@ -1,0 +1,11 @@
+step,decision,why,rows,delta_rows,cols
+5.1,dropped `timestamp`,submission time is a sampling artefact and a proxy for the source form,1126,0,22
+5.2,normalised `university`: 10 spellings -> 4,case/suffix variants of the same institution,1126,0,22
+5.3,merged 2 department columns and canonicalised 110 strings -> 24,complementary columns; abbreviation/case/typo variants split one category into many,1126,0,22
+5.4,reconciled 1 mismatched Likert label in `study_style`,same scale rung written two ways; unmerged it becomes a 6-level scale,1126,0,22
+5.5,parsed 2 band schemes + free-text numbers into one 4-class target,KUET never offered the finer 6-band split; 4 classes are recoverable from both forms,1126,0,24
+5.6,dropped 18 rows with no usable CGPA answer,a supervised model cannot learn from an unlabelled row; 1.6% of the sample,1108,-18,24
+5.7,imputed 45 blank `weekly_responsibilities` as 'None',"validated against the KUET form, which offered a None option and got a matching rate",1108,0,24
+5.8,imputed the remaining <1.3% scattered blanks (within-source median category),ordinal data -> median not mean; too few and too scattered to justify dropping rows,1108,0,25
+5.9,ordinal-encoded 15 Likert scales + the two GPA bands,categories are ordered; one-hot would destroy the order and 5x the dimensionality,1108,0,43
+5.11,derived academic_progress + 4 composite indices + 3 interaction features,raw semester encodes university; hidden structure must be built explicitly and then tested,1108,0,52

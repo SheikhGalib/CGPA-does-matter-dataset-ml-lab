@@ -1019,7 +1019,9 @@ spear = pd.DataFrame(rows)
 # Benjamini-Hochberg
 m = len(spear)
 spear = spear.sort_values("p_raw").reset_index(drop=True)
-spear["p_fdr"] = (spear.p_raw * m / (spear.index + 1)).cummin().clip(upper=1)
+# BH: the running minimum runs from the LARGEST p-value downwards, so q stays monotone in p.
+_q = spear.p_raw * m / (spear.index + 1)
+spear["p_fdr"] = _q[::-1].cummin()[::-1].clip(upper=1)
 spear["significant"] = spear.p_fdr < .05
 spear["abs_rho"] = spear.spearman_rho.abs()
 
@@ -1055,7 +1057,8 @@ for f in BEHAVIOUR_FEATURES:
     H, p = stats.kruskal(*groups)
     rows.append({"feature": NICE[f], "kruskal_H": H, "p_raw": p})
 kw = pd.DataFrame(rows).sort_values("p_raw").reset_index(drop=True)
-kw["p_fdr"] = (kw.p_raw * len(kw) / (kw.index + 1)).cummin().clip(upper=1)
+_qk = kw.p_raw * len(kw) / (kw.index + 1)
+kw["p_fdr"] = _qk[::-1].cummin()[::-1].clip(upper=1)
 kw["significant"] = kw.p_fdr < .05
 display(kw.round(4))
 
