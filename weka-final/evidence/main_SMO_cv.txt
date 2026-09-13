@@ -1,0 +1,32 @@
+WEKA 3.8.7
+Target experiment: main
+Model: SMO
+Options: -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Evaluation: stratified 10-fold CV, seed 1
+Dataset N: 1102
+
+Correctly Classified Instances         409               37.1143 %
+Incorrectly Classified Instances       693               62.8857 %
+Kappa statistic                          0.1504
+Mean absolute error                      0.3431
+Root mean squared error                  0.4358
+Relative absolute error                 91.9938 %
+Root relative squared error            100.9139 %
+Total Number of Instances             1102     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.258    0.148    0.323      0.258    0.287      0.120    0.639     0.288     C0
+                 0.481    0.335    0.370      0.481    0.418      0.137    0.596     0.344     C1
+                 0.363    0.223    0.378      0.363    0.371      0.142    0.581     0.321     C2
+                 0.346    0.145    0.407      0.346    0.374      0.213    0.647     0.322     C3
+Weighted Avg.    0.371    0.222    0.370      0.371    0.367      0.152    0.612     0.321     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+  61 113  34  28 |   a = C0
+  51 154  75  40 |   b = C1
+  42  93 109  56 |   c = C2
+  35  56  70  85 |   d = C3

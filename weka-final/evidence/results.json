@@ -1,0 +1,1382 @@
+{
+  "sgpa": {
+    "cv": {
+      "J48": {
+        "acc": 30.127,
+        "n": 1102,
+        "cm": [
+          [
+            61,
+            58,
+            58,
+            59
+          ],
+          [
+            60,
+            96,
+            74,
+            66
+          ],
+          [
+            43,
+            81,
+            93,
+            66
+          ],
+          [
+            70,
+            58,
+            77,
+            82
+          ]
+        ],
+        "kappa": 0.0661,
+        "macro_f1": 0.29908913994769937,
+        "source": "sgpa_J48_cv.txt",
+        "options": "-C 0.25 -M 2"
+      },
+      "RandomForest": {
+        "acc": 29.7641,
+        "n": 1102,
+        "cm": [
+          [
+            50,
+            75,
+            50,
+            61
+          ],
+          [
+            52,
+            102,
+            82,
+            60
+          ],
+          [
+            43,
+            93,
+            83,
+            64
+          ],
+          [
+            52,
+            88,
+            54,
+            93
+          ]
+        ],
+        "kappa": 0.0586,
+        "macro_f1": 0.2932004163064614,
+        "source": "sgpa_RandomForest_cv.txt",
+        "options": "-P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1"
+      },
+      "SMO": {
+        "acc": 25.9528,
+        "n": 1102,
+        "cm": [
+          [
+            12,
+            103,
+            54,
+            67
+          ],
+          [
+            16,
+            120,
+            76,
+            84
+          ],
+          [
+            9,
+            111,
+            66,
+            97
+          ],
+          [
+            20,
+            89,
+            90,
+            88
+          ]
+        ],
+        "kappa": -0.001,
+        "macro_f1": 0.2325495390201217,
+        "source": "sgpa_SMO_cv.txt",
+        "options": "-C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007\" -calibrator \"weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4\""
+      },
+      "Logistic": {
+        "acc": 24.9546,
+        "n": 1102,
+        "cm": [
+          [
+            30,
+            80,
+            55,
+            71
+          ],
+          [
+            37,
+            97,
+            72,
+            90
+          ],
+          [
+            25,
+            97,
+            64,
+            97
+          ],
+          [
+            43,
+            77,
+            83,
+            84
+          ]
+        ],
+        "kappa": -0.0093,
+        "macro_f1": 0.23961591034420568,
+        "source": "sgpa_Logistic_cv.txt",
+        "options": "-R 1.0E-8 -M -1 -num-decimal-places 4"
+      },
+      "NaiveBayes": {
+        "acc": 26.6788,
+        "n": 1102,
+        "cm": [
+          [
+            45,
+            86,
+            52,
+            53
+          ],
+          [
+            46,
+            94,
+            99,
+            57
+          ],
+          [
+            37,
+            89,
+            95,
+            62
+          ],
+          [
+            50,
+            75,
+            102,
+            60
+          ]
+        ],
+        "kappa": 0.0167,
+        "macro_f1": 0.2608661318544785,
+        "source": "sgpa_NaiveBayes_cv.txt",
+        "options": ""
+      },
+      "ZeroR": {
+        "acc": 26.8603,
+        "n": 1102,
+        "cm": [
+          [
+            0,
+            236,
+            0,
+            0
+          ],
+          [
+            0,
+            296,
+            0,
+            0
+          ],
+          [
+            0,
+            283,
+            0,
+            0
+          ],
+          [
+            0,
+            287,
+            0,
+            0
+          ]
+        ],
+        "kappa": 0.0,
+        "macro_f1": 0.10586552217453506,
+        "source": "sgpa_ZeroR_cv.txt",
+        "options": ""
+      }
+    },
+    "train": {
+      "acc": 39.3871,
+      "n": 881,
+      "cm": [
+        [
+          50,
+          70,
+          34,
+          42
+        ],
+        [
+          30,
+          112,
+          48,
+          46
+        ],
+        [
+          30,
+          56,
+          94,
+          45
+        ],
+        [
+          33,
+          55,
+          45,
+          91
+        ]
+      ],
+      "kappa": 0.1876,
+      "macro_f1": 0.3865500920251984
+    },
+    "test": {
+      "acc": 29.8643,
+      "n": 221,
+      "cm": [
+        [
+          5,
+          14,
+          3,
+          18
+        ],
+        [
+          16,
+          19,
+          11,
+          14
+        ],
+        [
+          8,
+          22,
+          20,
+          8
+        ],
+        [
+          12,
+          18,
+          11,
+          22
+        ]
+      ],
+      "kappa": 0.0565,
+      "macro_f1": 0.2873801476002123
+    },
+    "baseline": {
+      "acc": 27.1493,
+      "n": 221,
+      "cm": [
+        [
+          0,
+          40,
+          0,
+          0
+        ],
+        [
+          0,
+          60,
+          0,
+          0
+        ],
+        [
+          0,
+          58,
+          0,
+          0
+        ],
+        [
+          0,
+          63,
+          0,
+          0
+        ]
+      ],
+      "kappa": 0.0,
+      "macro_f1": 0.10676156583629894
+    },
+    "tree": "J48 pruned tree\n------------------\n\nroutine_manageability <= 0: C1 (125.0/80.0)\nroutine_manageability > 0\n|   topic_clarity <= 3\n|   |   attendance <= 3\n|   |   |   stress_frequency <= 1: C2 (128.0/77.0)\n|   |   |   stress_frequency > 1\n|   |   |   |   support_level <= 1: C3 (68.0/45.0)\n|   |   |   |   support_level > 1\n|   |   |   |   |   weekly_study_time <= 1\n|   |   |   |   |   |   weekly_responsibilities <= 1: C0 (52.0/35.0)\n|   |   |   |   |   |   weekly_responsibilities > 1: C1 (49.0/32.0)\n|   |   |   |   |   weekly_study_time > 1\n|   |   |   |   |   |   distraction_frequency <= 2: C1 (69.0/36.0)\n|   |   |   |   |   |   distraction_frequency > 2: C2 (50.0/31.0)\n|   |   attendance > 3\n|   |   |   study_environment <= 1: C3 (63.0/36.0)\n|   |   |   study_environment > 1\n|   |   |   |   study_environment <= 3\n|   |   |   |   |   desired_department_match <= 2: C1 (50.0/33.0)\n|   |   |   |   |   desired_department_match > 2\n|   |   |   |   |   |   weekly_study_time <= 1: C2 (43.0/19.0)\n|   |   |   |   |   |   weekly_study_time > 1: C3 (51.0/32.0)\n|   |   |   |   study_environment > 3: C3 (42.0/20.0)\n|   topic_clarity > 3: C0 (91.0/58.0)\n\nNumber of Leaves  : \t13\n\nSize of the tree : \t25\n",
+    "rules": [
+      {
+        "conditions": [
+          "routine_manageability <= 0"
+        ],
+        "target": "C1",
+        "readable": [
+          "Semester routine manageable: Completely unmanageable"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance <= 3",
+          "stress_frequency <= 1"
+        ],
+        "target": "C2",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Stress blocked studying: Never / Rarely"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance <= 3",
+          "stress_frequency > 1",
+          "support_level <= 1"
+        ],
+        "target": "C3",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Stress blocked studying: Sometimes / Often / Almost always",
+          "Family / friend support: No support / Very little support"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance <= 3",
+          "stress_frequency > 1",
+          "support_level > 1",
+          "weekly_study_time <= 1",
+          "weekly_responsibilities <= 1"
+        ],
+        "target": "C0",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Stress blocked studying: Sometimes / Often / Almost always",
+          "Family / friend support: Some support / Good support / Strong support",
+          "Self-study per week: Less than 3 hrs / 3-6 hrs",
+          "Outside commitments (tuition/job/club): None / 1-5 hrs"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance <= 3",
+          "stress_frequency > 1",
+          "support_level > 1",
+          "weekly_study_time <= 1",
+          "weekly_responsibilities > 1"
+        ],
+        "target": "C1",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Stress blocked studying: Sometimes / Often / Almost always",
+          "Family / friend support: Some support / Good support / Strong support",
+          "Self-study per week: Less than 3 hrs / 3-6 hrs",
+          "Outside commitments (tuition/job/club): 6-10 hrs / 11-15 hrs / More than 15 hrs"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance <= 3",
+          "stress_frequency > 1",
+          "support_level > 1",
+          "weekly_study_time > 1",
+          "distraction_frequency <= 2"
+        ],
+        "target": "C1",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Stress blocked studying: Sometimes / Often / Almost always",
+          "Family / friend support: Some support / Good support / Strong support",
+          "Self-study per week: 7-10 hrs / 11-15 hrs / More than 15 hrs",
+          "Phone / social media took study time: Never / Rarely / Sometimes"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance <= 3",
+          "stress_frequency > 1",
+          "support_level > 1",
+          "weekly_study_time > 1",
+          "distraction_frequency > 2"
+        ],
+        "target": "C2",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Stress blocked studying: Sometimes / Often / Almost always",
+          "Family / friend support: Some support / Good support / Strong support",
+          "Self-study per week: 7-10 hrs / 11-15 hrs / More than 15 hrs",
+          "Phone / social media took study time: Often / Almost every day"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance > 3",
+          "study_environment <= 1"
+        ],
+        "target": "C3",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Very distracting / Somewhat distracting"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance > 3",
+          "study_environment > 1",
+          "study_environment <= 3",
+          "desired_department_match <= 2"
+        ],
+        "target": "C1",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Study-friendly living place: Very distracting / Somewhat distracting / Neither good nor bad / Mostly suitable",
+          "Got desired department: Not at all what I wanted / Mostly different / Somewhat different"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance > 3",
+          "study_environment > 1",
+          "study_environment <= 3",
+          "desired_department_match > 2",
+          "weekly_study_time <= 1"
+        ],
+        "target": "C2",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Study-friendly living place: Very distracting / Somewhat distracting / Neither good nor bad / Mostly suitable",
+          "Got desired department: Close to what I wanted / Yes, exactly what I wanted",
+          "Self-study per week: Less than 3 hrs / 3-6 hrs"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance > 3",
+          "study_environment > 1",
+          "study_environment <= 3",
+          "desired_department_match > 2",
+          "weekly_study_time > 1"
+        ],
+        "target": "C3",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Study-friendly living place: Very distracting / Somewhat distracting / Neither good nor bad / Mostly suitable",
+          "Got desired department: Close to what I wanted / Yes, exactly what I wanted",
+          "Self-study per week: 7-10 hrs / 11-15 hrs / More than 15 hrs"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity <= 3",
+          "attendance > 3",
+          "study_environment > 1",
+          "study_environment > 3"
+        ],
+        "target": "C3",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost nothing / A little / About half / Most of it",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Study-friendly living place: Excellent for focused study"
+        ]
+      },
+      {
+        "conditions": [
+          "routine_manageability > 0",
+          "topic_clarity > 3"
+        ],
+        "target": "C0",
+        "readable": [
+          "Semester routine manageable: Difficult to manage / Average / Mostly manageable / Very healthy and balanced",
+          "Topic clear after class: Almost everything"
+        ]
+      }
+    ]
+  },
+  "questionnaire": {
+    "cv": {
+      "J48": {
+        "acc": 26.6788,
+        "n": 1102,
+        "cm": [
+          [
+            56,
+            63,
+            70,
+            47
+          ],
+          [
+            78,
+            95,
+            93,
+            54
+          ],
+          [
+            72,
+            80,
+            86,
+            62
+          ],
+          [
+            47,
+            72,
+            70,
+            57
+          ]
+        ],
+        "kappa": 0.0168,
+        "macro_f1": 0.2632822194493701,
+        "source": "questionnaire_J48_cv.txt",
+        "options": "-C 0.25 -M 2"
+      },
+      "RandomForest": {
+        "acc": 29.4011,
+        "n": 1102,
+        "cm": [
+          [
+            48,
+            85,
+            61,
+            42
+          ],
+          [
+            49,
+            125,
+            95,
+            51
+          ],
+          [
+            46,
+            113,
+            95,
+            46
+          ],
+          [
+            40,
+            86,
+            64,
+            56
+          ]
+        ],
+        "kappa": 0.0451,
+        "macro_f1": 0.28374095415681505,
+        "source": "questionnaire_RandomForest_cv.txt",
+        "options": "-P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1"
+      },
+      "SMO": {
+        "acc": 27.8584,
+        "n": 1102,
+        "cm": [
+          [
+            15,
+            142,
+            70,
+            9
+          ],
+          [
+            18,
+            176,
+            118,
+            8
+          ],
+          [
+            18,
+            161,
+            108,
+            13
+          ],
+          [
+            13,
+            125,
+            100,
+            8
+          ]
+        ],
+        "kappa": 0.002,
+        "macro_f1": 0.21190880917690047,
+        "source": "questionnaire_SMO_cv.txt",
+        "options": "-C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007\" -calibrator \"weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4\""
+      },
+      "Logistic": {
+        "acc": 29.5826,
+        "n": 1102,
+        "cm": [
+          [
+            26,
+            119,
+            66,
+            25
+          ],
+          [
+            41,
+            145,
+            101,
+            33
+          ],
+          [
+            31,
+            122,
+            101,
+            46
+          ],
+          [
+            18,
+            103,
+            71,
+            54
+          ]
+        ],
+        "kappa": 0.0391,
+        "macro_f1": 0.27241004618707315,
+        "source": "questionnaire_Logistic_cv.txt",
+        "options": "-R 1.0E-8 -M -1 -num-decimal-places 4"
+      },
+      "NaiveBayes": {
+        "acc": 30.0363,
+        "n": 1102,
+        "cm": [
+          [
+            49,
+            99,
+            59,
+            29
+          ],
+          [
+            60,
+            163,
+            72,
+            25
+          ],
+          [
+            54,
+            131,
+            80,
+            35
+          ],
+          [
+            39,
+            103,
+            65,
+            39
+          ]
+        ],
+        "kappa": 0.0493,
+        "macro_f1": 0.2773970059173524,
+        "source": "questionnaire_NaiveBayes_cv.txt",
+        "options": ""
+      },
+      "ZeroR": {
+        "acc": 29.0381,
+        "n": 1102,
+        "cm": [
+          [
+            0,
+            236,
+            0,
+            0
+          ],
+          [
+            0,
+            320,
+            0,
+            0
+          ],
+          [
+            0,
+            300,
+            0,
+            0
+          ],
+          [
+            0,
+            246,
+            0,
+            0
+          ]
+        ],
+        "kappa": 0.0,
+        "macro_f1": 0.11251758087201125,
+        "source": "questionnaire_ZeroR_cv.txt",
+        "options": ""
+      }
+    },
+    "train": {
+      "acc": 36.5494,
+      "n": 881,
+      "cm": [
+        [
+          58,
+          84,
+          24,
+          23
+        ],
+        [
+          37,
+          154,
+          29,
+          36
+        ],
+        [
+          39,
+          110,
+          47,
+          44
+        ],
+        [
+          44,
+          67,
+          22,
+          63
+        ]
+      ],
+      "kappa": 0.1427,
+      "macro_f1": 0.3457068735875966
+    },
+    "test": {
+      "acc": 32.1267,
+      "n": 221,
+      "cm": [
+        [
+          16,
+          18,
+          7,
+          6
+        ],
+        [
+          15,
+          34,
+          3,
+          12
+        ],
+        [
+          13,
+          30,
+          9,
+          8
+        ],
+        [
+          10,
+          20,
+          8,
+          12
+        ]
+      ],
+      "kappa": 0.0856,
+      "macro_f1": 0.30152351545914874
+    },
+    "baseline": {
+      "acc": 28.9593,
+      "n": 221,
+      "cm": [
+        [
+          0,
+          47,
+          0,
+          0
+        ],
+        [
+          0,
+          64,
+          0,
+          0
+        ],
+        [
+          0,
+          60,
+          0,
+          0
+        ],
+        [
+          0,
+          50,
+          0,
+          0
+        ]
+      ],
+      "kappa": 0.0,
+      "macro_f1": 0.11228070175438597
+    },
+    "tree": "J48 pruned tree\n------------------\n\nstudy_environment <= 0: C0 (116.0/82.0)\nstudy_environment > 0\n|   attendance <= 3\n|   |   distraction_frequency <= 0: C2 (46.0/26.0)\n|   |   distraction_frequency > 0\n|   |   |   routine_manageability <= 1\n|   |   |   |   support_level <= 2: C1 (107.0/67.0)\n|   |   |   |   support_level > 2: C0 (62.0/38.0)\n|   |   |   routine_manageability > 1: C1 (250.0/158.0)\n|   attendance > 3\n|   |   study_environment <= 3\n|   |   |   stress_frequency <= 1: C2 (76.0/49.0)\n|   |   |   stress_frequency > 1\n|   |   |   |   weekly_study_time <= 2\n|   |   |   |   |   distraction_frequency <= 2: C1 (58.0/36.0)\n|   |   |   |   |   distraction_frequency > 2: C3 (63.0/41.0)\n|   |   |   |   weekly_study_time > 2: C3 (45.0/26.0)\n|   |   study_environment > 3: C3 (58.0/36.0)\n\nNumber of Leaves  : \t10\n\nSize of the tree : \t19\n",
+    "rules": [
+      {
+        "conditions": [
+          "study_environment <= 0"
+        ],
+        "target": "C0",
+        "readable": [
+          "Study-friendly living place: Very distracting"
+        ]
+      },
+      {
+        "conditions": [
+          "study_environment > 0",
+          "attendance <= 3",
+          "distraction_frequency <= 0"
+        ],
+        "target": "C2",
+        "readable": [
+          "Study-friendly living place: Somewhat distracting / Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Phone / social media took study time: Never"
+        ]
+      },
+      {
+        "conditions": [
+          "study_environment > 0",
+          "attendance <= 3",
+          "distraction_frequency > 0",
+          "routine_manageability <= 1",
+          "support_level <= 2"
+        ],
+        "target": "C1",
+        "readable": [
+          "Study-friendly living place: Somewhat distracting / Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Phone / social media took study time: Rarely / Sometimes / Often / Almost every day",
+          "Semester routine manageable: Completely unmanageable / Difficult to manage",
+          "Family / friend support: No support / Very little support / Some support"
+        ]
+      },
+      {
+        "conditions": [
+          "study_environment > 0",
+          "attendance <= 3",
+          "distraction_frequency > 0",
+          "routine_manageability <= 1",
+          "support_level > 2"
+        ],
+        "target": "C0",
+        "readable": [
+          "Study-friendly living place: Somewhat distracting / Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Phone / social media took study time: Rarely / Sometimes / Often / Almost every day",
+          "Semester routine manageable: Completely unmanageable / Difficult to manage",
+          "Family / friend support: Good support / Strong support"
+        ]
+      },
+      {
+        "conditions": [
+          "study_environment > 0",
+          "attendance <= 3",
+          "distraction_frequency > 0",
+          "routine_manageability > 1"
+        ],
+        "target": "C1",
+        "readable": [
+          "Study-friendly living place: Somewhat distracting / Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Class attendance: Less than 40% / 40-59% / 60-74% / 75-89%",
+          "Phone / social media took study time: Rarely / Sometimes / Often / Almost every day",
+          "Semester routine manageable: Average / Mostly manageable / Very healthy and balanced"
+        ]
+      },
+      {
+        "conditions": [
+          "study_environment > 0",
+          "attendance > 3",
+          "study_environment <= 3",
+          "stress_frequency <= 1"
+        ],
+        "target": "C2",
+        "readable": [
+          "Study-friendly living place: Somewhat distracting / Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Very distracting / Somewhat distracting / Neither good nor bad / Mostly suitable",
+          "Stress blocked studying: Never / Rarely"
+        ]
+      },
+      {
+        "conditions": [
+          "study_environment > 0",
+          "attendance > 3",
+          "study_environment <= 3",
+          "stress_frequency > 1",
+          "weekly_study_time <= 2",
+          "distraction_frequency <= 2"
+        ],
+        "target": "C1",
+        "readable": [
+          "Study-friendly living place: Somewhat distracting / Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Very distracting / Somewhat distracting / Neither good nor bad / Mostly suitable",
+          "Stress blocked studying: Sometimes / Often / Almost always",
+          "Self-study per week: Less than 3 hrs / 3-6 hrs / 7-10 hrs",
+          "Phone / social media took study time: Never / Rarely / Sometimes"
+        ]
+      },
+      {
+        "conditions": [
+          "study_environment > 0",
+          "attendance > 3",
+          "study_environment <= 3",
+          "stress_frequency > 1",
+          "weekly_study_time <= 2",
+          "distraction_frequency > 2"
+        ],
+        "target": "C3",
+        "readable": [
+          "Study-friendly living place: Somewhat distracting / Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Very distracting / Somewhat distracting / Neither good nor bad / Mostly suitable",
+          "Stress blocked studying: Sometimes / Often / Almost always",
+          "Self-study per week: Less than 3 hrs / 3-6 hrs / 7-10 hrs",
+          "Phone / social media took study time: Often / Almost every day"
+        ]
+      },
+      {
+        "conditions": [
+          "study_environment > 0",
+          "attendance > 3",
+          "study_environment <= 3",
+          "stress_frequency > 1",
+          "weekly_study_time > 2"
+        ],
+        "target": "C3",
+        "readable": [
+          "Study-friendly living place: Somewhat distracting / Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Very distracting / Somewhat distracting / Neither good nor bad / Mostly suitable",
+          "Stress blocked studying: Sometimes / Often / Almost always",
+          "Self-study per week: 11-15 hrs / More than 15 hrs"
+        ]
+      },
+      {
+        "conditions": [
+          "study_environment > 0",
+          "attendance > 3",
+          "study_environment > 3"
+        ],
+        "target": "C3",
+        "readable": [
+          "Study-friendly living place: Somewhat distracting / Neither good nor bad / Mostly suitable / Excellent for focused study",
+          "Class attendance: 90% or more",
+          "Study-friendly living place: Excellent for focused study"
+        ]
+      }
+    ]
+  },
+  "main": {
+    "cv": {
+      "J48": {
+        "acc": 38.294,
+        "n": 1102,
+        "cm": [
+          [
+            82,
+            67,
+            47,
+            40
+          ],
+          [
+            56,
+            122,
+            98,
+            44
+          ],
+          [
+            50,
+            83,
+            107,
+            60
+          ],
+          [
+            52,
+            36,
+            47,
+            111
+          ]
+        ],
+        "kappa": 0.1736,
+        "macro_f1": 0.3833621807335293,
+        "source": "main_J48_cv.txt",
+        "options": "-C 0.25 -M 2"
+      },
+      "RandomForest": {
+        "acc": 43.9201,
+        "n": 1102,
+        "cm": [
+          [
+            95,
+            81,
+            26,
+            34
+          ],
+          [
+            57,
+            159,
+            71,
+            33
+          ],
+          [
+            47,
+            79,
+            126,
+            48
+          ],
+          [
+            43,
+            50,
+            49,
+            104
+          ]
+        ],
+        "kappa": 0.2464,
+        "macro_f1": 0.43672481745096137,
+        "source": "main_RandomForest_cv.txt",
+        "options": "-P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1"
+      },
+      "SMO": {
+        "acc": 37.1143,
+        "n": 1102,
+        "cm": [
+          [
+            61,
+            113,
+            34,
+            28
+          ],
+          [
+            51,
+            154,
+            75,
+            40
+          ],
+          [
+            42,
+            93,
+            109,
+            56
+          ],
+          [
+            35,
+            56,
+            70,
+            85
+          ]
+        ],
+        "kappa": 0.1504,
+        "macro_f1": 0.36247793933626965,
+        "source": "main_SMO_cv.txt",
+        "options": "-C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007\" -calibrator \"weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4\""
+      },
+      "Logistic": {
+        "acc": 36.8421,
+        "n": 1102,
+        "cm": [
+          [
+            61,
+            107,
+            38,
+            30
+          ],
+          [
+            49,
+            145,
+            83,
+            43
+          ],
+          [
+            42,
+            92,
+            101,
+            65
+          ],
+          [
+            31,
+            55,
+            61,
+            99
+          ]
+        ],
+        "kappa": 0.1481,
+        "macro_f1": 0.3627322534122404,
+        "source": "main_Logistic_cv.txt",
+        "options": "-R 1.0E-8 -M -1 -num-decimal-places 4"
+      },
+      "NaiveBayes": {
+        "acc": 38.1125,
+        "n": 1102,
+        "cm": [
+          [
+            69,
+            101,
+            34,
+            32
+          ],
+          [
+            51,
+            169,
+            70,
+            30
+          ],
+          [
+            54,
+            104,
+            96,
+            46
+          ],
+          [
+            39,
+            49,
+            72,
+            86
+          ]
+        ],
+        "kappa": 0.1644,
+        "macro_f1": 0.37220890233034765,
+        "source": "main_NaiveBayes_cv.txt",
+        "options": ""
+      },
+      "ZeroR": {
+        "acc": 29.0381,
+        "n": 1102,
+        "cm": [
+          [
+            0,
+            236,
+            0,
+            0
+          ],
+          [
+            0,
+            320,
+            0,
+            0
+          ],
+          [
+            0,
+            300,
+            0,
+            0
+          ],
+          [
+            0,
+            246,
+            0,
+            0
+          ]
+        ],
+        "kappa": 0.0,
+        "macro_f1": 0.11251758087201125,
+        "source": "main_ZeroR_cv.txt",
+        "options": ""
+      }
+    },
+    "train": {
+      "acc": 46.1975,
+      "n": 881,
+      "cm": [
+        [
+          80,
+          59,
+          27,
+          23
+        ],
+        [
+          41,
+          136,
+          60,
+          19
+        ],
+        [
+          37,
+          57,
+          102,
+          44
+        ],
+        [
+          38,
+          33,
+          36,
+          89
+        ]
+      ],
+      "kappa": 0.2773,
+      "macro_f1": 0.45921277570845614
+    },
+    "test": {
+      "acc": 49.7738,
+      "n": 221,
+      "cm": [
+        [
+          22,
+          15,
+          6,
+          4
+        ],
+        [
+          8,
+          31,
+          15,
+          10
+        ],
+        [
+          7,
+          15,
+          29,
+          9
+        ],
+        [
+          3,
+          11,
+          8,
+          28
+        ]
+      ],
+      "kappa": 0.3246,
+      "macro_f1": 0.5019025871628315
+    },
+    "baseline": {
+      "acc": 28.9593,
+      "n": 221,
+      "cm": [
+        [
+          0,
+          47,
+          0,
+          0
+        ],
+        [
+          0,
+          64,
+          0,
+          0
+        ],
+        [
+          0,
+          60,
+          0,
+          0
+        ],
+        [
+          0,
+          50,
+          0,
+          0
+        ]
+      ],
+      "kappa": 0.0,
+      "macro_f1": 0.11228070175438597
+    },
+    "tree": "J48 pruned tree\n------------------\n\nrecent_sgpa <= 1\n|   recent_sgpa <= 0: C0 (196.0/116.0)\n|   recent_sgpa > 0: C1 (236.0/117.0)\nrecent_sgpa > 1\n|   recent_sgpa <= 2: C2 (225.0/123.0)\n|   recent_sgpa > 2\n|   |   weekly_responsibilities <= 1: C3 (109.0/44.0)\n|   |   weekly_responsibilities > 1\n|   |   |   desired_department_match <= 2: C1 (49.0/32.0)\n|   |   |   desired_department_match > 2: C3 (66.0/42.0)\n\nNumber of Leaves  : \t6\n\nSize of the tree : \t11\n",
+    "rules": [
+      {
+        "conditions": [
+          "recent_sgpa <= 1",
+          "recent_sgpa <= 0"
+        ],
+        "target": "C0",
+        "readable": [
+          "Recent semester SGPA: below 3.20 / 3.20-3.49",
+          "Recent semester SGPA: below 3.20"
+        ]
+      },
+      {
+        "conditions": [
+          "recent_sgpa <= 1",
+          "recent_sgpa > 0"
+        ],
+        "target": "C1",
+        "readable": [
+          "Recent semester SGPA: below 3.20 / 3.20-3.49",
+          "Recent semester SGPA: 3.20-3.49 / 3.50-3.74 / 3.75+"
+        ]
+      },
+      {
+        "conditions": [
+          "recent_sgpa > 1",
+          "recent_sgpa <= 2"
+        ],
+        "target": "C2",
+        "readable": [
+          "Recent semester SGPA: 3.50-3.74 / 3.75+",
+          "Recent semester SGPA: below 3.20 / 3.20-3.49 / 3.50-3.74"
+        ]
+      },
+      {
+        "conditions": [
+          "recent_sgpa > 1",
+          "recent_sgpa > 2",
+          "weekly_responsibilities <= 1"
+        ],
+        "target": "C3",
+        "readable": [
+          "Recent semester SGPA: 3.50-3.74 / 3.75+",
+          "Recent semester SGPA: 3.75+",
+          "Outside commitments (tuition/job/club): None / 1-5 hrs"
+        ]
+      },
+      {
+        "conditions": [
+          "recent_sgpa > 1",
+          "recent_sgpa > 2",
+          "weekly_responsibilities > 1",
+          "desired_department_match <= 2"
+        ],
+        "target": "C1",
+        "readable": [
+          "Recent semester SGPA: 3.50-3.74 / 3.75+",
+          "Recent semester SGPA: 3.75+",
+          "Outside commitments (tuition/job/club): 6-10 hrs / 11-15 hrs / More than 15 hrs",
+          "Got desired department: Not at all what I wanted / Mostly different / Somewhat different"
+        ]
+      },
+      {
+        "conditions": [
+          "recent_sgpa > 1",
+          "recent_sgpa > 2",
+          "weekly_responsibilities > 1",
+          "desired_department_match > 2"
+        ],
+        "target": "C3",
+        "readable": [
+          "Recent semester SGPA: 3.50-3.74 / 3.75+",
+          "Recent semester SGPA: 3.75+",
+          "Outside commitments (tuition/job/club): 6-10 hrs / 11-15 hrs / More than 15 hrs",
+          "Got desired department: Close to what I wanted / Yes, exactly what I wanted"
+        ]
+      }
+    ]
+  }
+}

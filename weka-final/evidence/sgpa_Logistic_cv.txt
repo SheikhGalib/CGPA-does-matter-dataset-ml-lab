@@ -1,0 +1,32 @@
+WEKA 3.8.7
+Target experiment: sgpa
+Model: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Evaluation: stratified 10-fold CV, seed 1
+Dataset N: 1102
+
+Correctly Classified Instances         275               24.9546 %
+Incorrectly Classified Instances       827               75.0454 %
+Kappa statistic                         -0.0093
+Mean absolute error                      0.3736
+Root mean squared error                  0.4352
+Relative absolute error                 99.8626 %
+Root relative squared error            100.6182 %
+Total Number of Instances             1102     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.127    0.121    0.222      0.127    0.162      0.007    0.530     0.224     C0
+                 0.328    0.315    0.276      0.328    0.300      0.012    0.501     0.261     C1
+                 0.226    0.256    0.234      0.226    0.230      -0.031   0.507     0.261     C2
+                 0.293    0.317    0.246      0.293    0.267      -0.023   0.519     0.272     C3
+Weighted Avg.    0.250    0.259    0.246      0.250    0.244      -0.009   0.513     0.256     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 30 80 55 71 |  a = C0
+ 37 97 72 90 |  b = C1
+ 25 97 64 97 |  c = C2
+ 43 77 83 84 |  d = C3

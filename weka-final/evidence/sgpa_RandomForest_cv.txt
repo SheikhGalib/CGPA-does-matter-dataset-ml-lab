@@ -1,0 +1,32 @@
+WEKA 3.8.7
+Target experiment: sgpa
+Model: RandomForest
+Options: -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Evaluation: stratified 10-fold CV, seed 1
+Dataset N: 1102
+
+Correctly Classified Instances         328               29.7641 %
+Incorrectly Classified Instances       774               70.2359 %
+Kappa statistic                          0.0586
+Mean absolute error                      0.364 
+Root mean squared error                  0.4337
+Relative absolute error                 97.2969 %
+Root relative squared error            100.2757 %
+Total Number of Instances             1102     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.212    0.170    0.254      0.212    0.231      0.045    0.558     0.247     C0
+                 0.345    0.318    0.285      0.345    0.312      0.026    0.538     0.337     C1
+                 0.293    0.227    0.309      0.293    0.301      0.067    0.560     0.326     C2
+                 0.324    0.227    0.335      0.324    0.329      0.098    0.574     0.334     C3
+Weighted Avg.    0.298    0.239    0.297      0.298    0.296      0.059    0.557     0.314     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+  50  75  50  61 |   a = C0
+  52 102  82  60 |   b = C1
+  43  93  83  64 |   c = C2
+  52  88  54  93 |   d = C3

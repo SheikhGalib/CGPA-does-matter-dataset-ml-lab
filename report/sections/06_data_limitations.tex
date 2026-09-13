@@ -1,0 +1,12 @@
+\section{Data limitations}
+\begin{itemize}
+\item Grades and behaviours are self-reported and were not checked against registrar records.
+\item The convenience sample is dominated by KUET, which contributes 79.2\% of the records.
+\item The survey is cross-sectional. It measures each student once and cannot observe changes across semesters.
+\item CGPA and SGPA are stored as bands rather than consistent exact numbers.
+\item Small wording and option differences remain between the two questionnaires after semantic harmonisation.
+\item Source A asks for CGPA before the most recent semester, while Source B asks for current CGPA. This one-semester reference difference affects interpretation of the SGPA feature.
+\item The dataset does not contain verified course-level grades, longitudinal activity, or equally sized samples from all universities.
+\item Questionnaire missing-value modes were calculated before cross-validation and before the fixed train/test split. This historical preprocessing order can transfer limited distribution information into evaluation data.
+\end{itemize}
+These limitations restrict population-level generalisation and any intended high-stakes use. The model scores are exploratory course-project evidence. They remain useful for reproducible classroom analysis when the sampling, measurement, and preprocessing boundaries stay visible.

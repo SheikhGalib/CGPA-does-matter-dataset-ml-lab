@@ -1,0 +1,19 @@
+\section{Background}
+Academic performance reflects both prior preparation and the context in which students study. Educational data mining can organise these observations into measurable variables, compare student groups, and test whether the measured information supports prediction. Previous work has used classical classifiers, ensembles, and explainability methods for student-performance tasks \cite{ahmed2024,maruf2024,albonny2026}. Public Bangladeshi datasets also show the value of combining academic records with attendance, study time, technology use, family context, and lifestyle indicators \cite{prama2024,rahman2024,rahman2025,maruf2025}.
+
+The present project focuses on engineering students at BUET, BRAC University, CUET, and KUET. It extends an initial multi-university questionnaire with a larger KUET questionnaire that asks the same substantive questions with some different wording and response formatting. The project therefore has two connected aims. The first is to create a transparent, reusable dataset whose origin, response options, cleaning decisions, and limitations can be traced. The second is to demonstrate how that dataset can support descriptive analysis and machine-learning experiments without treating prediction as causal evidence.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=7mm, every node/.style={font=\small,align=center}, box/.style={draw=navy,rounded corners,minimum width=27mm,minimum height=12mm,fill=soft}, arr/.style={-{Latex[length=2.5mm]},thick,draw=blue}]
+\node[box] (form) {Two survey\\forms};
+\node[box,right=of form] (data) {1,126 raw\\responses};
+\node[box,right=of data] (clean) {1,108 clean\\records};
+\node[box,right=of clean] (desc) {Counts and\\associations};
+\node[box,right=of desc] (ml) {Train, test,\\and explain};
+\draw[arr] (form)--(data); \draw[arr] (data)--(clean); \draw[arr] (clean)--(desc); \draw[arr] (desc)--(ml);
+\end{tikzpicture}
+\caption{Project workflow from questionnaire collection to interpretable evaluation.}
+\label{fig:project-flow}
+\end{figure}
+

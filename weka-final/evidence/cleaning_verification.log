@@ -1,0 +1,141 @@
+pandas 3.0.5 | numpy 2.5.3
+root: D:\4.1\ML\LAB\CGPA-does-matter-dataset-ml-lab-main\publish\ML-Project
+multi-university file exists: True
+KUET file exists            : True
+multi-university :  230 rows x 22 columns
+KUET             :  896 rows x 21 columns
+combined         : 1126 raw responses
+shared columns (20): ['admission_satisfaction', 'attendance', 'career_expectation', 'cgpa_raw', 'department_listed', 'desired_department_match', 'distraction_frequency', 'recent_sgpa_raw', 'result_satisfaction', 'routine_manageability', 'semester_raw', 'sleep_duration', 'stress_frequency', 'study_environment', 'study_style', 'support_level', 'timestamp', 'topic_clarity', 'weekly_responsibilities', 'weekly_study_time']
+
+KUET only      ( 1): ['email']
+multi-uni only ( 2): ['department_other', 'university']
+email column fill rate: 0.0%
+
+after aligning columns:
+  KUET : (896, 23)
+  multi: (230, 23)
+  identical column sets: True
+distinct KUET answer strings across 17 columns: 120 -> 117
+merged: 1126 rows x 23 columns
+
+source_form
+kuet         896
+multi_uni    230
+exact duplicate rows (all columns incl. timestamp): 0
+exact duplicate ANSWER patterns (timestamp ignored): 0
+
+collection window: 2026-07-31 to 2026-09-03
+distinct department strings across both columns: 110
+strings written by only ONE person: 34
+
+A sample of the mess:
+department_listed
+CSE                                       146
+EEE                                        87
+ECE                                        54
+ME                                         49
+MSE                                        42
+civil                                      34
+URP                                        26
+BECM                                       21
+TE                                         21
+IEM                                        18
+Mechanical Engineering                     17
+MTE                                        16
+cse                                        15
+CSE                                        14
+LE                                         14
+CE                                         14
+Cse                                        13
+Computer Science and Engineering           12
+Chemical Engineering                       12
+Civil                                      11
+Electrical and Electronics Engineering     11
+Leather Engineering                        10
+Industrial Engineering and Management      10
+ESE                                         9
+KUET form  — actively chose 'None' : 26.5%  (option was offered)
+multi form — left the item blank   : 19.1%  (no zero option existed)
+KUET form  — left the item blank   : 0.3%  (a genuine skip)
+
+chi-square(blank vs GPA band, multi-uni rows): chi2=3.08, dof=5, p=0.688
+[5.1] dropped `timestamp`
+      rows 1126 -> 1126 | cols -> 22
+university
+KUET    896
+BUET    104
+BRAC    101
+CUET     25
+[5.2] normalised `university`: 10 spellings -> 4
+      rows 1126 -> 1126 | cols -> 22
+Strings the exact lookup did NOT cover (resolved by keyword fallback, or flagged Unknown):
+   'Mecha'                                            -> Unknown
+
+110 raw strings -> 24 canonical departments
+still missing (nobody answered either box): 17
+departments with fewer than 15 respondents (7): ['MME', 'NCE', 'PMRE', 'IPE', 'NAME', 'MIE', 'WRE']
+
+-> `department_grouped`: 18 categories
+department_grouped
+CSE        320
+EEE        151
+ME          99
+CE          86
+ECE         74
+MSE         56
+URP         41
+IEM         37
+Other       35
+TE          34
+BECM        33
+LE          31
+ChE         26
+BME         26
+ARCH        22
+MTE         22
+Unknown     18
+ESE         15
+[5.3] merged 2 department columns and canonicalised 110 strings -> 24
+      rows 1126 -> 1126 | cols -> 22
+study_style: renamed 123 values -> 'Mostly consistent routine'
+
+source_form                         kuet  multi_uni
+study_style                                        
+Consistent throughout the semester   114         20
+Mostly consistent routine            123         34
+Mostly just before exams             250         52
+Occasionally when necessary          218         51
+Regularly but not every day          190         73
+[5.4] reconciled 1 mismatched Likert label in `study_style`
+      rows 1126 -> 1126 | cols -> 22
+free-text numeric GPA answers parsed and binned: 35
+answers that could not be parsed at all: ['etao jani na', 'jani na :3']
+
+[5.5] parsed 2 band schemes + free-text numbers into one 4-class target
+      rows 1126 -> 1126 | cols -> 24
+Why each dropped row has no target:
+cgpa_raw
+(blank)         17
+etao jani na     1
+
+source of the dropped rows: {'kuet': 18}
+[5.6] dropped 18 rows with no usable CGPA answer
+      rows 1126 -> 1108 | cols -> 24
+filled 45 blanks with 'None'
+
+source_form              kuet  multi_uni
+weekly_responsibilities                 
+1-5 hrs                   206         57
+11-15 hrs                 151         40
+6-10 hrs                  172         60
+More than 15 hrs          119         29
+None                      230         44
+[5.7] imputed 45 blank `weekly_responsibilities` as 'None'
+      rows 1108 -> 1108 | cols -> 24
+rows that are complete on every Likert item: 1101 of 1108
+missing values left in every modelling column: 0
+[5.8] imputed the remaining <1.3% scattered blanks (within-source median category)
+      rows 1108 -> 1108 | cols -> 25
+All values in all 15 Likert columns are covered by an explicit ordering.
+[5.9] ordinal-encoded 15 Likert scales + the two GPA bands
+      rows 1108 -> 1108 | cols -> 43

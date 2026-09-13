@@ -1,0 +1,106 @@
+WEKA 3.8.7
+Target experiment: main
+Model: WEKA J48 Decision Tree
+Options: -C 0.25 -M 40
+Dataset: 881 train, 221 test
+J48 pruned tree
+------------------
+
+recent_sgpa <= 1
+|   recent_sgpa <= 0: C0 (196.0/116.0)
+|   recent_sgpa > 0: C1 (236.0/117.0)
+recent_sgpa > 1
+|   recent_sgpa <= 2: C2 (225.0/123.0)
+|   recent_sgpa > 2
+|   |   weekly_responsibilities <= 1: C3 (109.0/44.0)
+|   |   weekly_responsibilities > 1
+|   |   |   desired_department_match <= 2: C1 (49.0/32.0)
+|   |   |   desired_department_match > 2: C3 (66.0/42.0)
+
+Number of Leaves  : 	6
+
+Size of the tree : 	11
+
+=== TRAIN ===
+
+Correctly Classified Instances         407               46.1975 %
+Incorrectly Classified Instances       474               53.8025 %
+Kappa statistic                          0.2773
+Mean absolute error                      0.338 
+Root mean squared error                  0.4111
+Relative absolute error                 90.6324 %
+Root relative squared error             95.2022 %
+Total Number of Instances              881     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.423    0.168    0.408      0.423    0.416      0.252    0.673     0.331     C0
+                 0.531    0.238    0.477      0.531    0.503      0.284    0.690     0.432     C1
+                 0.425    0.192    0.453      0.425    0.439      0.238    0.640     0.381     C2
+                 0.454    0.126    0.509      0.454    0.480      0.342    0.708     0.417     C3
+Weighted Avg.    0.462    0.185    0.463      0.462    0.462      0.278    0.677     0.393     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+  80  59  27  23 |   a = C0
+  41 136  60  19 |   b = C1
+  37  57 102  44 |   c = C2
+  38  33  36  89 |   d = C3
+
+=== TEST ===
+
+Correctly Classified Instances         110               49.7738 %
+Incorrectly Classified Instances       111               50.2262 %
+Kappa statistic                          0.3246
+Mean absolute error                      0.3339
+Root mean squared error                  0.4075
+Relative absolute error                 89.529  %
+Root relative squared error             94.3535 %
+Total Number of Instances              221     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.468    0.103    0.550      0.468    0.506      0.388    0.759     0.428     C0
+                 0.484    0.261    0.431      0.484    0.456      0.216    0.628     0.385     C1
+                 0.483    0.180    0.500      0.483    0.492      0.306    0.657     0.406     C2
+                 0.560    0.135    0.549      0.560    0.554      0.423    0.711     0.469     C3
+Weighted Avg.    0.498    0.177    0.502      0.498    0.498      0.324    0.683     0.419     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 22 15  6  4 |  a = C0
+  8 31 15 10 |  b = C1
+  7 15 29  9 |  c = C2
+  3 11  8 28 |  d = C3
+
+=== ZeroR TEST BASELINE ===
+
+Correctly Classified Instances          64               28.9593 %
+Incorrectly Classified Instances       157               71.0407 %
+Kappa statistic                          0     
+Mean absolute error                      0.373 
+Root mean squared error                  0.4319
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              221     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.213     C0
+                 1.000    1.000    0.290      1.000    0.449      ?        0.500     0.290     C1
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.271     C2
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.226     C3
+Weighted Avg.    0.290    0.290    ?          0.290    ?          ?        0.500     0.254     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+  0 47  0  0 |  a = C0
+  0 64  0  0 |  b = C1
+  0 60  0  0 |  c = C2
+  0 50  0  0 |  d = C3

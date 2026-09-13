@@ -1,0 +1,17 @@
+J48 pruned tree
+------------------
+
+recent_sgpa <= 1
+|   recent_sgpa <= 0: C0 (196.0/116.0)
+|   recent_sgpa > 0: C1 (236.0/117.0)
+recent_sgpa > 1
+|   recent_sgpa <= 2: C2 (225.0/123.0)
+|   recent_sgpa > 2
+|   |   weekly_responsibilities <= 1: C3 (109.0/44.0)
+|   |   weekly_responsibilities > 1
+|   |   |   desired_department_match <= 2: C1 (49.0/32.0)
+|   |   |   desired_department_match > 2: C3 (66.0/42.0)
+
+Number of Leaves  : 	6
+
+Size of the tree : 	11

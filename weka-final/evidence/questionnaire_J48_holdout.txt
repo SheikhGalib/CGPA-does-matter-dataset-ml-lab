@@ -1,0 +1,114 @@
+WEKA 3.8.7
+Target experiment: questionnaire
+Model: WEKA J48 Decision Tree
+Options: -C 0.25 -M 40
+Dataset: 881 train, 221 test
+J48 pruned tree
+------------------
+
+study_environment <= 0: C0 (116.0/82.0)
+study_environment > 0
+|   attendance <= 3
+|   |   distraction_frequency <= 0: C2 (46.0/26.0)
+|   |   distraction_frequency > 0
+|   |   |   routine_manageability <= 1
+|   |   |   |   support_level <= 2: C1 (107.0/67.0)
+|   |   |   |   support_level > 2: C0 (62.0/38.0)
+|   |   |   routine_manageability > 1: C1 (250.0/158.0)
+|   attendance > 3
+|   |   study_environment <= 3
+|   |   |   stress_frequency <= 1: C2 (76.0/49.0)
+|   |   |   stress_frequency > 1
+|   |   |   |   weekly_study_time <= 2
+|   |   |   |   |   distraction_frequency <= 2: C1 (58.0/36.0)
+|   |   |   |   |   distraction_frequency > 2: C3 (63.0/41.0)
+|   |   |   |   weekly_study_time > 2: C3 (45.0/26.0)
+|   |   study_environment > 3: C3 (58.0/36.0)
+
+Number of Leaves  : 	10
+
+Size of the tree : 	19
+
+=== TRAIN ===
+
+Correctly Classified Instances         322               36.5494 %
+Incorrectly Classified Instances       559               63.4506 %
+Kappa statistic                          0.1427
+Mean absolute error                      0.3597
+Root mean squared error                  0.4241
+Relative absolute error                 96.4422 %
+Root relative squared error             98.2062 %
+Total Number of Instances              881     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.307    0.173    0.326      0.307    0.316      0.136    0.630     0.292     C0
+                 0.602    0.418    0.371      0.602    0.459      0.167    0.612     0.356     C1
+                 0.196    0.117    0.385      0.196    0.260      0.102    0.593     0.334     C2
+                 0.321    0.150    0.380      0.321    0.348      0.182    0.644     0.321     C3
+Weighted Avg.    0.365    0.224    0.367      0.365    0.349      0.146    0.618     0.329     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+  58  84  24  23 |   a = C0
+  37 154  29  36 |   b = C1
+  39 110  47  44 |   c = C2
+  44  67  22  63 |   d = C3
+
+=== TEST ===
+
+Correctly Classified Instances          71               32.1267 %
+Incorrectly Classified Instances       150               67.8733 %
+Kappa statistic                          0.0856
+Mean absolute error                      0.3686
+Root mean squared error                  0.4342
+Relative absolute error                 98.8373 %
+Root relative squared error            100.5311 %
+Total Number of Instances              221     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.340    0.218    0.296      0.340    0.317      0.116    0.572     0.252     C0
+                 0.531    0.433    0.333      0.531    0.410      0.089    0.532     0.319     C1
+                 0.150    0.112    0.333      0.150    0.207      0.052    0.567     0.311     C2
+                 0.240    0.152    0.316      0.240    0.273      0.098    0.513     0.241     C3
+Weighted Avg.    0.321    0.237    0.321      0.321    0.304      0.087    0.546     0.285     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 16 18  7  6 |  a = C0
+ 15 34  3 12 |  b = C1
+ 13 30  9  8 |  c = C2
+ 10 20  8 12 |  d = C3
+
+=== ZeroR TEST BASELINE ===
+
+Correctly Classified Instances          64               28.9593 %
+Incorrectly Classified Instances       157               71.0407 %
+Kappa statistic                          0     
+Mean absolute error                      0.373 
+Root mean squared error                  0.4319
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              221     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.213     C0
+                 1.000    1.000    0.290      1.000    0.449      ?        0.500     0.290     C1
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.271     C2
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.226     C3
+Weighted Avg.    0.290    0.290    ?          0.290    ?          ?        0.500     0.254     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+  0 47  0  0 |  a = C0
+  0 64  0  0 |  b = C1
+  0 60  0  0 |  c = C2
+  0 50  0  0 |  d = C3

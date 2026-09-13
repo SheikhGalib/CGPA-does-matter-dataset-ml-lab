@@ -1,0 +1,49 @@
+\section{Experimental design, materials, and methods}
+\subsection{Questionnaire design and collection}
+Two bilingual Google Forms collected responses from undergraduate engineering students. Source A contains 230 responses from BUET, BRAC University, and CUET. Source B contains 896 KUET responses. Both instruments cover 19 substantive concepts, while their column order, English phrasing, bilingual answer formatting, and grade-band options differ. The collection windows were 31 July to 13 August 2026 for the KUET form and 22 August to 3 September 2026 for the multi-university form.
+
+\subsection{Schema mapping and harmonisation}
+Each raw column was mapped by hand to a common \code{snake\_case} schema and guarded by assertions. Manual mapping was selected because automatic text similarity could incorrectly merge conceptually different satisfaction questions. The harmonisation pass removed emoji and Bangla parenthetical translations from answer values while preserving English department abbreviations. One study-style label was reconciled, and the two grade-band schemes plus typed KUET values were mapped into C0--C3.
+
+The pipeline retained a source-form field for audit comparisons but excluded it from modelling. It dropped timestamps because the collection windows identify the source form, and it removed an empty email column. University spelling variants were reduced to four institutions. A rule-based canonicaliser reduced 110 free-text department strings to 24 department names, then grouped categories with fewer than 15 students for modelling.
+
+\subsection{Cleaning sequence}
+\begin{table}[H]\centering\small
+\caption{Auditable cleaning sequence.}\label{tab:cleaning}
+\begin{tabularx}{\textwidth}{p{0.08\textwidth}p{0.35\textwidth}Yp{0.11\textwidth}}\toprule
+Step&Decision&Reason&Rows\\\midrule
+1&Drop timestamp&Collection timing is a source proxy, not a student attribute&1,126\\
+2&Normalise 10 university labels to 4&Case and suffix variants identify the same institution&1,126\\
+3&Canonicalise 110 department strings to 24&Abbreviations, spelling, and free text otherwise split categories&1,126\\
+4&Reconcile one study-style label&Keep the ordered scale consistent across forms&1,126\\
+5&Build four CGPA groups&Four classes are recoverable from both questionnaires&1,126\\
+6&Remove unusable CGPA targets&A supervised model cannot learn from an unlabelled target&1,108\\
+7&Map supported commitment blanks to None&The KUET form provides an explicit None option with a comparable response rate&1,108\\
+8&Fill remaining sparse predictor blanks&Within-source modal categories preserve the observed category labels&1,108\\
+9&Encode ordered scales&Preserve the natural order of the responses&1,108\\
+10&Derive academic progress and audit features&Replace raw semester with a comparable progress measure&1,108\\\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Missing values and leakage control}
+Only 18 rows were removed, all because their CGPA target could not be interpreted. Blank outside-commitment answers were handled as None when the form design and response rates supported that meaning. The remaining predictor missingness was below 1.3\% per field and was filled with the modal category from the same source form. Six rows had recent SGPA filled using information from their CGPA class in the earlier cleaning process. Descriptive summaries retain those rows, but every final model experiment excludes them. The resulting modelling set contains 1,102 students.
+
+Result satisfaction was omitted from predictive feature sets because it follows an academic outcome. Source form was also excluded so the model could not learn questionnaire identity. University, department, and raw semester were not used in the 12-question teacher-facing trees.
+
+\subsection{Data quality checks}
+Quality checks covered class balance, source-form option overlap, university imbalance, duplicates, category coverage, missingness, and complete-case sensitivity. In the 1,108-row descriptive snapshot, target shares range from 21.3\% to 29.0\%. After the six-row modelling exclusion, the CGPA ZeroR baseline is 29.04\% in 10-fold cross-validation. KUET contributes 79.2\% of cleaned records and therefore requires an explicit generalisation warning. Complete-case recalculation changed no reported Spearman coefficient by more than 0.0036.
+
+\begin{figure}[H]\centering
+\begin{tikzpicture}[node distance=6mm, every node/.style={font=\footnotesize,align=center}, p/.style={draw=navy,fill=soft,rounded corners,minimum width=29mm,minimum height=12mm}, a/.style={-{Latex[length=2mm]},thick,draw=blue}]
+\node[p] (raw) {1,126 raw};
+\node[p,right=of raw] (labels) {Normalise labels\\and departments};
+\node[p,right=of labels] (merge) {Merge forms\\and grade bands};
+\node[p,right=of merge] (drop) {Remove 18\\missing targets};
+\node[p,right=of drop] (clean) {1,108 clean};
+\draw[a] (raw)--(labels);\draw[a] (labels)--(merge);\draw[a] (merge)--(drop);\draw[a] (drop)--(clean);
+\node[p,below=12mm of merge] (tree) {Exclude 6 affected SGPA rows\\for all model experiments: 1,102};
+\draw[a] (clean.south) |- (tree.east);
+\end{tikzpicture}
+\caption{Cleaning and teacher-facing experiment populations.}
+\label{fig:cleaning-flow}
+\end{figure}

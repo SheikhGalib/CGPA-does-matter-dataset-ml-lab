@@ -1,0 +1,45 @@
+\section{Machine-learning analysis framework}
+\subsection{Research questions}
+\begin{enumerate}
+\item Which questionnaire variables show the clearest descriptive relationship with CGPA groups?
+\item Can the 12 questionnaire variables predict recent SGPA or CGPA for an unseen student?
+\item How much predictive structure appears when recent SGPA is added to the CGPA inputs?
+\item Which rules appear in a readable WEKA J48 tree, and how does that tree behave on the fixed test set?
+\end{enumerate}
+
+\subsection{Feature sets and targets}
+Three separate four-class tasks were prepared. Recent SGPA prediction uses 12 questionnaire variables: attendance, weekly study time, study style, topic clarity, sleep, stress, outside commitments, digital distraction, study environment, support, desired-department match, and routine manageability. The questionnaire-only CGPA task uses the same 12 inputs. The main CGPA task adds recent SGPA as a thirteenth input. The ordered classes are C0, C1, C2, and C3.
+
+All descriptive summaries use 1,108 cleaned records. Every model uses 1,102 records after excluding six rows whose recent SGPA had previously been imputed using the CGPA class. University, department, semester, source form, identifiers, and result satisfaction are excluded from all three feature sets.
+
+\subsection{Two WEKA evaluation views}
+The model comparison uses stratified 10-fold cross-validation on all 1,102 eligible records with seed 1. J48, Random Forest, SMO, Logistic, Naive Bayes, and ZeroR are run on each of the three tasks under the same evaluation protocol.
+
+The explanatory tree view uses the existing CGPA-stratified split with seed 42: 881 training rows and 221 test rows. The identical row indices are reused for all three targets. WEKA J48 uses confidence factor 0.25 and minimum leaf size 40 so that its exact tree is readable. The setting was specified for explanation rather than selected from test accuracy. ZeroR is fitted on the training rows and evaluated on the same test rows.
+
+\begin{figure}[H]\centering
+\begin{tikzpicture}[node distance=7mm, every node/.style={font=\small,align=center}, b/.style={draw=navy,rounded corners,fill=soft,minimum width=34mm,minimum height=14mm}, a/.style={-{Latex[length=2.5mm]},thick,draw=blue}]
+\node[b] (eligible) {1,102 eligible\\student rows};
+\node[b,above right=8mm and 16mm of eligible,fill=blue!12] (cv) {10-fold CV, seed 1\\six WEKA classifiers};
+\node[b,right=18mm of cv] (compare) {Compare three targets\\against ZeroR};
+\node[b,below right=8mm and 16mm of eligible,fill=orange!12] (split) {Fixed split, seed 42\\881 train / 221 test};
+\node[b,right=18mm of split] (tree) {J48: -C 0.25 -M 40\\tree and confusion matrix};
+\draw[a] (eligible)--(cv);\draw[a] (cv)--(compare);
+\draw[a] (eligible)--(split);\draw[a] (split)--(tree);
+\end{tikzpicture}
+\caption{The WEKA model comparison and explanatory J48 evaluation use separately labelled protocols.}
+\label{fig:evaluation-flow}
+\end{figure}
+
+\subsection{Preprocessing boundary}
+The raw-to-clean verification was re-executed before the final WEKA run and reproduced every modelling column used in the ARFF files. Questionnaire missing-value modes, however, were calculated in the historical cleaning pipeline before cross-validation and before the fixed split. This can transfer limited distribution information across folds. The reported scores are therefore exploratory course-project estimates rather than deployment estimates.
+
+\begin{table}[H]\centering
+\caption{Final WEKA prediction tasks.}\label{tab:tree-tasks}
+\begin{tabularx}{\textwidth}{p{0.27\textwidth}p{0.32\textwidth}Y}\toprule
+Prediction target&Inputs&Purpose\\\midrule
+Recent SGPA&12 questionnaire answers&Test the predictive signal for recent academic performance\\
+CGPA questionnaire-only&12 questionnaire answers&Measure how far survey responses alone rise above the CGPA baseline\\
+Main CGPA&12 answers plus recent SGPA&Measure the strongest available CGPA task and inspect its readable rules\\\bottomrule
+\end{tabularx}
+\end{table}

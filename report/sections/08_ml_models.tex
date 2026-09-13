@@ -1,0 +1,20 @@
+\section{Models and evaluation}
+\subsection{Models}
+The final comparison uses six WEKA 3.8.7 classifiers \cite{weka2009}. J48 supplies a readable decision tree. Random Forest supplies a non-linear ensemble benchmark. SMO supplies the course-tool support-vector-machine implementation. Logistic Regression gives a linear classifier, Naive Bayes gives a probabilistic comparison, and ZeroR predicts only the majority class.
+
+The 10-fold J48 run uses confidence factor 0.25 and WEKA's default minimum leaf size of 2. Random Forest uses 100 trees and seed 1. The explanatory fixed-split J48 uses confidence factor 0.25 and minimum leaf size 40. This larger leaf size keeps the exact WEKA tree readable. The cross-validation J48 and the fixed-split J48 answer different questions and are reported separately.
+
+\subsection{Metrics}
+\begin{table}[H]\centering
+\caption{Evaluation measures and interpretation.}\label{tab:metrics}
+\begin{tabularx}{\textwidth}{p{0.24\textwidth}Y}\toprule
+Measure&Role\\\midrule
+Exact accuracy&Primary fraction of students assigned to the correct group\\
+Weighted F1&Frequency-weighted class performance reported by WEKA\\
+Cohen's kappa&Agreement after accounting for chance\\
+Confusion matrix&Counts for every actual and predicted group\\
+Absolute class distance&Ordinal error magnitude: 0 exact, 1 adjacent, 2 or 3 farther away\\\bottomrule
+\end{tabularx}
+\end{table}
+
+The majority baseline depends on the target and evaluation subset. In 10-fold cross-validation, ZeroR reaches 26.86\% for recent SGPA and 29.04\% for both CGPA tasks. On the 221-row fixed test set, ZeroR reaches 27.15\% for recent SGPA and 28.96\% for both CGPA tasks. Scores close to those values require cautious interpretation.

@@ -1,0 +1,858 @@
+{
+  "stats": {
+    "attendance": {
+      "label": "Class attendance",
+      "options": [
+        "Less than 40%",
+        "40-59%",
+        "60-74%",
+        "75-89%",
+        "90% or more"
+      ],
+      "counts": [
+        10,
+        23,
+        276,
+        381,
+        418
+      ],
+      "mix": [
+        [
+          3,
+          2,
+          2,
+          3
+        ],
+        [
+          6,
+          7,
+          6,
+          4
+        ],
+        [
+          68,
+          81,
+          79,
+          48
+        ],
+        [
+          81,
+          120,
+          97,
+          83
+        ],
+        [
+          78,
+          111,
+          119,
+          110
+        ]
+      ]
+    },
+    "weekly_study_time": {
+      "label": "Self-study per week",
+      "options": [
+        "Less than 3 hrs",
+        "3-6 hrs",
+        "7-10 hrs",
+        "11-15 hrs",
+        "More than 15 hrs"
+      ],
+      "counts": [
+        235,
+        281,
+        251,
+        185,
+        156
+      ],
+      "mix": [
+        [
+          56,
+          66,
+          68,
+          45
+        ],
+        [
+          72,
+          81,
+          76,
+          52
+        ],
+        [
+          41,
+          75,
+          75,
+          60
+        ],
+        [
+          34,
+          58,
+          44,
+          49
+        ],
+        [
+          33,
+          41,
+          40,
+          42
+        ]
+      ]
+    },
+    "study_style": {
+      "label": "Study style",
+      "options": [
+        "Occasionally when necessary",
+        "Mostly just before exams",
+        "Regularly but not every day",
+        "Mostly consistent routine",
+        "Consistent throughout the semester"
+      ],
+      "counts": [
+        267,
+        296,
+        257,
+        157,
+        131
+      ],
+      "mix": [
+        [
+          54,
+          63,
+          81,
+          69
+        ],
+        [
+          71,
+          95,
+          76,
+          54
+        ],
+        [
+          47,
+          89,
+          71,
+          50
+        ],
+        [
+          38,
+          42,
+          39,
+          38
+        ],
+        [
+          26,
+          32,
+          36,
+          37
+        ]
+      ]
+    },
+    "topic_clarity": {
+      "label": "Topic clear after class",
+      "options": [
+        "Almost nothing",
+        "A little",
+        "About half",
+        "Most of it",
+        "Almost everything"
+      ],
+      "counts": [
+        181,
+        265,
+        312,
+        217,
+        133
+      ],
+      "mix": [
+        [
+          43,
+          56,
+          45,
+          37
+        ],
+        [
+          62,
+          70,
+          70,
+          63
+        ],
+        [
+          60,
+          99,
+          91,
+          62
+        ],
+        [
+          38,
+          62,
+          69,
+          48
+        ],
+        [
+          33,
+          34,
+          28,
+          38
+        ]
+      ]
+    },
+    "stress_frequency": {
+      "label": "Stress blocked studying",
+      "options": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Often",
+        "Almost always"
+      ],
+      "counts": [
+        129,
+        236,
+        302,
+        249,
+        192
+      ],
+      "mix": [
+        [
+          31,
+          37,
+          32,
+          29
+        ],
+        [
+          54,
+          57,
+          80,
+          45
+        ],
+        [
+          51,
+          99,
+          74,
+          78
+        ],
+        [
+          50,
+          86,
+          57,
+          56
+        ],
+        [
+          50,
+          42,
+          60,
+          40
+        ]
+      ]
+    },
+    "sleep_duration": {
+      "label": "Sleep per night",
+      "options": [
+        "Less than 5 hrs",
+        "5-6 hrs",
+        "6-7 hrs",
+        "7-8 hrs",
+        "More than 8 hrs"
+      ],
+      "counts": [
+        181,
+        310,
+        286,
+        216,
+        115
+      ],
+      "mix": [
+        [
+          40,
+          64,
+          43,
+          34
+        ],
+        [
+          64,
+          81,
+          96,
+          69
+        ],
+        [
+          57,
+          92,
+          74,
+          63
+        ],
+        [
+          43,
+          62,
+          55,
+          56
+        ],
+        [
+          32,
+          22,
+          35,
+          26
+        ]
+      ]
+    },
+    "distraction_frequency": {
+      "label": "Phone / social media took study time",
+      "options": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Often",
+        "Almost every day"
+      ],
+      "counts": [
+        118,
+        162,
+        300,
+        292,
+        236
+      ],
+      "mix": [
+        [
+          27,
+          23,
+          36,
+          32
+        ],
+        [
+          36,
+          44,
+          51,
+          31
+        ],
+        [
+          55,
+          99,
+          83,
+          63
+        ],
+        [
+          59,
+          90,
+          77,
+          66
+        ],
+        [
+          59,
+          65,
+          56,
+          56
+        ]
+      ]
+    },
+    "weekly_responsibilities": {
+      "label": "Outside commitments (tuition/job/club)",
+      "options": [
+        "None",
+        "1-5 hrs",
+        "6-10 hrs",
+        "11-15 hrs",
+        "More than 15 hrs"
+      ],
+      "counts": [
+        274,
+        263,
+        232,
+        191,
+        148
+      ],
+      "mix": [
+        [
+          55,
+          67,
+          76,
+          76
+        ],
+        [
+          53,
+          72,
+          72,
+          66
+        ],
+        [
+          46,
+          79,
+          66,
+          41
+        ],
+        [
+          48,
+          55,
+          52,
+          36
+        ],
+        [
+          34,
+          48,
+          37,
+          29
+        ]
+      ]
+    },
+    "desired_department_match": {
+      "label": "Got desired department",
+      "options": [
+        "Not at all what I wanted",
+        "Mostly different",
+        "Somewhat different",
+        "Close to what I wanted",
+        "Yes, exactly what I wanted"
+      ],
+      "counts": [
+        144,
+        138,
+        174,
+        244,
+        408
+      ],
+      "mix": [
+        [
+          41,
+          44,
+          33,
+          26
+        ],
+        [
+          46,
+          33,
+          31,
+          28
+        ],
+        [
+          37,
+          58,
+          48,
+          31
+        ],
+        [
+          44,
+          69,
+          65,
+          66
+        ],
+        [
+          68,
+          117,
+          126,
+          97
+        ]
+      ]
+    },
+    "support_level": {
+      "label": "Family / friend support",
+      "options": [
+        "No support",
+        "Very little support",
+        "Some support",
+        "Good support",
+        "Strong support"
+      ],
+      "counts": [
+        150,
+        172,
+        271,
+        314,
+        201
+      ],
+      "mix": [
+        [
+          37,
+          39,
+          39,
+          35
+        ],
+        [
+          49,
+          43,
+          42,
+          38
+        ],
+        [
+          51,
+          101,
+          69,
+          50
+        ],
+        [
+          55,
+          86,
+          96,
+          77
+        ],
+        [
+          44,
+          52,
+          57,
+          48
+        ]
+      ]
+    },
+    "study_environment": {
+      "label": "Study-friendly living place",
+      "options": [
+        "Very distracting",
+        "Somewhat distracting",
+        "Neither good nor bad",
+        "Mostly suitable",
+        "Excellent for focused study"
+      ],
+      "counts": [
+        153,
+        185,
+        266,
+        341,
+        163
+      ],
+      "mix": [
+        [
+          46,
+          36,
+          35,
+          36
+        ],
+        [
+          39,
+          57,
+          44,
+          45
+        ],
+        [
+          48,
+          87,
+          76,
+          55
+        ],
+        [
+          57,
+          98,
+          112,
+          74
+        ],
+        [
+          46,
+          43,
+          36,
+          38
+        ]
+      ]
+    },
+    "routine_manageability": {
+      "label": "Semester routine manageable",
+      "options": [
+        "Completely unmanageable",
+        "Difficult to manage",
+        "Average",
+        "Mostly manageable",
+        "Very healthy and balanced"
+      ],
+      "counts": [
+        165,
+        263,
+        332,
+        233,
+        115
+      ],
+      "mix": [
+        [
+          45,
+          45,
+          52,
+          23
+        ],
+        [
+          56,
+          79,
+          51,
+          77
+        ],
+        [
+          60,
+          106,
+          100,
+          66
+        ],
+        [
+          46,
+          63,
+          70,
+          54
+        ],
+        [
+          29,
+          28,
+          30,
+          28
+        ]
+      ]
+    },
+    "recent_sgpa": {
+      "label": "Recent semester SGPA",
+      "options": [
+        "below 3.20",
+        "3.20-3.49",
+        "3.50-3.74",
+        "3.75+"
+      ],
+      "counts": [
+        236,
+        297,
+        286,
+        289
+      ],
+      "mix": [
+        [
+          102,
+          49,
+          44,
+          41
+        ],
+        [
+          59,
+          147,
+          59,
+          32
+        ],
+        [
+          33,
+          75,
+          134,
+          44
+        ],
+        [
+          42,
+          50,
+          66,
+          131
+        ]
+      ]
+    }
+  },
+  "relations": [
+    {
+      "feature": "attendance",
+      "label": "Class attendance",
+      "cgpa": 0.08795830555095527,
+      "sgpa": 0.08462468332984549
+    },
+    {
+      "feature": "weekly_study_time",
+      "label": "Self-study per week",
+      "cgpa": 0.06773313241804717,
+      "sgpa": 0.02605741775912196
+    },
+    {
+      "feature": "study_style",
+      "label": "Study style",
+      "cgpa": -0.005424320951321819,
+      "sgpa": 0.03429667099159232
+    },
+    {
+      "feature": "topic_clarity",
+      "label": "Topic clear after class",
+      "cgpa": 0.037967999691137205,
+      "sgpa": -0.022222513054268495
+    },
+    {
+      "feature": "stress_frequency",
+      "label": "Stress blocked studying",
+      "cgpa": -0.005456409459170289,
+      "sgpa": -0.003664408133976616
+    },
+    {
+      "feature": "sleep_duration",
+      "label": "Sleep per night",
+      "cgpa": 0.0298502701881661,
+      "sgpa": -0.0008379200189679298
+    },
+    {
+      "feature": "distraction_frequency",
+      "label": "Phone / social media took study time",
+      "cgpa": -0.026541475568822644,
+      "sgpa": 0.007597542024692544
+    },
+    {
+      "feature": "weekly_responsibilities",
+      "label": "Outside commitments (tuition/job/club)",
+      "cgpa": -0.08652726735856286,
+      "sgpa": -0.03946295901525713
+    },
+    {
+      "feature": "desired_department_match",
+      "label": "Got desired department",
+      "cgpa": 0.11659798368712176,
+      "sgpa": 0.09624096239748714
+    },
+    {
+      "feature": "support_level",
+      "label": "Family / friend support",
+      "cgpa": 0.05420974429688086,
+      "sgpa": 0.03207561331833292
+    },
+    {
+      "feature": "study_environment",
+      "label": "Study-friendly living place",
+      "cgpa": 0.017936679001123775,
+      "sgpa": 0.044884331231825635
+    },
+    {
+      "feature": "routine_manageability",
+      "label": "Semester routine manageable",
+      "cgpa": 0.03911792230956405,
+      "sgpa": 0.055108984978417756
+    }
+  ],
+  "classes": [
+    "C0",
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "ranges": [
+    "< 3.20",
+    "3.20-3.49",
+    "3.50-3.74",
+    ">= 3.75"
+  ],
+  "cgpa_counts": [
+    236,
+    321,
+    303,
+    248
+  ],
+  "sgpa_counts": [
+    236,
+    297,
+    286,
+    289
+  ],
+  "universities": {
+    "KUET": 878,
+    "BUET": 104,
+    "BRAC": 101,
+    "CUET": 25
+  },
+  "features": [
+    "attendance",
+    "weekly_study_time",
+    "study_style",
+    "topic_clarity",
+    "stress_frequency",
+    "sleep_duration",
+    "distraction_frequency",
+    "weekly_responsibilities",
+    "desired_department_match",
+    "support_level",
+    "study_environment",
+    "routine_manageability"
+  ],
+  "options": {
+    "admission_satisfaction": [
+      "Very dissatisfied",
+      "Dissatisfied",
+      "Neutral",
+      "Satisfied",
+      "Very satisfied"
+    ],
+    "desired_department_match": [
+      "Not at all what I wanted",
+      "Mostly different",
+      "Somewhat different",
+      "Close to what I wanted",
+      "Yes, exactly what I wanted"
+    ],
+    "result_satisfaction": [
+      "Very dissatisfied",
+      "Dissatisfied",
+      "Neutral",
+      "Satisfied",
+      "Very satisfied"
+    ],
+    "attendance": [
+      "Less than 40%",
+      "40-59%",
+      "60-74%",
+      "75-89%",
+      "90% or more"
+    ],
+    "weekly_study_time": [
+      "Less than 3 hrs",
+      "3-6 hrs",
+      "7-10 hrs",
+      "11-15 hrs",
+      "More than 15 hrs"
+    ],
+    "study_style": [
+      "Occasionally when necessary",
+      "Mostly just before exams",
+      "Regularly but not every day",
+      "Mostly consistent routine",
+      "Consistent throughout the semester"
+    ],
+    "topic_clarity": [
+      "Almost nothing",
+      "A little",
+      "About half",
+      "Most of it",
+      "Almost everything"
+    ],
+    "sleep_duration": [
+      "Less than 5 hrs",
+      "5-6 hrs",
+      "6-7 hrs",
+      "7-8 hrs",
+      "More than 8 hrs"
+    ],
+    "stress_frequency": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Almost always"
+    ],
+    "weekly_responsibilities": [
+      "None",
+      "1-5 hrs",
+      "6-10 hrs",
+      "11-15 hrs",
+      "More than 15 hrs"
+    ],
+    "distraction_frequency": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Almost every day"
+    ],
+    "study_environment": [
+      "Very distracting",
+      "Somewhat distracting",
+      "Neither good nor bad",
+      "Mostly suitable",
+      "Excellent for focused study"
+    ],
+    "support_level": [
+      "No support",
+      "Very little support",
+      "Some support",
+      "Good support",
+      "Strong support"
+    ],
+    "routine_manageability": [
+      "Completely unmanageable",
+      "Difficult to manage",
+      "Average",
+      "Mostly manageable",
+      "Very healthy and balanced"
+    ],
+    "career_expectation": [
+      "Not at all",
+      "Slightly",
+      "Somewhat",
+      "Mostly",
+      "Completely"
+    ]
+  }
+}

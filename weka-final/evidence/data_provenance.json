@@ -1,0 +1,30 @@
+{
+  "raw_sha256": {
+    "raw-data\\Student Performance Analysis Form (Responses) - Form Responses 1.csv": "61df50259af37038b8e095af5c4dfca6f12d0cfc391d378b7fc7c7c54cf3eab9",
+    "raw-data\\University Student Performance Analysis Form (Responses) - Form Responses 1.csv": "a3cffef3b43b2bcf6610a13b7f6fe2ff3a6d910ff6f0caa24ced1590a4688dbe"
+  },
+  "raw_to_clean_columns_verified": [
+    "attendance_code",
+    "weekly_study_time_code",
+    "study_style_code",
+    "topic_clarity_code",
+    "stress_frequency_code",
+    "sleep_duration_code",
+    "distraction_frequency_code",
+    "weekly_responsibilities_code",
+    "desired_department_match_code",
+    "support_level_code",
+    "study_environment_code",
+    "routine_manageability_code",
+    "recent_sgpa_code",
+    "target_code",
+    "recent_sgpa_imputed",
+    "university"
+  ],
+  "n_descriptive": 1108,
+  "n_model": 1102,
+  "train": 881,
+  "test": 221,
+  "split": "existing CGPA stratified split, seed 42, used for all three targets",
+  "preprocessing_limitation": "Questionnaire missing-value modes were fitted before evaluation; results remain exploratory."
+}

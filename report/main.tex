@@ -1,0 +1,137 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\usepackage[a4paper,left=25mm,right=25mm,top=24mm,bottom=25mm]{geometry}
+\usepackage{graphicx,booktabs,longtable,tabularx,array,multirow,caption,subcaption,float}
+\usepackage{enumitem,microtype,amsmath,xcolor,fancyhdr,setspace,tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{refs.bib}
+
+\definecolor{navy}{HTML}{173A63}
+\definecolor{blue}{HTML}{2F7ED8}
+\definecolor{orange}{HTML}{E9783A}
+\definecolor{soft}{HTML}{F2F6FA}
+\definecolor{green}{HTML}{1F9D73}
+\setstretch{1.18}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist[itemize]{leftmargin=18pt,itemsep=3pt,topsep=3pt}
+\setlist[enumerate]{leftmargin=20pt,itemsep=3pt,topsep=3pt}
+\captionsetup{font=small,labelfont=bf}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small What Shapes Student CGPA?}
+\fancyhead[R]{\small CSE 4112 Machine Learning Laboratory}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\placeholder}[1]{\fcolorbox{orange}{orange!8}{\parbox{0.94\linewidth}{\textbf{TODO:} #1}}}
+\newcommand{\partbanner}[1]{\clearpage\thispagestyle{empty}\vspace*{0.28\textheight}\begin{center}\color{navy}\rule{0.75\linewidth}{1.2pt}\\[12pt]{\Huge\bfseries #1}\\[12pt]\rule{0.75\linewidth}{1.2pt}\end{center}\clearpage}
+
+\begin{document}
+\begin{titlepage}
+\centering
+\vspace*{16mm}
+{\color{navy}\rule{\textwidth}{1.5pt}}\\[12mm]
+{\Huge\bfseries What Shapes Student CGPA?\\[4mm]}
+{\LARGE An Engineering Student Academic Performance Dataset and Machine Learning Analysis}
+\\[11mm]
+{\Large CSE 4112: Machine Learning Laboratory}\\[4mm]
+{\large Department of Computer Science and Engineering\\Khulna University of Engineering \& Technology}
+\\[12mm]
+\begin{tabular}{rl}
+2107007 & Asif Jawad\\
+2107008 & Rakibul Islam\\
+2107012 & Md Enam E Elahi\\
+2107014 & Al Mubtasim Preom\\
+2107020 & Sheikh Md. Galib Mahim\\
+2107030 & Md. Eftakar Jaman Arfan
+\end{tabular}
+\\[12mm]
+\textbf{Submitted to}\\
+Dr. Muhammad Aminul Haque, Professor\\
+Nabil Faiyaz Sadi, Lecturer\\[8mm]
+Lab Group A1\\[3mm]
+14 September 2026
+\vfill
+{\color{navy}\rule{\textwidth}{1.5pt}}
+\end{titlepage}
+
+\pagenumbering{roman}
+\input{sections/00_abstract}
+\tableofcontents
+\listoffigures
+\listoftables
+\clearpage
+\pagenumbering{arabic}
+
+\partbanner{Part I: Data Article Section}
+\input{sections/01_specifications}
+\input{sections/02_value_of_data}
+\input{sections/03_background}
+\input{sections/04_data_description}
+\input{sections/05_data_methods}
+\input{sections/06_data_limitations}
+
+\partbanner{Part II: Machine Learning Analysis}
+\input{sections/07_ml_framework}
+\input{sections/08_ml_models}
+\input{sections/09_ml_results}
+\input{sections/10_discussion}
+\input{sections/11_conclusion}
+\input{sections/12_ethics_credit}
+
+\printbibliography[title={References}]
+\appendix
+\section{Questionnaire and data dictionary summary}
+The complete, bilingual questionnaire and detailed coding dictionary remain in the project package. Table~\ref{tab:dictionary} provides the modelling variables used in the teacher-facing experiments.
+\begin{longtable}{p{0.24\linewidth}p{0.23\linewidth}p{0.16\linewidth}p{0.27\linewidth}}
+\caption{Teacher-facing modelling data dictionary.}\label{tab:dictionary}\\
+\toprule Feature & Meaning & Type & Missing-value treatment\\\midrule\endfirsthead
+\toprule Feature & Meaning & Type & Missing-value treatment\\\midrule\endhead
+attendance & Class attendance band & Ordinal & Modal response within source when blank\\
+weekly\_study\_time & Self-study hours per week & Ordinal & Modal response within source when blank\\
+study\_style & Regularity of study & Ordinal & Harmonised label, then within-source fill\\
+topic\_clarity & Topic clarity after class & Ordinal & Within-source fill\\
+sleep\_duration & Sleep on a normal night & Ordinal & Within-source fill\\
+stress\_frequency & Stress blocking study & Ordinal & Within-source fill\\
+weekly\_responsibilities & Tuition, job, club hours & Ordinal & Blank mapped to None when supported by form evidence\\
+distraction\_frequency & Digital distraction & Ordinal & Within-source fill\\
+study\_environment & Suitability of living place & Ordinal & Within-source fill\\
+support\_level & Family or friend support & Ordinal & Within-source fill\\
+desired\_department\_match & Match with preferred department & Ordinal & Within-source fill\\
+routine\_manageability & Semester routine management & Ordinal & Within-source fill\\
+recent\_sgpa & Most recent SGPA group & Ordinal band & Six affected rows excluded from tree experiments\\
+cgpa & Cumulative CGPA group & Ordered target & Records without usable target removed\\
+\bottomrule
+\end{longtable}
+
+\section{Full model result tables}
+\begin{table}[H]\centering\small
+\caption{Final WEKA 10-fold cross-validation accuracy on 1,102 eligible students, seed 1.}\label{tab:weka-full}
+\begin{tabular}{lrrr}\toprule
+Model&Recent SGPA&Questionnaire CGPA&Main CGPA\\\midrule
+J48&30.13&26.68&38.29\\
+Random Forest&29.76&29.40&43.92\\
+SMO&25.95&27.86&37.11\\
+Logistic&24.95&29.58&36.84\\
+Naive Bayes&26.68&30.04&38.11\\
+ZeroR&26.86&29.04&29.04\\\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Reproducibility checklist}
+\begin{itemize}
+\item Current merged pipeline: \path{notebooks/02_merged_cleaning_eda_modeling.ipynb} and \path{notebooks/pipeline_v2_source.py}.
+\item Teacher-facing analysis: \code{notebooks/03\_teacher\_focused\_analysis.ipynb}.
+\item Descriptive snapshot: 1,108 records. All model experiments: 1,102 records after excluding six target-conditioned SGPA imputations.
+\item Final WEKA evidence: nine ARFF files, 18 cross-validation logs, three fixed-split J48 logs, serialized models, exact trees, and audit files under \path{weka-final/evidence/}.
+\item Model comparison: stratified 10-fold cross-validation with seed 1. Explanatory J48: the existing CGPA-stratified 881/221 split with seed 42, reused for all targets.
+\item Cross-validation J48 uses \code{-C 0.25 -M 2}; explanatory J48 uses \code{-C 0.25 -M 40}.
+\item Run the scripts in \path{weka-final/scripts/} to rebuild and audit the final evidence package.
+\end{itemize}
+
+\end{document}

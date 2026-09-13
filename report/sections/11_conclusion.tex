@@ -1,0 +1,8 @@
+\section{Conclusion}
+\textbf{Dataset.} Two related Google Forms were harmonised into a documented dataset of 1,108 engineering students from four universities. The workflow preserves raw files, mappings, cleaned tables, figures, ARFF datasets, and audit logs.
+
+\textbf{Data understanding.} The survey responses vary across all answer options. Desired-department match, attendance, and outside commitments show the clearest corrected CGPA associations, but the effect sizes remain small.
+
+\textbf{WEKA analysis.} Every final model experiment uses the same 1,102 eligible records. Questionnaire-only prediction is weak: the best 10-fold result reaches 30.04\% against a 29.04\% CGPA baseline. For the main CGPA task, Random Forest reaches 43.92\% in 10-fold validation. The readable fixed-split J48 tree reaches 49.77\% on 221 test students and relies first on recent SGPA. The exact WEKA trees, models, logs, and confusion matrices are included with the project.
+
+The findings describe associations and predictive patterns in the collected survey data. They do not establish causal effects, and the stated sampling and preprocessing limitations remain part of every result.
