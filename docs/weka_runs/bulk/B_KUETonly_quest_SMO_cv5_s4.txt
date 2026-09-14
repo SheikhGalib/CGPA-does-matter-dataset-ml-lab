@@ -1,0 +1,37 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.functions.SMO -t <repo>\cleaned-dataset\ours\anomaly\_work\sub_KUETonly_quest.arff -x 5 -s 4 -o -v
+
+
+Time taken to perform cross-validation: 1.04 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         253               29.0138 %
+Incorrectly Classified Instances       619               70.9862 %
+Kappa statistic                          0.0146
+Mean absolute error                      0.3606
+Root mean squared error                  0.455 
+Relative absolute error                 96.8373 %
+Root relative squared error            105.4459 %
+Total Number of Instances              872     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.065    0.051    0.255      0.065    0.104      0.026    0.551     0.236     C0
+                 0.564    0.540    0.306      0.564    0.397      0.022    0.511     0.302     C1
+                 0.339    0.333    0.277      0.339    0.305      0.005    0.509     0.277     C2
+                 0.074    0.062    0.250      0.074    0.114      0.020    0.551     0.241     C3
+Weighted Avg.    0.290    0.276    0.275      0.290    0.248      0.018    0.528     0.268     
+
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+  12 105  55  12 |   a = C0
+  13 146  86  14 |   b = C1
+   9 133  81  16 |   c = C2
+  13  93  70  14 |   d = C3
+

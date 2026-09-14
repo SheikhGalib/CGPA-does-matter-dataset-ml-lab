@@ -1,0 +1,37 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.rules.OneR -B 6 -t <repo>\cleaned-dataset\ours\final\_work_questionnaire_cgpa.arff -x 5 -s 1 -o -v
+
+
+Time taken to perform cross-validation: 0.72 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         311               33.8043 %
+Incorrectly Classified Instances       609               66.1957 %
+Kappa statistic                          0.0583
+Mean absolute error                      0.331 
+Root mean squared error                  0.5753
+Relative absolute error                 89.3773 %
+Root relative squared error            133.7032 %
+Total Number of Instances              920     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.033    0.042    0.162      0.033    0.055      -0.018   0.495     0.197     C0
+                 0.701    0.596    0.344      0.701    0.462      0.100    0.552     0.334     C1
+                 0.402    0.303    0.348      0.402    0.373      0.094    0.549     0.311     C2
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.207     C3
+Weighted Avg.    0.338    0.279    ?          0.338    ?          ?        0.529     0.274     
+
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+   6 106  70   0 |   a = C0
+  10 199  75   0 |   b = C1
+  15 143 106   0 |   c = C2
+   6 130  54   0 |   d = C3
+

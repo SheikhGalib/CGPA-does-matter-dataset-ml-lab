@@ -1,0 +1,36 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 -t <repo>\cleaned-dataset\ours\anomaly\main_cgpa_1102.arff -split-percentage 80 -s 10 -o -v
+
+
+Time taken to test model on test split: 0.05 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances          89               40.4545 %
+Incorrectly Classified Instances       131               59.5455 %
+Kappa statistic                          0.1956
+Mean absolute error                      0.3298
+Root mean squared error                  0.417 
+Relative absolute error                 88.5995 %
+Root relative squared error             96.8126 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.366    0.168    0.333      0.366    0.349      0.191    0.626     0.300     C0
+                 0.441    0.237    0.455      0.441    0.448      0.206    0.651     0.524     C1
+                 0.413    0.261    0.388      0.413    0.400      0.149    0.623     0.452     C2
+                 0.375    0.140    0.429      0.375    0.400      0.247    0.691     0.482     C3
+Weighted Avg.    0.405    0.210    0.407      0.405    0.405      0.196    0.647     0.452     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 15 13  8  5 |  a = C0
+ 11 30 21  6 |  b = C1
+ 11 13 26 13 |  c = C2
+  8 10 12 18 |  d = C3
+

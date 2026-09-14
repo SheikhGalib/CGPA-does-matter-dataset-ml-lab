@@ -1,0 +1,36 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -t <repo>\cleaned-dataset\ours\anomaly\questionnaire_cgpa_1102.arff -split-percentage 70 -s 1 -o -v
+
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances          90               27.1903 %
+Incorrectly Classified Instances       241               72.8097 %
+Kappa statistic                          0.0132
+Mean absolute error                      0.3714
+Root mean squared error                  0.4348
+Relative absolute error                 99.4368 %
+Root relative squared error            100.4516 %
+Total Number of Instances              331     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.091    0.113    0.167      0.091    0.118      -0.029   0.549     0.228     C0
+                 0.533    0.465    0.300      0.533    0.384      0.061    0.544     0.290     C1
+                 0.264    0.263    0.276      0.264    0.270      0.001    0.499     0.306     C2
+                 0.143    0.146    0.250      0.143    0.182      -0.004   0.512     0.288     C3
+Weighted Avg.    0.272    0.258    0.254      0.272    0.248      0.010    0.524     0.282     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+  6 36 16  8 |  a = C0
+  9 48 21 12 |  b = C1
+  7 44 24 16 |  c = C2
+ 14 32 26 12 |  d = C3
+

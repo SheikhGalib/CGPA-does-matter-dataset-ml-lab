@@ -1,0 +1,36 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.bayes.NaiveBayes -t <repo>\cleaned-dataset\ours\anomaly\split_all_train80.arff -T <repo>\cleaned-dataset\ours\anomaly\split_all_test20.arff -o -v
+
+
+Time taken to test model on test data: 0.01 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances         110               49.7738 %
+Incorrectly Classified Instances       111               50.2262 %
+Kappa statistic                          0.3295
+Mean absolute error                      0.3337
+Root mean squared error                  0.4084
+Relative absolute error                 89.4572 %
+Root relative squared error             94.566  %
+Total Number of Instances              221     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.532    0.138    0.510      0.532    0.521      0.388    0.759     0.507     C0
+                 0.438    0.178    0.500      0.438    0.467      0.270    0.608     0.462     C1
+                 0.483    0.174    0.509      0.483    0.496      0.315    0.663     0.499     C2
+                 0.560    0.181    0.475      0.560    0.514      0.358    0.748     0.422     C3
+Weighted Avg.    0.498    0.169    0.499      0.498    0.497      0.327    0.687     0.473     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 25  8  5  9 |  a = C0
+ 11 28 14 11 |  b = C1
+  7 13 29 11 |  c = C2
+  6  7  9 28 |  d = C3
+

@@ -1,0 +1,56 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 80 -t <repo>\cleaned-dataset\ours\anomaly\main_cgpa_1102.arff -x 10 -s 1 -v
+
+
+Options: -C 0.25 -M 80 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+recent_sgpa_band = C0: C0 (236.0/134.0)
+recent_sgpa_band = C1: C1 (296.0/150.0)
+recent_sgpa_band = C2: C2 (283.0/152.0)
+recent_sgpa_band = C3: C3 (287.0/158.0)
+
+Number of Leaves  : 	4
+
+Size of the tree : 	5
+
+
+Time taken to build model: 0.2 seconds
+
+Time taken to perform cross-validation: 0.11 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         503               45.6443 %
+Incorrectly Classified Instances       599               54.3557 %
+Kappa statistic                          0.273 
+Mean absolute error                      0.3433
+Root mean squared error                  0.4152
+Relative absolute error                 92.0381 %
+Root relative squared error             96.1614 %
+Total Number of Instances             1102     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.432    0.155    0.432      0.432    0.432      0.277    0.652     0.331     C0
+                 0.456    0.201    0.482      0.456    0.469      0.260    0.632     0.398     C1
+                 0.437    0.190    0.463      0.437    0.449      0.252    0.615     0.363     C2
+                 0.504    0.182    0.443      0.504    0.471      0.308    0.666     0.345     C3
+Weighted Avg.    0.456    0.184    0.457      0.456    0.456      0.272    0.639     0.362     
+
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+ 102  60  33  41 |   a = C0
+  49 146  75  50 |   b = C1
+  44  60 131  65 |   c = C2
+  41  37  44 124 |   d = C3
+

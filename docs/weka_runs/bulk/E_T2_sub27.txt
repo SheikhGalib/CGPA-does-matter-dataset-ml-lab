@@ -1,0 +1,75 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T2_sub27_train.arff -T <repo>\cleaned-dataset\ours\anomaly\_work\tree_T2_sub27_test.arff -v
+
+
+Options: -C 0.25 -M 40 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+desired_department_match <= 1
+|   sleep_duration <= 0: C1 (44.0/22.0)
+|   sleep_duration > 0
+|   |   weekly_study_time <= 2
+|   |   |   weekly_study_time <= 1
+|   |   |   |   distraction_frequency <= 2: C2 (49.0/31.0)
+|   |   |   |   distraction_frequency > 2: C0 (41.0/20.0)
+|   |   |   weekly_study_time > 1: C1 (40.0/23.0)
+|   |   weekly_study_time > 2: C0 (53.0/34.0)
+desired_department_match > 1
+|   distraction_frequency <= 0: C2 (55.0/38.0)
+|   distraction_frequency > 0
+|   |   study_environment <= 1
+|   |   |   weekly_responsibilities <= 1: C3 (74.0/48.0)
+|   |   |   weekly_responsibilities > 1
+|   |   |   |   weekly_study_time <= 1: C2 (40.0/25.0)
+|   |   |   |   weekly_study_time > 1: C1 (40.0/21.0)
+|   |   study_environment > 1
+|   |   |   distraction_frequency <= 1: C2 (55.0/30.0)
+|   |   |   distraction_frequency > 1
+|   |   |   |   attendance <= 3: C1 (228.0/141.0)
+|   |   |   |   attendance > 3
+|   |   |   |   |   stress_frequency <= 2: C2 (104.0/68.0)
+|   |   |   |   |   stress_frequency > 2: C1 (59.0/40.0)
+
+Number of Leaves  : 	13
+
+Size of the tree : 	25
+
+
+Time taken to build model: 0.67 seconds
+
+Time taken to test model on test data: 0 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances          65               29.5455 %
+Incorrectly Classified Instances       155               70.4545 %
+Kappa statistic                          0.0451
+Mean absolute error                      0.368 
+Root mean squared error                  0.4372
+Relative absolute error                 98.5019 %
+Root relative squared error            101.0114 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.229    0.099    0.393      0.229    0.289      0.162    0.579     0.288     C0
+                 0.508    0.439    0.317      0.508    0.390      0.062    0.534     0.311     C1
+                 0.273    0.327    0.217      0.273    0.242      -0.051   0.528     0.274     C2
+                 0.130    0.090    0.318      0.130    0.184      0.056    0.513     0.267     C3
+Weighted Avg.    0.295    0.251    0.309      0.295    0.281      0.054    0.537     0.286     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 11 20 11  6 |  a = C0
+  7 32 21  3 |  b = C1
+  4 30 15  6 |  c = C2
+  6 19 22  7 |  d = C3
+

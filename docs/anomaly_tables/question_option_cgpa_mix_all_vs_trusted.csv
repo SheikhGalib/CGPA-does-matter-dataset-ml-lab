@@ -1,0 +1,121 @@
+question,data,option_code,option,n,C0 %,C1 %,C2 %,C3 %
+desired_department_match,all,0,Not at all what I wanted,144,28.5,30.6,22.9,18.1
+desired_department_match,all,1,Mostly different,138,33.3,23.9,22.5,20.3
+desired_department_match,all,2,Somewhat different,174,21.3,33.3,27.6,17.8
+desired_department_match,all,3,Close to what I wanted,243,18.1,28.4,26.3,27.2
+desired_department_match,all,4,"Yes, exactly what I wanted",403,16.9,28.8,30.8,23.6
+desired_department_match,trusted,0,Not at all what I wanted,62,22.6,40.3,24.2,12.9
+desired_department_match,trusted,1,Mostly different,51,43.1,21.6,15.7,19.6
+desired_department_match,trusted,2,Somewhat different,81,22.2,43.2,21.0,13.6
+desired_department_match,trusted,3,Close to what I wanted,148,17.6,27.0,30.4,25.0
+desired_department_match,trusted,4,"Yes, exactly what I wanted",305,14.8,30.2,30.8,24.3
+attendance,all,0,Less than 40%,10,30.0,20.0,20.0,30.0
+attendance,all,1,40-59%,23,26.1,30.4,26.1,17.4
+attendance,all,2,60-74%,276,24.6,29.3,28.6,17.4
+attendance,all,3,75-89%,379,21.4,31.7,25.1,21.9
+attendance,all,4,90% or more,414,18.8,26.6,28.5,26.1
+attendance,trusted,0,Less than 40%,1,0.0,0.0,100.0,0.0
+attendance,trusted,1,40-59%,11,27.3,36.4,18.2,18.2
+attendance,trusted,2,60-74%,142,23.2,34.5,26.1,16.2
+attendance,trusted,3,75-89%,234,20.1,34.2,29.1,16.7
+attendance,trusted,4,90% or more,259,16.2,27.0,27.4,29.3
+weekly_study_time,all,0,Less than 3 hrs,235,23.8,28.1,28.9,19.1
+weekly_study_time,all,1,3-6 hrs,278,25.9,28.8,27.0,18.3
+weekly_study_time,all,2,7-10 hrs,250,16.4,30.0,29.6,24.0
+weekly_study_time,all,3,11-15 hrs,185,18.4,31.4,23.8,26.5
+weekly_study_time,all,4,More than 15 hrs,154,21.4,26.6,25.3,26.6
+weekly_study_time,trusted,0,Less than 3 hrs,135,23.0,29.6,30.4,17.0
+weekly_study_time,trusted,1,3-6 hrs,171,26.3,31.0,24.6,18.1
+weekly_study_time,trusted,2,7-10 hrs,166,14.5,34.3,26.5,24.7
+weekly_study_time,trusted,3,11-15 hrs,91,14.3,38.5,28.6,18.7
+weekly_study_time,trusted,4,More than 15 hrs,84,14.3,21.4,31.0,33.3
+study_style,all,0,Occasionally when necessary,267,20.2,23.6,30.3,25.8
+study_style,all,1,Mostly just before exams,293,24.2,32.1,25.3,18.4
+study_style,all,2,Regularly but not every day,256,18.4,34.8,27.3,19.5
+study_style,all,3,Mostly consistent routine,156,24.4,26.9,25.0,23.7
+study_style,all,4,Consistent throughout the semester,130,20.0,24.6,27.7,27.7
+study_style,trusted,0,Occasionally when necessary,157,20.4,25.5,26.1,28.0
+study_style,trusted,1,Mostly just before exams,204,25.5,35.3,23.5,15.7
+study_style,trusted,2,Regularly but not every day,172,13.4,37.8,29.7,19.2
+study_style,trusted,3,Mostly consistent routine,71,18.3,26.8,35.2,19.7
+study_style,trusted,4,Consistent throughout the semester,43,11.6,16.3,32.6,39.5
+topic_clarity,all,0,Almost nothing,180,23.9,31.1,24.4,20.6
+topic_clarity,all,1,A little,265,23.4,26.4,26.4,23.8
+topic_clarity,all,2,About half,309,19.4,31.7,29.1,19.7
+topic_clarity,all,3,Most of it,215,17.7,28.8,31.6,21.9
+topic_clarity,all,4,Almost everything,133,24.8,25.6,21.1,28.6
+topic_clarity,trusted,0,Almost nothing,99,25.3,31.3,26.3,17.2
+topic_clarity,trusted,1,A little,160,22.5,31.9,22.5,23.1
+topic_clarity,trusted,2,About half,199,14.1,38.7,28.6,18.6
+topic_clarity,trusted,3,Most of it,140,16.4,25.7,34.3,23.6
+topic_clarity,trusted,4,Almost everything,49,26.5,16.3,24.5,32.7
+sleep_duration,all,0,Less than 5 hrs,180,22.2,35.6,23.3,18.9
+sleep_duration,all,1,5-6 hrs,307,20.8,26.4,30.6,22.1
+sleep_duration,all,2,6-7 hrs,285,20.0,32.3,26.0,21.8
+sleep_duration,all,3,7-8 hrs,215,20.0,28.4,25.6,26.0
+sleep_duration,all,4,More than 8 hrs,115,27.8,19.1,30.4,22.6
+sleep_duration,trusted,0,Less than 5 hrs,96,19.8,36.5,26.0,17.7
+sleep_duration,trusted,1,5-6 hrs,196,17.3,29.1,32.1,21.4
+sleep_duration,trusted,2,6-7 hrs,204,16.7,37.3,26.5,19.6
+sleep_duration,trusted,3,7-8 hrs,119,21.8,26.1,22.7,29.4
+sleep_duration,trusted,4,More than 8 hrs,32,37.5,12.5,31.2,18.8
+stress_frequency,all,0,Never,129,24.0,28.7,24.8,22.5
+stress_frequency,all,1,Rarely,236,22.9,24.2,33.9,19.1
+stress_frequency,all,2,Sometimes,299,17.1,33.1,24.4,25.4
+stress_frequency,all,3,Often,247,20.2,34.4,22.7,22.7
+stress_frequency,all,4,Almost always,191,26.2,22.0,30.9,20.9
+stress_frequency,trusted,0,Never,42,9.5,38.1,21.4,31.0
+stress_frequency,trusted,1,Rarely,132,18.2,27.3,39.4,15.2
+stress_frequency,trusted,2,Sometimes,203,16.3,34.5,25.1,24.1
+stress_frequency,trusted,3,Often,171,19.9,35.1,21.6,23.4
+stress_frequency,trusted,4,Almost always,99,30.3,21.2,30.3,18.2
+weekly_responsibilities,all,0,None,271,20.3,24.4,27.7,27.7
+weekly_responsibilities,all,1,1-5 hrs,263,20.2,27.4,27.4,25.1
+weekly_responsibilities,all,2,6-10 hrs,230,20.0,34.3,27.8,17.8
+weekly_responsibilities,all,3,11-15 hrs,190,25.3,28.9,27.4,18.4
+weekly_responsibilities,all,4,More than 15 hrs,148,23.0,32.4,25.0,19.6
+weekly_responsibilities,trusted,0,None,174,17.2,27.0,28.7,27.0
+weekly_responsibilities,trusted,1,1-5 hrs,174,19.5,28.7,24.1,27.6
+weekly_responsibilities,trusted,2,6-10 hrs,136,16.9,41.2,29.4,12.5
+weekly_responsibilities,trusted,3,11-15 hrs,96,21.9,30.2,29.2,18.8
+weekly_responsibilities,trusted,4,More than 15 hrs,67,25.4,31.3,28.4,14.9
+distraction_frequency,all,0,Never,118,22.9,19.5,30.5,27.1
+distraction_frequency,all,1,Rarely,162,22.2,27.2,31.5,19.1
+distraction_frequency,all,2,Sometimes,296,18.6,33.1,27.7,20.6
+distraction_frequency,all,3,Often,291,20.3,30.9,26.1,22.7
+distraction_frequency,all,4,Almost every day,235,25.1,27.7,23.4,23.8
+distraction_frequency,trusted,0,Never,37,27.0,13.5,32.4,27.0
+distraction_frequency,trusted,1,Rarely,81,22.2,22.2,34.6,21.0
+distraction_frequency,trusted,2,Sometimes,198,14.6,39.4,28.8,17.2
+distraction_frequency,trusted,3,Often,183,19.1,32.8,24.6,23.5
+distraction_frequency,trusted,4,Almost every day,148,22.3,28.4,25.0,24.3
+study_environment,all,0,Very distracting,153,30.1,23.5,22.9,23.5
+study_environment,all,1,Somewhat distracting,185,21.1,30.8,23.8,24.3
+study_environment,all,2,Neither good nor bad,260,18.5,33.1,28.1,20.4
+study_environment,all,3,Mostly suitable,341,16.7,28.7,32.8,21.7
+study_environment,all,4,Excellent for focused study,163,28.2,26.4,22.1,23.3
+study_environment,trusted,0,Very distracting,44,43.2,22.7,15.9,18.2
+study_environment,trusted,1,Somewhat distracting,98,20.4,32.7,23.5,23.5
+study_environment,trusted,2,Neither good nor bad,174,16.7,37.9,28.2,17.2
+study_environment,trusted,3,Mostly suitable,245,13.9,30.2,33.9,22.0
+study_environment,trusted,4,Excellent for focused study,86,26.7,24.4,19.8,29.1
+support_level,all,0,No support,150,24.7,26.0,26.0,23.3
+support_level,all,1,Very little support,172,28.5,25.0,24.4,22.1
+support_level,all,2,Some support,269,19.0,37.5,25.3,18.2
+support_level,all,3,Good support,312,17.6,27.6,30.4,24.4
+support_level,all,4,Strong support,199,22.1,25.6,28.1,24.1
+support_level,trusted,0,No support,62,24.2,25.8,33.9,16.1
+support_level,trusted,1,Very little support,77,28.6,29.9,22.1,19.5
+support_level,trusted,2,Some support,176,17.6,42.6,22.2,17.6
+support_level,trusted,3,Good support,227,13.7,29.5,31.7,25.1
+support_level,trusted,4,Strong support,105,24.8,21.0,28.6,25.7
+routine_manageability,all,0,Completely unmanageable,164,27.4,27.4,31.1,14.0
+routine_manageability,all,1,Difficult to manage,263,21.3,30.0,19.4,29.3
+routine_manageability,all,2,Average,328,18.3,32.0,29.9,19.8
+routine_manageability,all,3,Mostly manageable,232,19.8,27.2,30.2,22.8
+routine_manageability,all,4,Very healthy and balanced,115,25.2,24.3,26.1,24.3
+routine_manageability,trusted,0,Completely unmanageable,71,29.6,26.8,28.2,15.5
+routine_manageability,trusted,1,Difficult to manage,172,25.0,30.2,19.8,25.0
+routine_manageability,trusted,2,Average,237,15.2,35.4,30.8,18.6
+routine_manageability,trusted,3,Mostly manageable,136,14.0,27.9,34.6,23.5
+routine_manageability,trusted,4,Very healthy and balanced,31,19.4,32.3,16.1,32.3

@@ -1,0 +1,4 @@
+tree,J48 10-fold acc,ZeroR,shuffled-label mean,shuffled 95th pct,permutation p,most common root,distinct roots,resample test acc (mean ± sd),"leaves, -M 40","leaves, default -M 2"
+T1: behaviour -> SGPA,0.28039927404718695,0.26860254083484575,0.2526260793048452,0.276950998185118,0.05,topic_clarity (13/30),7,0.270 ± 0.028,15,272
+T2: behaviour -> CGPA,0.26497277676951,0.29038112522686027,0.26548607673834534,0.29038112522686027,0.52,desired_department_match (19/30),6,0.278 ± 0.029,13,265
+T3: behaviour + SGPA -> CGPA,0.43284936479128855,0.29038112522686027,0.2647161267850923,0.28774954627949184,0.01,recent_sgpa_band (30/30),1,0.438 ± 0.030,7,242

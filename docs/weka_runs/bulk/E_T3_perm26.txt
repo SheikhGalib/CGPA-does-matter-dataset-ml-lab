@@ -1,0 +1,37 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T3_perm26.arff -x 10 -s 1 -o -v
+
+
+Time taken to perform cross-validation: 1.09 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         266               24.1379 %
+Incorrectly Classified Instances       836               75.8621 %
+Kappa statistic                         -0.0373
+Mean absolute error                      0.3767
+Root mean squared error                  0.4425
+Relative absolute error                101.0066 %
+Root relative squared error            102.4705 %
+Total Number of Instances             1102     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.055    0.087    0.148      0.055    0.080      -0.048   0.441     0.191     C0
+                 0.419    0.476    0.265      0.419    0.324      -0.052   0.465     0.270     C1
+                 0.293    0.319    0.256      0.293    0.273      -0.025   0.454     0.254     C2
+                 0.126    0.155    0.189      0.126    0.151      -0.034   0.477     0.215     C3
+Weighted Avg.    0.241    0.278    0.220      0.241    0.220      -0.040   0.459     0.236     
+
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+  13 122  69  32 |   a = C0
+  28 134 105  53 |   b = C1
+  25 139  88  48 |   c = C2
+  22 111  82  31 |   d = C3
+

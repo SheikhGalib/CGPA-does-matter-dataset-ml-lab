@@ -1,0 +1,37 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.lazy.IBk -K 25 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -D -R first-last"" -t <repo>\cleaned-dataset\ours\anomaly\_work\weight_sgpa_4.arff -x 10 -s 1 -o -v
+
+
+Time taken to perform cross-validation: 0.76 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         512               46.461  %
+Incorrectly Classified Instances       590               53.539  %
+Kappa statistic                          0.2811
+Mean absolute error                      0.3152
+Root mean squared error                  0.4132
+Relative absolute error                 84.5065 %
+Root relative squared error             95.6859 %
+Total Number of Instances             1102     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.407    0.137    0.447      0.407    0.426      0.279    0.698     0.426     C0
+                 0.506    0.252    0.451      0.506    0.477      0.246    0.663     0.496     C1
+                 0.417    0.180    0.465      0.417    0.439      0.246    0.660     0.436     C2
+                 0.524    0.152    0.498      0.524    0.511      0.366    0.737     0.501     C3
+Weighted Avg.    0.465    0.185    0.464      0.465    0.463      0.280    0.686     0.466     
+
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+  96  73  33  34 |   a = C0
+  48 162  74  36 |   b = C1
+  39  76 125  60 |   c = C2
+  32  48  37 129 |   d = C3
+

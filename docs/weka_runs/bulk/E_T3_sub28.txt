@@ -1,0 +1,59 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T3_sub28_train.arff -T <repo>\cleaned-dataset\ours\anomaly\_work\tree_T3_sub28_test.arff -v
+
+
+Options: -C 0.25 -M 40 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+recent_sgpa_band = C0: C0 (195.0/109.0)
+recent_sgpa_band = C1: C1 (237.0/120.0)
+recent_sgpa_band = C2: C2 (222.0/112.0)
+recent_sgpa_band = C3
+|   desired_department_match <= 2
+|   |   study_style <= 1: C2 (40.0/27.0)
+|   |   study_style > 1: C1 (45.0/30.0)
+|   desired_department_match > 2: C3 (143.0/58.0)
+
+Number of Leaves  : 	6
+
+Size of the tree : 	9
+
+
+Time taken to build model: 0.39 seconds
+
+Time taken to test model on test data: 0.01 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances          85               38.6364 %
+Incorrectly Classified Instances       135               61.3636 %
+Kappa statistic                          0.1739
+Mean absolute error                      0.3496
+Root mean squared error                  0.4307
+Relative absolute error                 93.6645 %
+Root relative squared error             99.6393 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.308    0.149    0.390      0.308    0.344      0.173    0.579     0.307     C0
+                 0.451    0.248    0.464      0.451    0.457      0.204    0.649     0.430     C1
+                 0.423    0.268    0.328      0.423    0.370      0.143    0.585     0.292     C2
+                 0.333    0.160    0.349      0.333    0.341      0.176    0.637     0.287     C3
+Weighted Avg.    0.386    0.211    0.391      0.386    0.386      0.177    0.615     0.339     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 16 16  8 12 |  a = C0
+  9 32 23  7 |  b = C1
+  8 13 22  9 |  c = C2
+  8  8 14 15 |  d = C3
+

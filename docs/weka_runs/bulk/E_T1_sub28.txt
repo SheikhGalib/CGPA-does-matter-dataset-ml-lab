@@ -1,0 +1,77 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T1_sub28_train.arff -T <repo>\cleaned-dataset\ours\anomaly\_work\tree_T1_sub28_test.arff -v
+
+
+Options: -C 0.25 -M 40 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+support_level <= 2
+|   desired_department_match <= 0: C1 (76.0/47.0)
+|   desired_department_match > 0
+|   |   support_level <= 0
+|   |   |   weekly_responsibilities <= 1: C0 (40.0/23.0)
+|   |   |   weekly_responsibilities > 1: C3 (52.0/29.0)
+|   |   support_level > 0
+|   |   |   desired_department_match <= 3
+|   |   |   |   desired_department_match <= 1: C3 (44.0/27.0)
+|   |   |   |   desired_department_match > 1: C1 (127.0/81.0)
+|   |   |   desired_department_match > 3
+|   |   |   |   routine_manageability <= 1: C1 (61.0/38.0)
+|   |   |   |   routine_manageability > 1: C3 (65.0/38.0)
+support_level > 2
+|   attendance <= 3
+|   |   support_level <= 3
+|   |   |   study_style <= 2: C1 (113.0/71.0)
+|   |   |   study_style > 2: C3 (40.0/27.0)
+|   |   support_level > 3
+|   |   |   weekly_study_time <= 1: C0 (57.0/36.0)
+|   |   |   weekly_study_time > 1: C2 (45.0/28.0)
+|   attendance > 3
+|   |   desired_department_match <= 3
+|   |   |   study_environment <= 2: C1 (43.0/28.0)
+|   |   |   study_environment > 2: C3 (50.0/32.0)
+|   |   desired_department_match > 3: C2 (69.0/40.0)
+
+Number of Leaves  : 	14
+
+Size of the tree : 	27
+
+
+Time taken to build model: 0.39 seconds
+
+Time taken to test model on test data: 0.01 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances          60               27.2727 %
+Incorrectly Classified Instances       160               72.7273 %
+Kappa statistic                          0.0166
+Mean absolute error                      0.3708
+Root mean squared error                  0.44  
+Relative absolute error                 99.1991 %
+Root relative squared error            101.862  %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.146    0.101    0.250      0.146    0.185      0.057    0.512     0.202     C0
+                 0.559    0.491    0.295      0.559    0.386      0.061    0.527     0.283     C1
+                 0.115    0.132    0.250      0.115    0.157      -0.023   0.517     0.298     C2
+                 0.237    0.261    0.250      0.237    0.243      -0.024   0.513     0.273     C3
+Weighted Avg.    0.273    0.257    0.262      0.273    0.247      0.014    0.518     0.269     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+  6 18  7 10 |  a = C0
+  3 33  6 17 |  b = C1
+  5 34  7 15 |  c = C2
+ 10 27  8 14 |  d = C3
+

@@ -1,0 +1,69 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T2_sub06_train.arff -T <repo>\cleaned-dataset\ours\anomaly\_work\tree_T2_sub06_test.arff -v
+
+
+Options: -C 0.25 -M 40 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+desired_department_match <= 2
+|   routine_manageability <= 0: C0 (70.0/46.0)
+|   routine_manageability > 0
+|   |   routine_manageability <= 3: C1 (245.0/159.0)
+|   |   routine_manageability > 3: C3 (45.0/31.0)
+desired_department_match > 2
+|   stress_frequency <= 1: C2 (154.0/96.0)
+|   stress_frequency > 1
+|   |   attendance <= 3
+|   |   |   study_environment <= 1: C3 (66.0/46.0)
+|   |   |   study_environment > 1
+|   |   |   |   support_level <= 1: C2 (42.0/29.0)
+|   |   |   |   support_level > 1
+|   |   |   |   |   support_level <= 2: C1 (51.0/26.0)
+|   |   |   |   |   support_level > 2: C2 (76.0/48.0)
+|   |   attendance > 3
+|   |   |   weekly_responsibilities <= 1: C3 (75.0/40.0)
+|   |   |   weekly_responsibilities > 1: C2 (58.0/39.0)
+
+Number of Leaves  : 	10
+
+Size of the tree : 	19
+
+
+Time taken to build model: 0.49 seconds
+
+Time taken to test model on test data: 0.01 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances          72               32.7273 %
+Incorrectly Classified Instances       148               67.2727 %
+Kappa statistic                          0.0786
+Mean absolute error                      0.3646
+Root mean squared error                  0.4302
+Relative absolute error                 97.8951 %
+Root relative squared error             99.8093 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.182    0.063    0.421      0.182    0.254      0.170    0.629     0.286     C0
+                 0.412    0.362    0.337      0.412    0.371      0.048    0.520     0.336     C1
+                 0.393    0.314    0.324      0.393    0.356      0.075    0.537     0.309     C2
+                 0.255    0.185    0.273      0.255    0.264      0.072    0.560     0.266     C3
+Weighted Avg.    0.327    0.251    0.337      0.327    0.320      0.085    0.555     0.304     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+  8 16 12  8 |  a = C0
+  3 28 21 16 |  b = C1
+  6 23 24  8 |  c = C2
+  2 16 17 12 |  d = C3
+

@@ -1,0 +1,36 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.functions.SMO -t <repo>\cleaned-dataset\ours\anomaly\main_cgpa_1102.arff -split-percentage 80 -s 9 -o -v
+
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances         102               46.3636 %
+Incorrectly Classified Instances       118               53.6364 %
+Kappa statistic                          0.2844
+Mean absolute error                      0.3341
+Root mean squared error                  0.4258
+Relative absolute error                 89.1763 %
+Root relative squared error             98.0479 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.538    0.167    0.500      0.538    0.519      0.363    0.702     0.398     C0
+                 0.314    0.160    0.372      0.314    0.340      0.164    0.606     0.292     C1
+                 0.415    0.187    0.482      0.415    0.446      0.239    0.618     0.389     C2
+                 0.596    0.202    0.477      0.596    0.530      0.367    0.695     0.387     C3
+Weighted Avg.    0.464    0.180    0.460      0.464    0.459      0.281    0.653     0.368     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 28  8  6 10 |  a = C0
+ 10 16 15 10 |  b = C1
+ 11 13 27 14 |  c = C2
+  7  6  8 31 |  d = C3
+

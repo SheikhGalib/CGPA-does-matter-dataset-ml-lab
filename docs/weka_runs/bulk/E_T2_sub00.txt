@@ -1,0 +1,71 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T2_sub00_train.arff -T <repo>\cleaned-dataset\ours\anomaly\_work\tree_T2_sub00_test.arff -v
+
+
+Options: -C 0.25 -M 40 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+routine_manageability <= 0: C2 (131.0/85.0)
+routine_manageability > 0
+|   stress_frequency <= 3
+|   |   topic_clarity <= 3
+|   |   |   distraction_frequency <= 1: C2 (115.0/70.0)
+|   |   |   distraction_frequency > 1
+|   |   |   |   weekly_responsibilities <= 1
+|   |   |   |   |   study_style <= 2
+|   |   |   |   |   |   attendance <= 3: C1 (104.0/66.0)
+|   |   |   |   |   |   attendance > 3: C3 (81.0/48.0)
+|   |   |   |   |   study_style > 2: C3 (43.0/24.0)
+|   |   |   |   weekly_responsibilities > 1
+|   |   |   |   |   desired_department_match <= 2: C1 (86.0/45.0)
+|   |   |   |   |   desired_department_match > 2
+|   |   |   |   |   |   weekly_study_time <= 2: C1 (84.0/57.0)
+|   |   |   |   |   |   weekly_study_time > 2: C2 (40.0/20.0)
+|   |   topic_clarity > 3: C3 (75.0/48.0)
+|   stress_frequency > 3
+|   |   desired_department_match <= 2: C0 (51.0/33.0)
+|   |   desired_department_match > 2: C3 (72.0/49.0)
+
+Number of Leaves  : 	11
+
+Size of the tree : 	21
+
+
+Time taken to build model: 0.51 seconds
+
+Time taken to test model on test data: 0.04 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances          57               25.9091 %
+Incorrectly Classified Instances       163               74.0909 %
+Kappa statistic                          0.0184
+Mean absolute error                      0.3718
+Root mean squared error                  0.4418
+Relative absolute error                 99.516  %
+Root relative squared error            102.0879 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.054    0.061    0.231      0.054    0.087      -0.014   0.549     0.271     C0
+                 0.254    0.229    0.327      0.254    0.286      0.027    0.552     0.338     C1
+                 0.333    0.434    0.200      0.333    0.250      -0.088   0.428     0.220     C2
+                 0.442    0.260    0.292      0.442    0.352      0.158    0.565     0.254     C3
+Weighted Avg.    0.259    0.242    0.265      0.259    0.239      0.014    0.524     0.275     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+  3 15 25 13 |  a = C0
+  4 17 33 13 |  b = C1
+  3 13 18 20 |  c = C2
+  3  7 14 19 |  d = C3
+

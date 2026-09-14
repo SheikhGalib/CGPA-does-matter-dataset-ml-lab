@@ -1,0 +1,36 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.rules.ZeroR -t <repo>\cleaned-dataset\ours\anomaly\main_cgpa_1102.arff -split-percentage 70 -s 1 -o -v
+
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances          90               27.1903 %
+Incorrectly Classified Instances       241               72.8097 %
+Kappa statistic                          0     
+Mean absolute error                      0.3735
+Root mean squared error                  0.4328
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              331     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.199     C0
+                 1.000    1.000    0.272      1.000    0.428      ?        0.500     0.272     C1
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.275     C2
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.254     C3
+Weighted Avg.    0.272    0.272    ?          0.272    ?          ?        0.500     0.254     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+  0 66  0  0 |  a = C0
+  0 90  0  0 |  b = C1
+  0 91  0  0 |  c = C2
+  0 84  0  0 |  d = C3
+

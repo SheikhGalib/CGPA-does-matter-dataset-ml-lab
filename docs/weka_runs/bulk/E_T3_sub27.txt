@@ -1,0 +1,57 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T3_sub27_train.arff -T <repo>\cleaned-dataset\ours\anomaly\_work\tree_T3_sub27_test.arff -v
+
+
+Options: -C 0.25 -M 40 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+recent_sgpa_band = C0: C0 (185.0/106.0)
+recent_sgpa_band = C1: C1 (235.0/116.0)
+recent_sgpa_band = C2: C2 (233.0/126.0)
+recent_sgpa_band = C3
+|   desired_department_match <= 2: C1 (76.0/51.0)
+|   desired_department_match > 2: C3 (153.0/73.0)
+
+Number of Leaves  : 	5
+
+Size of the tree : 	7
+
+
+Time taken to build model: 0.48 seconds
+
+Time taken to test model on test data: 0 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances          99               45      %
+Incorrectly Classified Instances       121               55      %
+Kappa statistic                          0.2606
+Mean absolute error                      0.3417
+Root mean squared error                  0.4145
+Relative absolute error                 91.4661 %
+Root relative squared error             95.7823 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.479    0.163    0.451      0.479    0.465      0.310    0.683     0.356     C0
+                 0.508    0.344    0.372      0.508    0.430      0.152    0.619     0.374     C1
+                 0.436    0.158    0.480      0.436    0.457      0.288    0.598     0.360     C2
+                 0.370    0.078    0.606      0.370    0.460      0.352    0.700     0.447     C3
+Weighted Avg.    0.450    0.193    0.474      0.450    0.452      0.269    0.648     0.385     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 23 16  5  4 |  a = C0
+ 13 32 13  5 |  b = C1
+  8 19 24  4 |  c = C2
+  7 19  8 20 |  d = C3
+

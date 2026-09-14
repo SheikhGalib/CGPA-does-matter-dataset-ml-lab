@@ -1,0 +1,427 @@
+
+Options: -C 0.25 -M 2 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+recent_sgpa_band = C0
+|   topic_clarity <= 3
+|   |   stress_frequency <= 0
+|   |   |   weekly_study_time <= 0: C1 (3.0/1.0)
+|   |   |   weekly_study_time > 0
+|   |   |   |   desired_department_match <= 2
+|   |   |   |   |   weekly_responsibilities <= 1: C0 (6.0/1.0)
+|   |   |   |   |   weekly_responsibilities > 1: C3 (4.0/2.0)
+|   |   |   |   desired_department_match > 2
+|   |   |   |   |   distraction_frequency <= 3: C1 (3.0)
+|   |   |   |   |   distraction_frequency > 3: C0 (3.0/1.0)
+|   |   stress_frequency > 0
+|   |   |   study_style <= 3
+|   |   |   |   weekly_study_time <= 1
+|   |   |   |   |   topic_clarity <= 0
+|   |   |   |   |   |   stress_frequency <= 2: C1 (7.0/1.0)
+|   |   |   |   |   |   stress_frequency > 2: C0 (8.0/1.0)
+|   |   |   |   |   topic_clarity > 0: C0 (58.0/11.0)
+|   |   |   |   weekly_study_time > 1
+|   |   |   |   |   study_style <= 2
+|   |   |   |   |   |   weekly_responsibilities <= 3
+|   |   |   |   |   |   |   routine_manageability <= 0: C0 (8.0/1.0)
+|   |   |   |   |   |   |   routine_manageability > 0
+|   |   |   |   |   |   |   |   weekly_responsibilities <= 0: C1 (5.0/1.0)
+|   |   |   |   |   |   |   |   weekly_responsibilities > 0
+|   |   |   |   |   |   |   |   |   study_environment <= 2: C0 (9.0)
+|   |   |   |   |   |   |   |   |   study_environment > 2
+|   |   |   |   |   |   |   |   |   |   support_level <= 2
+|   |   |   |   |   |   |   |   |   |   |   distraction_frequency <= 2: C1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   distraction_frequency > 2: C0 (3.0)
+|   |   |   |   |   |   |   |   |   |   support_level > 2: C1 (3.0)
+|   |   |   |   |   |   weekly_responsibilities > 3: C0 (7.0/2.0)
+|   |   |   |   |   study_style > 2
+|   |   |   |   |   |   routine_manageability <= 3
+|   |   |   |   |   |   |   topic_clarity <= 0: C2 (2.0)
+|   |   |   |   |   |   |   topic_clarity > 0: C0 (6.0/1.0)
+|   |   |   |   |   |   routine_manageability > 3: C1 (2.0)
+|   |   |   study_style > 3: C1 (4.0/1.0)
+|   topic_clarity > 3
+|   |   distraction_frequency <= 3
+|   |   |   attendance <= 2
+|   |   |   |   weekly_responsibilities <= 1: C2 (2.0)
+|   |   |   |   weekly_responsibilities > 1
+|   |   |   |   |   study_style <= 3: C1 (3.0)
+|   |   |   |   |   study_style > 3: C3 (2.0)
+|   |   |   attendance > 2
+|   |   |   |   weekly_study_time <= 2
+|   |   |   |   |   sleep_duration <= 0: C1 (2.0)
+|   |   |   |   |   sleep_duration > 0
+|   |   |   |   |   |   desired_department_match <= 1
+|   |   |   |   |   |   |   study_style <= 1: C0 (2.0)
+|   |   |   |   |   |   |   study_style > 1: C1 (2.0)
+|   |   |   |   |   |   desired_department_match > 1: C0 (5.0)
+|   |   |   |   weekly_study_time > 2
+|   |   |   |   |   weekly_responsibilities <= 1: C3 (3.0/1.0)
+|   |   |   |   |   weekly_responsibilities > 1: C1 (3.0)
+|   |   distraction_frequency > 3: C3 (3.0/1.0)
+recent_sgpa_band = C1
+|   routine_manageability <= 3
+|   |   study_style <= 0
+|   |   |   study_environment <= 0
+|   |   |   |   stress_frequency <= 2: C2 (3.0)
+|   |   |   |   stress_frequency > 2: C0 (3.0)
+|   |   |   study_environment > 0
+|   |   |   |   attendance <= 2
+|   |   |   |   |   attendance <= 1: C1 (2.0)
+|   |   |   |   |   attendance > 1
+|   |   |   |   |   |   study_environment <= 2
+|   |   |   |   |   |   |   weekly_study_time <= 0: C3 (2.0)
+|   |   |   |   |   |   |   weekly_study_time > 0: C0 (2.0/1.0)
+|   |   |   |   |   |   study_environment > 2
+|   |   |   |   |   |   |   sleep_duration <= 0: C0 (2.0)
+|   |   |   |   |   |   |   sleep_duration > 0
+|   |   |   |   |   |   |   |   topic_clarity <= 2: C2 (4.0/1.0)
+|   |   |   |   |   |   |   |   topic_clarity > 2: C0 (3.0/1.0)
+|   |   |   |   attendance > 2
+|   |   |   |   |   support_level <= 3
+|   |   |   |   |   |   weekly_study_time <= 2
+|   |   |   |   |   |   |   support_level <= 1
+|   |   |   |   |   |   |   |   weekly_responsibilities <= 1
+|   |   |   |   |   |   |   |   |   desired_department_match <= 1: C1 (2.0)
+|   |   |   |   |   |   |   |   |   desired_department_match > 1: C2 (2.0)
+|   |   |   |   |   |   |   |   weekly_responsibilities > 1: C2 (3.0)
+|   |   |   |   |   |   |   support_level > 1
+|   |   |   |   |   |   |   |   sleep_duration <= 2: C1 (15.0/1.0)
+|   |   |   |   |   |   |   |   sleep_duration > 2
+|   |   |   |   |   |   |   |   |   desired_department_match <= 3: C2 (3.0)
+|   |   |   |   |   |   |   |   |   desired_department_match > 3: C1 (2.0)
+|   |   |   |   |   |   weekly_study_time > 2: C2 (6.0/1.0)
+|   |   |   |   |   support_level > 3
+|   |   |   |   |   |   routine_manageability <= 1: C0 (3.0/1.0)
+|   |   |   |   |   |   routine_manageability > 1
+|   |   |   |   |   |   |   stress_frequency <= 2: C1 (2.0)
+|   |   |   |   |   |   |   stress_frequency > 2: C2 (3.0/1.0)
+|   |   study_style > 0
+|   |   |   desired_department_match <= 1
+|   |   |   |   support_level <= 3
+|   |   |   |   |   study_style <= 2
+|   |   |   |   |   |   desired_department_match <= 0
+|   |   |   |   |   |   |   topic_clarity <= 3: C1 (17.0/3.0)
+|   |   |   |   |   |   |   topic_clarity > 3
+|   |   |   |   |   |   |   |   weekly_study_time <= 3: C2 (2.0)
+|   |   |   |   |   |   |   |   weekly_study_time > 3: C0 (2.0/1.0)
+|   |   |   |   |   |   desired_department_match > 0
+|   |   |   |   |   |   |   weekly_study_time <= 3: C1 (5.0/2.0)
+|   |   |   |   |   |   |   weekly_study_time > 3: C0 (3.0/1.0)
+|   |   |   |   |   study_style > 2
+|   |   |   |   |   |   study_environment <= 2
+|   |   |   |   |   |   |   stress_frequency <= 0: C0 (2.0/1.0)
+|   |   |   |   |   |   |   stress_frequency > 0: C1 (4.0)
+|   |   |   |   |   |   study_environment > 2: C0 (4.0/1.0)
+|   |   |   |   support_level > 3: C0 (4.0)
+|   |   |   desired_department_match > 1
+|   |   |   |   stress_frequency <= 1
+|   |   |   |   |   routine_manageability <= 2
+|   |   |   |   |   |   routine_manageability <= 1
+|   |   |   |   |   |   |   desired_department_match <= 3
+|   |   |   |   |   |   |   |   study_environment <= 1: C2 (2.0)
+|   |   |   |   |   |   |   |   study_environment > 1: C1 (6.0/1.0)
+|   |   |   |   |   |   |   desired_department_match > 3: C1 (8.0)
+|   |   |   |   |   |   routine_manageability > 1
+|   |   |   |   |   |   |   study_style <= 1: C1 (2.0)
+|   |   |   |   |   |   |   study_style > 1
+|   |   |   |   |   |   |   |   study_environment <= 3: C2 (10.0/2.0)
+|   |   |   |   |   |   |   |   study_environment > 3: C1 (2.0)
+|   |   |   |   |   routine_manageability > 2
+|   |   |   |   |   |   desired_department_match <= 3: C0 (5.0/2.0)
+|   |   |   |   |   |   desired_department_match > 3: C1 (2.0)
+|   |   |   |   stress_frequency > 1
+|   |   |   |   |   study_style <= 2
+|   |   |   |   |   |   stress_frequency <= 3: C1 (68.0/16.0)
+|   |   |   |   |   |   stress_frequency > 3
+|   |   |   |   |   |   |   support_level <= 1: C1 (3.0)
+|   |   |   |   |   |   |   support_level > 1
+|   |   |   |   |   |   |   |   weekly_study_time <= 0: C0 (4.0)
+|   |   |   |   |   |   |   |   weekly_study_time > 0
+|   |   |   |   |   |   |   |   |   weekly_study_time <= 2: C2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   weekly_study_time > 2: C1 (3.0/1.0)
+|   |   |   |   |   study_style > 2
+|   |   |   |   |   |   topic_clarity <= 1
+|   |   |   |   |   |   |   weekly_responsibilities <= 1: C1 (6.0/1.0)
+|   |   |   |   |   |   |   weekly_responsibilities > 1: C2 (4.0)
+|   |   |   |   |   |   topic_clarity > 1: C1 (8.0/1.0)
+|   routine_manageability > 3
+|   |   support_level <= 0: C2 (3.0)
+|   |   support_level > 0
+|   |   |   distraction_frequency <= 1
+|   |   |   |   support_level <= 3: C0 (5.0/1.0)
+|   |   |   |   support_level > 3: C2 (4.0/1.0)
+|   |   |   distraction_frequency > 1
+|   |   |   |   stress_frequency <= 1
+|   |   |   |   |   weekly_study_time <= 0: C0 (2.0)
+|   |   |   |   |   weekly_study_time > 0: C2 (3.0/1.0)
+|   |   |   |   stress_frequency > 1
+|   |   |   |   |   weekly_responsibilities <= 1: C1 (7.0/1.0)
+|   |   |   |   |   weekly_responsibilities > 1: C0 (4.0)
+recent_sgpa_band = C2
+|   study_environment <= 0
+|   |   attendance <= 3
+|   |   |   weekly_study_time <= 3
+|   |   |   |   sleep_duration <= 2
+|   |   |   |   |   distraction_frequency <= 1
+|   |   |   |   |   |   attendance <= 2: C0 (3.0/1.0)
+|   |   |   |   |   |   attendance > 2: C2 (4.0)
+|   |   |   |   |   distraction_frequency > 1
+|   |   |   |   |   |   weekly_responsibilities <= 2: C2 (5.0/1.0)
+|   |   |   |   |   |   weekly_responsibilities > 2: C3 (3.0)
+|   |   |   |   sleep_duration > 2
+|   |   |   |   |   routine_manageability <= 1: C3 (3.0)
+|   |   |   |   |   routine_manageability > 1: C0 (2.0)
+|   |   |   weekly_study_time > 3: C1 (3.0/1.0)
+|   |   attendance > 3: C1 (3.0/1.0)
+|   study_environment > 0
+|   |   routine_manageability <= 3
+|   |   |   weekly_responsibilities <= 3
+|   |   |   |   stress_frequency <= 3
+|   |   |   |   |   topic_clarity <= 0
+|   |   |   |   |   |   desired_department_match <= 2
+|   |   |   |   |   |   |   support_level <= 0: C0 (2.0/1.0)
+|   |   |   |   |   |   |   support_level > 0: C1 (7.0/1.0)
+|   |   |   |   |   |   desired_department_match > 2: C2 (10.0/2.0)
+|   |   |   |   |   topic_clarity > 0
+|   |   |   |   |   |   topic_clarity <= 1
+|   |   |   |   |   |   |   stress_frequency <= 2
+|   |   |   |   |   |   |   |   routine_manageability <= 2
+|   |   |   |   |   |   |   |   |   attendance <= 3
+|   |   |   |   |   |   |   |   |   |   routine_manageability <= 1
+|   |   |   |   |   |   |   |   |   |   |   distraction_frequency <= 2: C2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   distraction_frequency > 2: C3 (2.0)
+|   |   |   |   |   |   |   |   |   |   routine_manageability > 1
+|   |   |   |   |   |   |   |   |   |   |   attendance <= 2: C3 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   attendance > 2: C1 (5.0/2.0)
+|   |   |   |   |   |   |   |   |   attendance > 3
+|   |   |   |   |   |   |   |   |   |   study_environment <= 1: C1 (2.0)
+|   |   |   |   |   |   |   |   |   |   study_environment > 1
+|   |   |   |   |   |   |   |   |   |   |   desired_department_match <= 3: C2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   desired_department_match > 3
+|   |   |   |   |   |   |   |   |   |   |   |   weekly_study_time <= 1: C2 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weekly_study_time > 1: C1 (2.0)
+|   |   |   |   |   |   |   |   routine_manageability > 2: C1 (5.0/2.0)
+|   |   |   |   |   |   |   stress_frequency > 2: C2 (11.0/2.0)
+|   |   |   |   |   |   topic_clarity > 1
+|   |   |   |   |   |   |   routine_manageability <= 0
+|   |   |   |   |   |   |   |   study_style <= 2: C2 (5.0/1.0)
+|   |   |   |   |   |   |   |   study_style > 2: C3 (2.0)
+|   |   |   |   |   |   |   routine_manageability > 0
+|   |   |   |   |   |   |   |   weekly_responsibilities <= 0
+|   |   |   |   |   |   |   |   |   distraction_frequency <= 1
+|   |   |   |   |   |   |   |   |   |   attendance <= 3: C3 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   attendance > 3: C2 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   distraction_frequency > 1
+|   |   |   |   |   |   |   |   |   |   routine_manageability <= 2: C2 (8.0)
+|   |   |   |   |   |   |   |   |   |   routine_manageability > 2
+|   |   |   |   |   |   |   |   |   |   |   weekly_study_time <= 1: C2 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   weekly_study_time > 1: C1 (2.0)
+|   |   |   |   |   |   |   |   weekly_responsibilities > 0
+|   |   |   |   |   |   |   |   |   study_environment <= 1
+|   |   |   |   |   |   |   |   |   |   desired_department_match <= 3: C1 (5.0)
+|   |   |   |   |   |   |   |   |   |   desired_department_match > 3
+|   |   |   |   |   |   |   |   |   |   |   weekly_responsibilities <= 2: C2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   weekly_responsibilities > 2: C1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   study_environment > 1
+|   |   |   |   |   |   |   |   |   |   stress_frequency <= 0: C2 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   stress_frequency > 0
+|   |   |   |   |   |   |   |   |   |   |   attendance <= 1: C1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   attendance > 1
+|   |   |   |   |   |   |   |   |   |   |   |   topic_clarity <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   routine_manageability <= 1: C1 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   routine_manageability > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   sleep_duration <= 0: C1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   sleep_duration > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weekly_study_time <= 0: C1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weekly_study_time > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   sleep_duration <= 1: C2 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   sleep_duration > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weekly_study_time <= 1: C2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weekly_study_time > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   attendance <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   desired_department_match <= 3: C2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   desired_department_match > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   routine_manageability <= 2: C1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   routine_manageability > 2: C2 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   attendance > 3: C1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   topic_clarity > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   attendance <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   attendance <= 2: C2 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   attendance > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   support_level <= 2: C1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   support_level > 2: C2 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   attendance > 3: C2 (12.0/1.0)
+|   |   |   |   stress_frequency > 3
+|   |   |   |   |   study_style <= 0
+|   |   |   |   |   |   distraction_frequency <= 2: C3 (2.0)
+|   |   |   |   |   |   distraction_frequency > 2: C2 (5.0/1.0)
+|   |   |   |   |   study_style > 0: C2 (19.0/2.0)
+|   |   |   weekly_responsibilities > 3
+|   |   |   |   desired_department_match <= 3
+|   |   |   |   |   desired_department_match <= 1: C1 (5.0/1.0)
+|   |   |   |   |   desired_department_match > 1
+|   |   |   |   |   |   weekly_study_time <= 1: C1 (5.0)
+|   |   |   |   |   |   weekly_study_time > 1: C3 (4.0/1.0)
+|   |   |   |   desired_department_match > 3
+|   |   |   |   |   study_environment <= 2: C2 (2.0/1.0)
+|   |   |   |   |   study_environment > 2
+|   |   |   |   |   |   sleep_duration <= 1: C2 (4.0)
+|   |   |   |   |   |   sleep_duration > 1: C1 (2.0)
+|   |   routine_manageability > 3
+|   |   |   topic_clarity <= 1
+|   |   |   |   support_level <= 2: C1 (2.0)
+|   |   |   |   support_level > 2
+|   |   |   |   |   topic_clarity <= 0: C3 (3.0)
+|   |   |   |   |   topic_clarity > 0
+|   |   |   |   |   |   sleep_duration <= 2: C1 (2.0)
+|   |   |   |   |   |   sleep_duration > 2: C3 (2.0)
+|   |   |   topic_clarity > 1
+|   |   |   |   distraction_frequency <= 1
+|   |   |   |   |   sleep_duration <= 3: C2 (5.0/1.0)
+|   |   |   |   |   sleep_duration > 3: C0 (2.0/1.0)
+|   |   |   |   distraction_frequency > 1: C3 (4.0/1.0)
+recent_sgpa_band = C3
+|   weekly_responsibilities <= 1
+|   |   study_environment <= 1
+|   |   |   attendance <= 1: C2 (2.0)
+|   |   |   attendance > 1
+|   |   |   |   study_style <= 3: C3 (24.0/4.0)
+|   |   |   |   study_style > 3: C0 (3.0/1.0)
+|   |   study_environment > 1
+|   |   |   stress_frequency <= 1
+|   |   |   |   stress_frequency <= 0: C3 (4.0/1.0)
+|   |   |   |   stress_frequency > 0
+|   |   |   |   |   support_level <= 1: C2 (3.0/1.0)
+|   |   |   |   |   support_level > 1
+|   |   |   |   |   |   routine_manageability <= 3
+|   |   |   |   |   |   |   weekly_responsibilities <= 0
+|   |   |   |   |   |   |   |   study_environment <= 2
+|   |   |   |   |   |   |   |   |   topic_clarity <= 2: C3 (4.0/2.0)
+|   |   |   |   |   |   |   |   |   topic_clarity > 2: C2 (2.0)
+|   |   |   |   |   |   |   |   study_environment > 2: C3 (2.0)
+|   |   |   |   |   |   |   weekly_responsibilities > 0: C2 (2.0)
+|   |   |   |   |   |   routine_manageability > 3: C3 (3.0)
+|   |   |   stress_frequency > 1
+|   |   |   |   routine_manageability <= 3
+|   |   |   |   |   routine_manageability <= 0
+|   |   |   |   |   |   stress_frequency <= 2: C2 (5.0/1.0)
+|   |   |   |   |   |   stress_frequency > 2: C3 (2.0)
+|   |   |   |   |   routine_manageability > 0: C3 (64.0/11.0)
+|   |   |   |   routine_manageability > 3: C2 (2.0)
+|   weekly_responsibilities > 1
+|   |   topic_clarity <= 3
+|   |   |   attendance <= 2
+|   |   |   |   study_environment <= 1
+|   |   |   |   |   weekly_responsibilities <= 2: C3 (3.0/1.0)
+|   |   |   |   |   weekly_responsibilities > 2: C2 (4.0/1.0)
+|   |   |   |   study_environment > 1: C2 (12.0/1.0)
+|   |   |   attendance > 2
+|   |   |   |   study_environment <= 3
+|   |   |   |   |   weekly_responsibilities <= 3
+|   |   |   |   |   |   sleep_duration <= 0: C1 (3.0/1.0)
+|   |   |   |   |   |   sleep_duration > 0
+|   |   |   |   |   |   |   study_environment <= 1
+|   |   |   |   |   |   |   |   attendance <= 3: C3 (7.0)
+|   |   |   |   |   |   |   |   attendance > 3
+|   |   |   |   |   |   |   |   |   support_level <= 1: C2 (2.0)
+|   |   |   |   |   |   |   |   |   support_level > 1: C3 (3.0)
+|   |   |   |   |   |   |   study_environment > 1
+|   |   |   |   |   |   |   |   weekly_study_time <= 3
+|   |   |   |   |   |   |   |   |   topic_clarity <= 0: C2 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   topic_clarity > 0: C3 (18.0/7.0)
+|   |   |   |   |   |   |   |   weekly_study_time > 3: C2 (3.0)
+|   |   |   |   |   weekly_responsibilities > 3
+|   |   |   |   |   |   study_style <= 1
+|   |   |   |   |   |   |   desired_department_match <= 1: C2 (2.0)
+|   |   |   |   |   |   |   desired_department_match > 1: C3 (7.0/2.0)
+|   |   |   |   |   |   study_style > 1: C0 (3.0/1.0)
+|   |   |   |   study_environment > 3
+|   |   |   |   |   support_level <= 3
+|   |   |   |   |   |   weekly_responsibilities <= 2: C2 (3.0/1.0)
+|   |   |   |   |   |   weekly_responsibilities > 2
+|   |   |   |   |   |   |   support_level <= 0: C2 (3.0/1.0)
+|   |   |   |   |   |   |   support_level > 0: C0 (3.0)
+|   |   |   |   |   support_level > 3
+|   |   |   |   |   |   stress_frequency <= 1: C3 (3.0)
+|   |   |   |   |   |   stress_frequency > 1: C1 (3.0/1.0)
+|   |   topic_clarity > 3
+|   |   |   study_style <= 3: C3 (7.0)
+|   |   |   study_style > 3: C2 (3.0/1.0)
+
+Number of Leaves  : 	175
+
+Size of the tree : 	347
+
+
+Time taken to build model: 0.16 seconds
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         773               84.0217 %
+Incorrectly Classified Instances       147               15.9783 %
+Kappa statistic                          0.7844
+Mean absolute error                      0.1215
+Root mean squared error                  0.2464
+Relative absolute error                 32.8029 %
+Root relative squared error             57.2754 %
+Total Number of Instances              920     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.813    0.045    0.818      0.813    0.815      0.770    0.967     0.866     C0
+                 0.849    0.071    0.843      0.849    0.846      0.776    0.959     0.905     C1
+                 0.837    0.052    0.867      0.837    0.852      0.794    0.964     0.911     C2
+                 0.858    0.048    0.823      0.858    0.840      0.798    0.976     0.894     C3
+Weighted Avg.    0.840    0.055    0.841      0.840    0.840      0.784    0.965     0.897     
+
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+ 148  24   6   4 |   a = C0
+  18 241  16   9 |   b = C1
+   7  14 221  22 |   c = C2
+   8   7  12 163 |   d = C3
+
+Time taken to perform cross-validation: 0.07 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         428               46.5217 %
+Incorrectly Classified Instances       492               53.4783 %
+Kappa statistic                          0.2806
+Mean absolute error                      0.2865
+Root mean squared error                  0.4758
+Relative absolute error                 77.3787 %
+Root relative squared error            110.587  %
+Total Number of Instances              920     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.462    0.138    0.452      0.462    0.457      0.321    0.699     0.338     C0
+                 0.426    0.241    0.442      0.426    0.434      0.187    0.590     0.386     C1
+                 0.428    0.201    0.461      0.428    0.444      0.232    0.612     0.372     C2
+                 0.579    0.144    0.512      0.579    0.543      0.416    0.734     0.386     C3
+Weighted Avg.    0.465    0.189    0.464      0.465    0.464      0.274    0.648     0.373     
+
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+  84  63  20  15 |   a = C0
+  67 121  66  30 |   b = C1
+  26  65 113  60 |   c = C2
+   9  25  46 110 |   d = C3
+

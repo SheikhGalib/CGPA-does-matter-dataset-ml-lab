@@ -1,0 +1,59 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T3_sub02_train.arff -T <repo>\cleaned-dataset\ours\anomaly\_work\tree_T3_sub02_test.arff -v
+
+
+Options: -C 0.25 -M 40 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+recent_sgpa_band = C0: C0 (180.0/104.0)
+recent_sgpa_band = C1: C1 (243.0/124.0)
+recent_sgpa_band = C2: C2 (230.0/122.0)
+recent_sgpa_band = C3
+|   weekly_responsibilities <= 1: C3 (112.0/41.0)
+|   weekly_responsibilities > 1
+|   |   desired_department_match <= 2: C1 (49.0/32.0)
+|   |   desired_department_match > 2: C3 (68.0/41.0)
+
+Number of Leaves  : 	6
+
+Size of the tree : 	9
+
+
+Time taken to build model: 0.56 seconds
+
+Time taken to test model on test data: 0 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances          99               45      %
+Incorrectly Classified Instances       121               55      %
+Kappa statistic                          0.2637
+Mean absolute error                      0.3398
+Root mean squared error                  0.4153
+Relative absolute error                 91.0503 %
+Root relative squared error             96.096  %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.510    0.178    0.464      0.510    0.486      0.322    0.690     0.380     C0
+                 0.492    0.217    0.477      0.492    0.484      0.273    0.672     0.422     C1
+                 0.383    0.188    0.434      0.383    0.407      0.204    0.617     0.365     C2
+                 0.413    0.155    0.413      0.413    0.413      0.258    0.656     0.353     C3
+Weighted Avg.    0.450    0.187    0.449      0.450    0.449      0.262    0.658     0.382     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 26 12  6  7 |  a = C0
+ 11 31 14  7 |  b = C1
+ 10 14 23 13 |  c = C2
+  9  8 10 19 |  d = C3
+

@@ -1,0 +1,37 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.bayes.NaiveBayes -t <repo>\cleaned-dataset\ours\anomaly\main_cgpa_1102.arff -x 5 -s 1 -o -v
+
+
+Time taken to perform cross-validation: 0.49 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         494               44.8276 %
+Incorrectly Classified Instances       608               55.1724 %
+Kappa statistic                          0.2619
+Mean absolute error                      0.3387
+Root mean squared error                  0.4167
+Relative absolute error                 90.8185 %
+Root relative squared error             96.5055 %
+Total Number of Instances             1102     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.394    0.176    0.380      0.394    0.387      0.216    0.693     0.337     C0
+                 0.478    0.207    0.486      0.478    0.482      0.272    0.658     0.475     C1
+                 0.420    0.183    0.462      0.420    0.440      0.244    0.625     0.377     C2
+                 0.496    0.172    0.454      0.496    0.474      0.314    0.678     0.417     C3
+Weighted Avg.    0.448    0.186    0.449      0.448    0.448      0.262    0.661     0.406     
+
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+  93  66  35  42 |   a = C0
+  54 153  67  46 |   b = C1
+  54  61 126  59 |   c = C2
+  44  35  45 122 |   d = C3
+

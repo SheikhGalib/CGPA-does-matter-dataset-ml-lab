@@ -1,0 +1,12 @@
+digraph J48Tree {
+N0 [label="recent_sgpa_band" ]
+N0->N1 [label="= C0"]
+N1 [label="C0 (171.0/69.0)" shape=box style=filled ]
+N0->N2 [label="= C1"]
+N2 [label="C1 (269.0/123.0)" shape=box style=filled ]
+N0->N3 [label="= C2"]
+N3 [label="C2 (261.0/130.0)" shape=box style=filled ]
+N0->N4 [label="= C3"]
+N4 [label="C3 (219.0/90.0)" shape=box style=filled ]
+}
+

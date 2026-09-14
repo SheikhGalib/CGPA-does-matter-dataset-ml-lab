@@ -1,0 +1,36 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.functions.SMO -t <repo>\cleaned-dataset\ours\anomaly\trusted_main_cgpa.arff -T <repo>\cleaned-dataset\ours\anomaly\burst_6_7_aug_main_cgpa.arff -o -v
+
+
+Time taken to test model on test data: 0.02 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances         113               24.8352 %
+Incorrectly Classified Instances       342               75.1648 %
+Kappa statistic                         -0.0009
+Mean absolute error                      0.3769
+Root mean squared error                  0.4734
+Relative absolute error                100.7526 %
+Root relative squared error            108.9411 %
+Total Number of Instances              455     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.252    0.262    0.237      0.252    0.245      -0.009   0.497     0.242     C0
+                 0.265    0.251    0.267      0.265    0.266      0.014    0.487     0.255     C1
+                 0.223    0.210    0.278      0.223    0.248      0.015    0.485     0.262     C2
+                 0.255    0.278    0.218      0.255    0.235      -0.022   0.491     0.229     C3
+Weighted Avg.    0.248    0.249    0.251      0.248    0.249      -0.000   0.490     0.248     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 28 29 22 32 |  a = C0
+ 25 31 25 36 |  b = C1
+ 36 29 27 29 |  c = C2
+ 29 27 23 27 |  d = C3
+

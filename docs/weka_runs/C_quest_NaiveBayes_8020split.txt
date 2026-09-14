@@ -1,0 +1,36 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.bayes.NaiveBayes -t <repo>\cleaned-dataset\ours\anomaly\questionnaire_cgpa_1102.arff -split-percentage 80 -s 1 -o -v
+
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances          67               30.4545 %
+Incorrectly Classified Instances       153               69.5455 %
+Kappa statistic                          0.0699
+Mean absolute error                      0.3681
+Root mean squared error                  0.434 
+Relative absolute error                 98.4066 %
+Root relative squared error            100.1121 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.277    0.185    0.289      0.277    0.283      0.093    0.610     0.310     C0
+                 0.491    0.387    0.308      0.491    0.378      0.093    0.578     0.326     C1
+                 0.305    0.261    0.300      0.305    0.303      0.044    0.544     0.339     C2
+                 0.140    0.098    0.333      0.140    0.198      0.059    0.516     0.336     C3
+Weighted Avg.    0.305    0.235    0.308      0.305    0.291      0.071    0.560     0.329     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 13 21 10  3 |  a = C0
+  8 28 16  5 |  b = C1
+ 10 23 18  8 |  c = C2
+ 14 19 16  8 |  d = C3
+

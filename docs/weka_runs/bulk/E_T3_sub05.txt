@@ -1,0 +1,61 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T3_sub05_train.arff -T <repo>\cleaned-dataset\ours\anomaly\_work\tree_T3_sub05_test.arff -v
+
+
+Options: -C 0.25 -M 40 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+recent_sgpa_band = C0: C0 (189.0/105.0)
+recent_sgpa_band = C1
+|   distraction_frequency <= 1: C2 (54.0/37.0)
+|   distraction_frequency > 1: C1 (174.0/81.0)
+recent_sgpa_band = C2: C2 (234.0/123.0)
+recent_sgpa_band = C3
+|   weekly_responsibilities <= 1: C3 (115.0/48.0)
+|   weekly_responsibilities > 1
+|   |   study_environment <= 1: C3 (44.0/30.0)
+|   |   study_environment > 1: C2 (72.0/45.0)
+
+Number of Leaves  : 	7
+
+Size of the tree : 	11
+
+
+Time taken to build model: 0.42 seconds
+
+Time taken to test model on test data: 0 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances         102               46.3636 %
+Incorrectly Classified Instances       118               53.6364 %
+Kappa statistic                          0.2864
+Mean absolute error                      0.3349
+Root mean squared error                  0.4085
+Relative absolute error                 89.7854 %
+Root relative squared error             94.6223 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.439    0.162    0.383      0.439    0.409      0.263    0.658     0.297     C0
+                 0.413    0.131    0.620      0.413    0.496      0.319    0.680     0.499     C1
+                 0.569    0.343    0.333      0.569    0.420      0.195    0.603     0.324     C2
+                 0.453    0.072    0.667      0.453    0.539      0.440    0.762     0.519     C3
+Weighted Avg.    0.464    0.172    0.521      0.464    0.473      0.309    0.678     0.425     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 18  8 13  2 |  a = C0
+ 14 31 28  2 |  b = C1
+  5  9 29  8 |  c = C2
+ 10  2 17 24 |  d = C3
+

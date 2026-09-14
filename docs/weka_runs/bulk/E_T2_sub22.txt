@@ -1,0 +1,75 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -C 0.25 -M 40 -t <repo>\cleaned-dataset\ours\anomaly\_work\tree_T2_sub22_train.arff -T <repo>\cleaned-dataset\ours\anomaly\_work\tree_T2_sub22_test.arff -v
+
+
+Options: -C 0.25 -M 40 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+desired_department_match <= 1
+|   sleep_duration <= 0: C1 (40.0/19.0)
+|   sleep_duration > 0
+|   |   weekly_study_time <= 2
+|   |   |   weekly_study_time <= 1: C0 (77.0/43.0)
+|   |   |   weekly_study_time > 1: C1 (43.0/27.0)
+|   |   weekly_study_time > 2: C0 (57.0/35.0)
+desired_department_match > 1
+|   weekly_responsibilities <= 1
+|   |   study_environment <= 1: C3 (87.0/55.0)
+|   |   study_environment > 1
+|   |   |   weekly_study_time <= 1
+|   |   |   |   routine_manageability <= 1: C1 (48.0/29.0)
+|   |   |   |   routine_manageability > 1: C2 (77.0/42.0)
+|   |   |   weekly_study_time > 1
+|   |   |   |   support_level <= 2: C1 (48.0/30.0)
+|   |   |   |   support_level > 2: C3 (67.0/37.0)
+|   weekly_responsibilities > 1
+|   |   stress_frequency <= 3
+|   |   |   weekly_study_time <= 2
+|   |   |   |   study_environment <= 1: C0 (58.0/40.0)
+|   |   |   |   study_environment > 1: C1 (115.0/70.0)
+|   |   |   weekly_study_time > 2: C1 (102.0/55.0)
+|   |   stress_frequency > 3: C3 (63.0/41.0)
+
+Number of Leaves  : 	13
+
+Size of the tree : 	25
+
+
+Time taken to build model: 0.52 seconds
+
+Time taken to test model on test data: 0 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances          62               28.1818 %
+Incorrectly Classified Instances       158               71.8182 %
+Kappa statistic                          0.0474
+Mean absolute error                      0.3672
+Root mean squared error                  0.4375
+Relative absolute error                 98.5476 %
+Root relative squared error            101.4466 %
+Total Number of Instances              220     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.409    0.222    0.316      0.409    0.356      0.171    0.601     0.267     C0
+                 0.452    0.443    0.286      0.452    0.350      0.008    0.501     0.281     C1
+                 0.086    0.080    0.333      0.086    0.136      0.010    0.564     0.366     C2
+                 0.227    0.210    0.213      0.227    0.220      0.017    0.494     0.221     C3
+Weighted Avg.    0.282    0.237    0.292      0.282    0.257      0.043    0.540     0.294     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 18 14  4  8 |  a = C0
+ 13 28  7 14 |  b = C1
+ 13 36  6 15 |  c = C2
+ 13 20  1 10 |  d = C3
+

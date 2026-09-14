@@ -114,28 +114,52 @@ ml-lab/
 │       ├── primary_clean.csv          # notebook 01 output: 230 rows (baseline only)
 │       ├── behavior_clean.csv
 │       ├── primary_weka.csv | behavior_weka.csv | primary.arff | behavior.arff
-│       └── merged/                    # *** USE THESE *** — notebook 02 output
-│           ├── merged_primary_clean.csv    # 1108 x 27, text values, with recent SGPA band
-│           ├── merged_behavior_clean.csv   # 1108 x 26, text values, no prior performance
-│           ├── merged_full_clean.csv       # every intermediate column, for auditing
-│           ├── merged_primary_weka.csv | merged_behavior_weka.csv
-│           ├── merged_primary.arff         # WEKA-ready: 1108 instances
-│           └── merged_behavior.arff
+│       ├── merged/                    # notebook 02 output — the cleaned dataset
+│       │   ├── merged_primary_clean.csv    # 1108 x 27, text values, with recent SGPA band
+│       │   ├── merged_behavior_clean.csv   # 1108 x 26, text values, no prior performance
+│       │   ├── merged_full_clean.csv       # every intermediate column, for auditing
+│       │   ├── merged_primary_weka.csv | merged_behavior_weka.csv
+│       │   ├── merged_primary.arff         # WEKA-ready: 1108 instances
+│       │   └── merged_behavior.arff
+│       ├── final/                     # *** FINAL DATASET (section 4b) *** — notebooks/final_weka_results.py
+│       │   ├── final_920.arff              # load this in WEKA: 12 items + recent SGPA + cgpa_band
+│       │   ├── final_920.csv | final_920_with_details.csv | answer_codes.csv
+│       │   └── dropped_182_rows.csv        # the removed answers, with university/semester/date/gap
+│       └── anomaly/                   # notebook 03 output (investigation stage, superseded by final/)
+│           ├── main_cgpa_1102.arff         # the team's WEKA setting: 12 items + recent SGPA (nominal)
+│           ├── trusted_main_cgpa.arff      # same, 6-7 Aug KUET sem-7 wave excluded (647 rows)
+│           ├── split_{all,trusted}_{train80,test20}.arff   # fixed stratified split, seed 42
+│           ├── main_cgpa_1102_with_wave_flag.arff          # for the clean-training-folds demo
+│           └── _work/                      # auxiliary ARFFs (git-ignored)
 ├── notebooks/
 │   ├── 01_cleaning_eda_modeling.ipynb # Source A only, n=230 — the replication baseline
 │   ├── pipeline_source.py             # its `# %%` source
-│   ├── 02_merged_cleaning_eda_modeling.ipynb   # *** THE CURRENT PIPELINE *** n=1108
+│   ├── 02_merged_cleaning_eda_modeling.ipynb   # merge + clean + EDA, n=1108 (Python models)
 │   ├── pipeline_v2_source.py          # its `# %%` source
+│   ├── 03_anomaly_investigation_weka.ipynb     # *** CURRENT *** far-error anomaly, all models in WEKA
+│   ├── pipeline_v3_source.py          # its `# %%` source
+│   ├── weka_runner.py                 # Python -> WEKA 3.8.7 CLI driver (ARFF, runs, log parsing)
+│   ├── final_weka_results.py          # *** FINAL *** builds final_920 + runs every WEKA result in the deck
 │   └── py2nb.py                       # `# %%` .py -> .ipynb converter
 ├── docs/
 │   ├── WEKA_Next_Steps_Tutorial.pdf   # given to us
 │   ├── WEKA_Next_Steps_Tutorial.md    # markitdown conversion — read this instead
-│   ├── MERGED_DATASET_REPORT.md       # *** THE REPORT *** — start here
+│   ├── FINAL_WEKA_STEPS.md            # *** FINAL *** files, WEKA Explorer steps, expected numbers, screenshot slots
+│   ├── final_results.json             # every number in the updated pptx, machine-readable
+│   ├── weka_runs/final/               # WEKA logs behind final_results.json
+│   ├── figures/final/                 # charts used in the updated pptx
+│   ├── ANOMALY_INVESTIGATION_REPORT.md   # checks 1-7, fixes, WEKA steps (investigation stage)
+│   ├── anomaly_results.json           # every notebook-03 headline number, machine-readable
+│   ├── anomaly_tables/                # notebook-03 result tables (CSV)
+│   ├── weka_runs/                     # raw WEKA output for every quoted number (command on line 2)
+│   │   └── bulk/                      # permutation / resample / seed-sweep runs
+│   ├── MERGED_DATASET_REPORT.md       # notebook-02 report (merge + cleaning)
 │   ├── NOTEBOOK_WALKTHROUGH.md        # plain-English guide to notebook 01
 │   ├── WEKA_GUIDE.md                  # how to run our data in WEKA
 │   ├── DATA_QUALITY_REPORT.md         # notebook-01-era data-quality notes
 │   ├── figures/                       # 17 charts from notebook 01
-│   │   └── merged/                    # 22 charts from notebook 02 (m01..m22)
+│   │   ├── merged/                    # 22 charts from notebook 02 (m01..m22)
+│   │   └── anomaly/                   # charts from notebook 03 (a01..a15)
 │   ├── results_summary.json           # notebook 01 headline numbers
 │   ├── model_results_primary.csv | model_results_behavior.csv
 │   ├── feature_importance_consensus.csv
@@ -146,6 +170,9 @@ ml-lab/
 │   ├── source_form_comparison.csv     # Cliff's delta between the two samples
 │   └── cleaning_step_log.csv          # the 10-step audit trail
 ├── presentation/
+│   ├── What_Shapes_Student_CGPA_Ready.pptx      # *** THE DECK THE TEAM PRESENTS *** (75 slides)
+│   ├── What_Shapes_Student_CGPA_Ready_BEFORE_FINAL_UPDATE.pptx   # untouched copy; update_deck.py reads it
+│   ├── final_update/                  # make_figures.py -> docs/figures/final; update_deck.py -> the pptx
 │   ├── deck-signal.html               # same 17 slides, three visual styles
 │   ├── deck-cobalt.html
 │   ├── deck-swiss.html
@@ -186,6 +213,42 @@ responses that arrived later. `kuet_satisfaction` was the correct name for that 
 **If someone asks in the viva why the repo history calls that file synthetic:** we could not
 reconcile it with the only raw data we had, we said so with evidence, we got the missing raw file,
 and we corrected the record. That sequence is the right one.
+
+---
+
+## 4b. The far-error anomaly and the trusted dataset — must know
+
+The teacher flagged that WEKA confusion matrices put a significant share of predictions **two or
+three CGPA bands** away from the truth. `notebooks/03_anomaly_investigation_weka.ipynb` traced it:
+
+- ~22% of students report a recent SGPA and a CGPA **two or more bands apart**. About two thirds of
+  all far errors land on them.
+- Those contradictions are concentrated in **KUET semester-7 responses submitted on 6-7 August 2026**
+  (455 rows). Before 6 Aug the same cohort is consistent; in the wave, SGPA and CGPA look randomly
+  chosen, and target-free careless-response checks (satisfaction contradicting own SGPA,
+  Mahalanobis outliers) are also elevated.
+- Models score at **ZeroR** on that wave even when trained on everyone else; on the remaining
+  **647 trusted rows** WEKA SMO reaches ~61% (ZeroR ~31%) with far errors under 10%.
+
+**Rule used, stated exactly:** exclude rows where `source_form == kuet` AND `semester == 7` AND
+submission date is 2026-08-06 or 2026-08-07. Full-data numbers are always reported next to trusted
+ones — never replace them silently. The exclusion was checked against three guards (random removal
+of the same row count, train-trusted/test-wave, and the openly circular "delete contradictory rows"
+ceiling); see the report before changing it.
+
+Any WEKA number quoted anywhere must come from a log in `docs/weka_runs/`.
+
+**Final team decision (supersedes the 647-row trusted set for the presentation):**
+
+- Start from 1,102 rows (1,108 minus 6 without a real recent SGPA).
+- Of the 455 wave rows, keep those whose recent SGPA band and CGPA band are ≤ 1 apart (273). Drop the
+  182 that are 2–3 apart. That leaves **920 rows** (`cleaned-dataset/ours/final/final_920.arff`).
+- `result_satisfaction` is **not a feature**. It is subjective.
+- Evaluation is **5-fold CV, seed 1**. A WEKA 80/20 percentage split (seed 1) sits on hidden slides only.
+- Headline, main CGPA: SMO 55.22%, J48 (`-M 40`) 54.35%, ZeroR 30.87%.
+- Known caveat: BUET's 37 big-gap rows are kept, because the rule only targets the wave.
+
+`docs/FINAL_WEKA_STEPS.md` is the reproduction guide.
 
 ---
 
@@ -237,6 +300,23 @@ result files. Set `PYTHONIOENCODING=utf-8` if printing a Bangla value raises `Un
 nbconvert prints a wall of joblib `resource_tracker` `KeyError` tracebacks on Windows **after** a
 successful run. They are shutdown noise, not cell failures. Check for real errors by counting
 error outputs in the written notebook rather than by reading the console tail.
+
+### WEKA from the command line (used by notebook 03)
+
+- WEKA 3.8.7 is installed at `C:/Program Files/Weka-3-8-7`. Java is **not on PATH**; WEKA's bundled
+  runtime is `jre/jre-25.0.2-full/bin/java.exe`. `notebooks/weka_runner.py` finds it.
+- Java 25 needs `--add-opens java.base/java.lang=ALL-UNNAMED`, otherwise every run prints
+  reflection warnings (harmless, but noisy). The driver adds it.
+- The package manager **cannot download packages** (the repository returns HTTP 403), so
+  `ordinalClassClassifier` is unavailable. Use the built-in `meta.CostSensitiveClassifier` for
+  ordinal-aware costs.
+- Asking for per-row predictions (`-classifications ...CSV`) makes WEKA **omit** the statistics and
+  confusion matrix; the driver rebuilds the matrix from the printed predictions.
+- `weka_runner.run()` caches by exact command: if `docs/weka_runs/<name>.txt` exists and its command
+  line matches, the log is reused. Delete the log to force a fresh WEKA run. A first full execution
+  of notebook 03 launches ~1,250 WEKA JVMs and takes 10-20 minutes.
+- Nested WEKA options (MultiFilter inside FilteredClassifier, IBk distance settings) are passed as
+  one list element each; do not add shell quoting around them.
 
 ---
 

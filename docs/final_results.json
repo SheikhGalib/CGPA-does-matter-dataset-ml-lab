@@ -1,0 +1,3309 @@
+{
+  "final_rows": 920,
+  "universities": [
+    {
+      "value": "KUET",
+      "n": 690,
+      "pct": 75.0
+    },
+    {
+      "value": "BUET",
+      "n": 104,
+      "pct": 11.3
+    },
+    {
+      "value": "BRAC",
+      "n": 101,
+      "pct": 11.0
+    },
+    {
+      "value": "CUET",
+      "n": 25,
+      "pct": 2.7
+    }
+  ],
+  "cgpa_bands": [
+    {
+      "band": "C0",
+      "n": 182,
+      "pct": 19.8
+    },
+    {
+      "band": "C1",
+      "n": 284,
+      "pct": 30.9
+    },
+    {
+      "band": "C2",
+      "n": 264,
+      "pct": 28.7
+    },
+    {
+      "band": "C3",
+      "n": 190,
+      "pct": 20.7
+    }
+  ],
+  "sgpa_bands": [
+    {
+      "band": "C0",
+      "n": 171,
+      "pct": 18.6
+    },
+    {
+      "band": "C1",
+      "n": 269,
+      "pct": 29.2
+    },
+    {
+      "band": "C2",
+      "n": 261,
+      "pct": 28.4
+    },
+    {
+      "band": "C3",
+      "n": 219,
+      "pct": 23.8
+    }
+  ],
+  "answers": {
+    "desired_department_match": [
+      {
+        "value": "Not at all what I wanted",
+        "n": 110,
+        "pct": 12.0
+      },
+      {
+        "value": "Mostly different",
+        "n": 101,
+        "pct": 11.0
+      },
+      {
+        "value": "Somewhat different",
+        "n": 138,
+        "pct": 15.0
+      },
+      {
+        "value": "Close to what I wanted",
+        "n": 212,
+        "pct": 23.0
+      },
+      {
+        "value": "Yes, exactly what I wanted",
+        "n": 359,
+        "pct": 39.0
+      }
+    ],
+    "attendance": [
+      {
+        "value": "Less than 40%",
+        "n": 6,
+        "pct": 0.7
+      },
+      {
+        "value": "40-59%",
+        "n": 19,
+        "pct": 2.1
+      },
+      {
+        "value": "60-74%",
+        "n": 223,
+        "pct": 24.2
+      },
+      {
+        "value": "75-89%",
+        "n": 323,
+        "pct": 35.1
+      },
+      {
+        "value": "90% or more",
+        "n": 349,
+        "pct": 37.9
+      }
+    ],
+    "weekly_study_time": [
+      {
+        "value": "Less than 3 hrs",
+        "n": 194,
+        "pct": 21.1
+      },
+      {
+        "value": "3-6 hrs",
+        "n": 237,
+        "pct": 25.8
+      },
+      {
+        "value": "7-10 hrs",
+        "n": 217,
+        "pct": 23.6
+      },
+      {
+        "value": "11-15 hrs",
+        "n": 142,
+        "pct": 15.4
+      },
+      {
+        "value": "More than 15 hrs",
+        "n": 130,
+        "pct": 14.1
+      }
+    ],
+    "study_style": [
+      {
+        "value": "Occasionally when necessary",
+        "n": 240,
+        "pct": 26.1
+      },
+      {
+        "value": "Mostly just before exams",
+        "n": 257,
+        "pct": 27.9
+      },
+      {
+        "value": "Regularly but not every day",
+        "n": 218,
+        "pct": 23.7
+      },
+      {
+        "value": "Mostly consistent routine",
+        "n": 110,
+        "pct": 12.0
+      },
+      {
+        "value": "Consistent throughout the semester",
+        "n": 95,
+        "pct": 10.3
+      }
+    ],
+    "topic_clarity": [
+      {
+        "value": "Almost nothing",
+        "n": 149,
+        "pct": 16.2
+      },
+      {
+        "value": "A little",
+        "n": 220,
+        "pct": 23.9
+      },
+      {
+        "value": "About half",
+        "n": 267,
+        "pct": 29.0
+      },
+      {
+        "value": "Most of it",
+        "n": 191,
+        "pct": 20.8
+      },
+      {
+        "value": "Almost everything",
+        "n": 93,
+        "pct": 10.1
+      }
+    ],
+    "sleep_duration": [
+      {
+        "value": "Less than 5 hrs",
+        "n": 146,
+        "pct": 15.9
+      },
+      {
+        "value": "5-6 hrs",
+        "n": 262,
+        "pct": 28.5
+      },
+      {
+        "value": "6-7 hrs",
+        "n": 255,
+        "pct": 27.7
+      },
+      {
+        "value": "7-8 hrs",
+        "n": 177,
+        "pct": 19.2
+      },
+      {
+        "value": "More than 8 hrs",
+        "n": 80,
+        "pct": 8.7
+      }
+    ],
+    "stress_frequency": [
+      {
+        "value": "Never",
+        "n": 101,
+        "pct": 11.0
+      },
+      {
+        "value": "Rarely",
+        "n": 184,
+        "pct": 20.0
+      },
+      {
+        "value": "Sometimes",
+        "n": 259,
+        "pct": 28.2
+      },
+      {
+        "value": "Often",
+        "n": 218,
+        "pct": 23.7
+      },
+      {
+        "value": "Almost always",
+        "n": 158,
+        "pct": 17.2
+      }
+    ],
+    "weekly_responsibilities": [
+      {
+        "value": "None",
+        "n": 234,
+        "pct": 25.4
+      },
+      {
+        "value": "1-5 hrs",
+        "n": 231,
+        "pct": 25.1
+      },
+      {
+        "value": "6-10 hrs",
+        "n": 195,
+        "pct": 21.2
+      },
+      {
+        "value": "11-15 hrs",
+        "n": 147,
+        "pct": 16.0
+      },
+      {
+        "value": "More than 15 hrs",
+        "n": 113,
+        "pct": 12.3
+      }
+    ],
+    "distraction_frequency": [
+      {
+        "value": "Never",
+        "n": 84,
+        "pct": 9.1
+      },
+      {
+        "value": "Rarely",
+        "n": 133,
+        "pct": 14.5
+      },
+      {
+        "value": "Sometimes",
+        "n": 255,
+        "pct": 27.7
+      },
+      {
+        "value": "Often",
+        "n": 249,
+        "pct": 27.1
+      },
+      {
+        "value": "Almost every day",
+        "n": 199,
+        "pct": 21.6
+      }
+    ],
+    "study_environment": [
+      {
+        "value": "Very distracting",
+        "n": 106,
+        "pct": 11.5
+      },
+      {
+        "value": "Somewhat distracting",
+        "n": 151,
+        "pct": 16.4
+      },
+      {
+        "value": "Neither good nor bad",
+        "n": 221,
+        "pct": 24.0
+      },
+      {
+        "value": "Mostly suitable",
+        "n": 310,
+        "pct": 33.7
+      },
+      {
+        "value": "Excellent for focused study",
+        "n": 132,
+        "pct": 14.3
+      }
+    ],
+    "support_level": [
+      {
+        "value": "No support",
+        "n": 116,
+        "pct": 12.6
+      },
+      {
+        "value": "Very little support",
+        "n": 128,
+        "pct": 13.9
+      },
+      {
+        "value": "Some support",
+        "n": 233,
+        "pct": 25.3
+      },
+      {
+        "value": "Good support",
+        "n": 278,
+        "pct": 30.2
+      },
+      {
+        "value": "Strong support",
+        "n": 165,
+        "pct": 17.9
+      }
+    ],
+    "routine_manageability": [
+      {
+        "value": "Completely unmanageable",
+        "n": 127,
+        "pct": 13.8
+      },
+      {
+        "value": "Difficult to manage",
+        "n": 226,
+        "pct": 24.6
+      },
+      {
+        "value": "Average",
+        "n": 290,
+        "pct": 31.5
+      },
+      {
+        "value": "Mostly manageable",
+        "n": 195,
+        "pct": 21.2
+      },
+      {
+        "value": "Very healthy and balanced",
+        "n": 82,
+        "pct": 8.9
+      }
+    ]
+  },
+  "association_cgpa": {
+    "desired_department_match": {
+      "rho": 0.1336,
+      "p": 5e-05,
+      "q": 0.00058,
+      "reliable": true
+    },
+    "attendance": {
+      "rho": 0.0926,
+      "p": 0.00496,
+      "q": 0.02973,
+      "reliable": true
+    },
+    "weekly_responsibilities": {
+      "rho": -0.0864,
+      "p": 0.00875,
+      "q": 0.03498,
+      "reliable": true
+    },
+    "weekly_study_time": {
+      "rho": 0.062,
+      "p": 0.06028,
+      "q": 0.18085,
+      "reliable": false
+    },
+    "support_level": {
+      "rho": 0.0553,
+      "p": 0.09381,
+      "q": 0.19871,
+      "reliable": false
+    },
+    "routine_manageability": {
+      "rho": 0.0544,
+      "p": 0.09935,
+      "q": 0.19871,
+      "reliable": false
+    },
+    "study_environment": {
+      "rho": 0.0399,
+      "p": 0.22663,
+      "q": 0.38851,
+      "reliable": false
+    },
+    "topic_clarity": {
+      "rho": 0.0337,
+      "p": 0.30654,
+      "q": 0.45981,
+      "reliable": false
+    },
+    "stress_frequency": {
+      "rho": -0.0303,
+      "p": 0.35842,
+      "q": 0.47789,
+      "reliable": false
+    },
+    "sleep_duration": {
+      "rho": 0.0255,
+      "p": 0.44038,
+      "q": 0.52845,
+      "reliable": false
+    },
+    "study_style": {
+      "rho": 0.0163,
+      "p": 0.62219,
+      "q": 0.67876,
+      "reliable": false
+    },
+    "distraction_frequency": {
+      "rho": -0.0131,
+      "p": 0.69114,
+      "q": 0.69114,
+      "reliable": false
+    }
+  },
+  "association_sgpa": {
+    "desired_department_match": {
+      "rho": 0.1371,
+      "p": 3e-05,
+      "q": 0.00036,
+      "reliable": true
+    },
+    "attendance": {
+      "rho": 0.1113,
+      "p": 0.00072,
+      "q": 0.00433,
+      "reliable": true
+    },
+    "support_level": {
+      "rho": 0.0683,
+      "p": 0.03827,
+      "q": 0.12847,
+      "reliable": false
+    },
+    "weekly_responsibilities": {
+      "rho": -0.0668,
+      "p": 0.04282,
+      "q": 0.12847,
+      "reliable": false
+    },
+    "weekly_study_time": {
+      "rho": 0.0603,
+      "p": 0.06773,
+      "q": 0.1439,
+      "reliable": false
+    },
+    "routine_manageability": {
+      "rho": 0.0594,
+      "p": 0.07195,
+      "q": 0.1439,
+      "reliable": false
+    },
+    "study_environment": {
+      "rho": 0.0542,
+      "p": 0.1001,
+      "q": 0.1716,
+      "reliable": false
+    },
+    "sleep_duration": {
+      "rho": 0.0192,
+      "p": 0.5606,
+      "q": 0.75285,
+      "reliable": false
+    },
+    "topic_clarity": {
+      "rho": -0.0165,
+      "p": 0.61748,
+      "q": 0.75285,
+      "reliable": false
+    },
+    "study_style": {
+      "rho": 0.0144,
+      "p": 0.66225,
+      "q": 0.75285,
+      "reliable": false
+    },
+    "distraction_frequency": {
+      "rho": -0.0132,
+      "p": 0.69011,
+      "q": 0.75285,
+      "reliable": false
+    },
+    "stress_frequency": {
+      "rho": -0.0,
+      "p": 0.99954,
+      "q": 0.99954,
+      "reliable": false
+    }
+  },
+  "per_question_cgpa_mix": {
+    "desired_department_match": [
+      {
+        "code": 0,
+        "answer": "Not at all what I wanted",
+        "n": 110,
+        "C0": 26,
+        "C1": 33,
+        "C2": 26,
+        "C3": 15
+      },
+      {
+        "code": 1,
+        "answer": "Mostly different",
+        "n": 101,
+        "C0": 34,
+        "C1": 23,
+        "C2": 24,
+        "C3": 20
+      },
+      {
+        "code": 2,
+        "answer": "Somewhat different",
+        "n": 138,
+        "C0": 21,
+        "C1": 38,
+        "C2": 26,
+        "C3": 14
+      },
+      {
+        "code": 3,
+        "answer": "Close to what I wanted",
+        "n": 212,
+        "C0": 18,
+        "C1": 29,
+        "C2": 29,
+        "C3": 25
+      },
+      {
+        "code": 4,
+        "answer": "Yes, exactly what I wanted",
+        "n": 359,
+        "C0": 14,
+        "C1": 31,
+        "C2": 32,
+        "C3": 23
+      }
+    ],
+    "attendance": [
+      {
+        "code": 0,
+        "answer": "Less than 40%",
+        "n": 6,
+        "C0": 33,
+        "C1": 17,
+        "C2": 33,
+        "C3": 17
+      },
+      {
+        "code": 1,
+        "answer": "40-59%",
+        "n": 19,
+        "C0": 21,
+        "C1": 37,
+        "C2": 26,
+        "C3": 16
+      },
+      {
+        "code": 2,
+        "answer": "60-74%",
+        "n": 223,
+        "C0": 22,
+        "C1": 31,
+        "C2": 30,
+        "C3": 17
+      },
+      {
+        "code": 3,
+        "answer": "75-89%",
+        "n": 323,
+        "C0": 20,
+        "C1": 34,
+        "C2": 28,
+        "C3": 19
+      },
+      {
+        "code": 4,
+        "answer": "90% or more",
+        "n": 349,
+        "C0": 17,
+        "C1": 28,
+        "C2": 29,
+        "C3": 26
+      }
+    ],
+    "weekly_study_time": [
+      {
+        "code": 0,
+        "answer": "Less than 3 hrs",
+        "n": 194,
+        "C0": 23,
+        "C1": 29,
+        "C2": 31,
+        "C3": 17
+      },
+      {
+        "code": 1,
+        "answer": "3-6 hrs",
+        "n": 237,
+        "C0": 24,
+        "C1": 30,
+        "C2": 29,
+        "C3": 17
+      },
+      {
+        "code": 2,
+        "answer": "7-10 hrs",
+        "n": 217,
+        "C0": 14,
+        "C1": 32,
+        "C2": 30,
+        "C3": 24
+      },
+      {
+        "code": 3,
+        "answer": "11-15 hrs",
+        "n": 142,
+        "C0": 18,
+        "C1": 35,
+        "C2": 25,
+        "C3": 22
+      },
+      {
+        "code": 4,
+        "answer": "More than 15 hrs",
+        "n": 130,
+        "C0": 19,
+        "C1": 28,
+        "C2": 26,
+        "C3": 26
+      }
+    ],
+    "study_style": [
+      {
+        "code": 0,
+        "answer": "Occasionally when necessary",
+        "n": 240,
+        "C0": 20,
+        "C1": 24,
+        "C2": 31,
+        "C3": 25
+      },
+      {
+        "code": 1,
+        "answer": "Mostly just before exams",
+        "n": 257,
+        "C0": 25,
+        "C1": 34,
+        "C2": 26,
+        "C3": 16
+      },
+      {
+        "code": 2,
+        "answer": "Regularly but not every day",
+        "n": 218,
+        "C0": 16,
+        "C1": 38,
+        "C2": 28,
+        "C3": 18
+      },
+      {
+        "code": 3,
+        "answer": "Mostly consistent routine",
+        "n": 110,
+        "C0": 19,
+        "C1": 29,
+        "C2": 30,
+        "C3": 22
+      },
+      {
+        "code": 4,
+        "answer": "Consistent throughout the semester",
+        "n": 95,
+        "C0": 16,
+        "C1": 25,
+        "C2": 32,
+        "C3": 27
+      }
+    ],
+    "topic_clarity": [
+      {
+        "code": 0,
+        "answer": "Almost nothing",
+        "n": 149,
+        "C0": 21,
+        "C1": 34,
+        "C2": 27,
+        "C3": 18
+      },
+      {
+        "code": 1,
+        "answer": "A little",
+        "n": 220,
+        "C0": 21,
+        "C1": 29,
+        "C2": 26,
+        "C3": 24
+      },
+      {
+        "code": 2,
+        "answer": "About half",
+        "n": 267,
+        "C0": 18,
+        "C1": 33,
+        "C2": 31,
+        "C3": 17
+      },
+      {
+        "code": 3,
+        "answer": "Most of it",
+        "n": 191,
+        "C0": 18,
+        "C1": 29,
+        "C2": 32,
+        "C3": 21
+      },
+      {
+        "code": 4,
+        "answer": "Almost everything",
+        "n": 93,
+        "C0": 23,
+        "C1": 28,
+        "C2": 23,
+        "C3": 27
+      }
+    ],
+    "sleep_duration": [
+      {
+        "code": 0,
+        "answer": "Less than 5 hrs",
+        "n": 146,
+        "C0": 18,
+        "C1": 38,
+        "C2": 25,
+        "C3": 18
+      },
+      {
+        "code": 1,
+        "answer": "5-6 hrs",
+        "n": 262,
+        "C0": 20,
+        "C1": 27,
+        "C2": 32,
+        "C3": 20
+      },
+      {
+        "code": 2,
+        "answer": "6-7 hrs",
+        "n": 255,
+        "C0": 19,
+        "C1": 34,
+        "C2": 27,
+        "C3": 19
+      },
+      {
+        "code": 3,
+        "answer": "7-8 hrs",
+        "n": 177,
+        "C0": 18,
+        "C1": 28,
+        "C2": 28,
+        "C3": 26
+      },
+      {
+        "code": 4,
+        "answer": "More than 8 hrs",
+        "n": 80,
+        "C0": 26,
+        "C1": 25,
+        "C2": 29,
+        "C3": 20
+      }
+    ],
+    "stress_frequency": [
+      {
+        "code": 0,
+        "answer": "Never",
+        "n": 101,
+        "C0": 21,
+        "C1": 33,
+        "C2": 25,
+        "C3": 22
+      },
+      {
+        "code": 1,
+        "answer": "Rarely",
+        "n": 184,
+        "C0": 18,
+        "C1": 28,
+        "C2": 38,
+        "C3": 17
+      },
+      {
+        "code": 2,
+        "answer": "Sometimes",
+        "n": 259,
+        "C0": 16,
+        "C1": 34,
+        "C2": 27,
+        "C3": 23
+      },
+      {
+        "code": 3,
+        "answer": "Often",
+        "n": 218,
+        "C0": 20,
+        "C1": 35,
+        "C2": 22,
+        "C3": 22
+      },
+      {
+        "code": 4,
+        "answer": "Almost always",
+        "n": 158,
+        "C0": 27,
+        "C1": 22,
+        "C2": 33,
+        "C3": 18
+      }
+    ],
+    "weekly_responsibilities": [
+      {
+        "code": 0,
+        "answer": "None",
+        "n": 234,
+        "C0": 20,
+        "C1": 26,
+        "C2": 29,
+        "C3": 26
+      },
+      {
+        "code": 1,
+        "answer": "1-5 hrs",
+        "n": 231,
+        "C0": 20,
+        "C1": 29,
+        "C2": 28,
+        "C3": 24
+      },
+      {
+        "code": 2,
+        "answer": "6-10 hrs",
+        "n": 195,
+        "C0": 16,
+        "C1": 37,
+        "C2": 30,
+        "C3": 16
+      },
+      {
+        "code": 3,
+        "answer": "11-15 hrs",
+        "n": 147,
+        "C0": 22,
+        "C1": 31,
+        "C2": 30,
+        "C3": 16
+      },
+      {
+        "code": 4,
+        "answer": "More than 15 hrs",
+        "n": 113,
+        "C0": 22,
+        "C1": 35,
+        "C2": 27,
+        "C3": 16
+      }
+    ],
+    "distraction_frequency": [
+      {
+        "code": 0,
+        "answer": "Never",
+        "n": 84,
+        "C0": 21,
+        "C1": 20,
+        "C2": 33,
+        "C3": 25
+      },
+      {
+        "code": 1,
+        "answer": "Rarely",
+        "n": 133,
+        "C0": 21,
+        "C1": 27,
+        "C2": 35,
+        "C3": 17
+      },
+      {
+        "code": 2,
+        "answer": "Sometimes",
+        "n": 255,
+        "C0": 17,
+        "C1": 36,
+        "C2": 29,
+        "C3": 18
+      },
+      {
+        "code": 3,
+        "answer": "Often",
+        "n": 249,
+        "C0": 19,
+        "C1": 33,
+        "C2": 26,
+        "C3": 22
+      },
+      {
+        "code": 4,
+        "answer": "Almost every day",
+        "n": 199,
+        "C0": 23,
+        "C1": 29,
+        "C2": 26,
+        "C3": 23
+      }
+    ],
+    "study_environment": [
+      {
+        "code": 0,
+        "answer": "Very distracting",
+        "n": 106,
+        "C0": 33,
+        "C1": 24,
+        "C2": 23,
+        "C3": 21
+      },
+      {
+        "code": 1,
+        "answer": "Somewhat distracting",
+        "n": 151,
+        "C0": 21,
+        "C1": 32,
+        "C2": 25,
+        "C3": 22
+      },
+      {
+        "code": 2,
+        "answer": "Neither good nor bad",
+        "n": 221,
+        "C0": 15,
+        "C1": 35,
+        "C2": 31,
+        "C3": 19
+      },
+      {
+        "code": 3,
+        "answer": "Mostly suitable",
+        "n": 310,
+        "C0": 15,
+        "C1": 31,
+        "C2": 34,
+        "C3": 21
+      },
+      {
+        "code": 4,
+        "answer": "Excellent for focused study",
+        "n": 132,
+        "C0": 27,
+        "C1": 28,
+        "C2": 22,
+        "C3": 23
+      }
+    ],
+    "support_level": [
+      {
+        "code": 0,
+        "answer": "No support",
+        "n": 116,
+        "C0": 23,
+        "C1": 26,
+        "C2": 31,
+        "C3": 20
+      },
+      {
+        "code": 1,
+        "answer": "Very little support",
+        "n": 128,
+        "C0": 27,
+        "C1": 27,
+        "C2": 27,
+        "C3": 20
+      },
+      {
+        "code": 2,
+        "answer": "Some support",
+        "n": 233,
+        "C0": 18,
+        "C1": 40,
+        "C2": 24,
+        "C3": 17
+      },
+      {
+        "code": 3,
+        "answer": "Good support",
+        "n": 278,
+        "C0": 15,
+        "C1": 29,
+        "C2": 32,
+        "C3": 24
+      },
+      {
+        "code": 4,
+        "answer": "Strong support",
+        "n": 165,
+        "C0": 22,
+        "C1": 28,
+        "C2": 30,
+        "C3": 21
+      }
+    ],
+    "routine_manageability": [
+      {
+        "code": 0,
+        "answer": "Completely unmanageable",
+        "n": 127,
+        "C0": 27,
+        "C1": 32,
+        "C2": 31,
+        "C3": 10
+      },
+      {
+        "code": 1,
+        "answer": "Difficult to manage",
+        "n": 226,
+        "C0": 21,
+        "C1": 30,
+        "C2": 21,
+        "C3": 28
+      },
+      {
+        "code": 2,
+        "answer": "Average",
+        "n": 290,
+        "C0": 16,
+        "C1": 33,
+        "C2": 32,
+        "C3": 19
+      },
+      {
+        "code": 3,
+        "answer": "Mostly manageable",
+        "n": 195,
+        "C0": 17,
+        "C1": 30,
+        "C2": 32,
+        "C3": 22
+      },
+      {
+        "code": 4,
+        "answer": "Very healthy and balanced",
+        "n": 82,
+        "C0": 24,
+        "C1": 27,
+        "C2": 28,
+        "C3": 21
+      }
+    ]
+  },
+  "gap_analysis": {
+    "base_rows": 1102,
+    "final_rows": 920,
+    "dropped_rows": 182,
+    "aug67_group_rows": 455,
+    "aug67_kept": 273,
+    "gap_distribution_all": {
+      "0": 508,
+      "1": 352,
+      "2": 159,
+      "3": 83
+    },
+    "gap_distribution_aug67": {
+      "0": 113,
+      "1": 160,
+      "2": 121,
+      "3": 61
+    },
+    "gap_distribution_rest": {
+      "0": 395,
+      "1": 192,
+      "2": 38,
+      "3": 22
+    },
+    "far_gap_rate_aug67": 0.4,
+    "far_gap_rate_rest": 0.0927,
+    "far_gap_by_university": [
+      {
+        "university": "BRAC",
+        "n": 101,
+        "far": 0
+      },
+      {
+        "university": "BUET",
+        "n": 104,
+        "far": 37
+      },
+      {
+        "university": "CUET",
+        "n": 25,
+        "far": 0
+      },
+      {
+        "university": "KUET",
+        "n": 872,
+        "far": 205
+      }
+    ],
+    "far_gap_by_kuet_semester": [
+      {
+        "semester": 1.0,
+        "n": 43,
+        "far": 0
+      },
+      {
+        "semester": 2.0,
+        "n": 7,
+        "far": 0
+      },
+      {
+        "semester": 3.0,
+        "n": 44,
+        "far": 0
+      },
+      {
+        "semester": 4.0,
+        "n": 67,
+        "far": 3
+      },
+      {
+        "semester": 5.0,
+        "n": 28,
+        "far": 3
+      },
+      {
+        "semester": 6.0,
+        "n": 8,
+        "far": 0
+      },
+      {
+        "semester": 7.0,
+        "n": 675,
+        "far": 199
+      }
+    ],
+    "kuet_sem7_by_date": [
+      {
+        "date": "2026-07-31",
+        "n": 2,
+        "far": 0
+      },
+      {
+        "date": "2026-08-01",
+        "n": 15,
+        "far": 0
+      },
+      {
+        "date": "2026-08-03",
+        "n": 2,
+        "far": 0
+      },
+      {
+        "date": "2026-08-04",
+        "n": 17,
+        "far": 1
+      },
+      {
+        "date": "2026-08-05",
+        "n": 84,
+        "far": 1
+      },
+      {
+        "date": "2026-08-06",
+        "n": 324,
+        "far": 131
+      },
+      {
+        "date": "2026-08-07",
+        "n": 131,
+        "far": 51
+      },
+      {
+        "date": "2026-08-09",
+        "n": 39,
+        "far": 9
+      },
+      {
+        "date": "2026-08-10",
+        "n": 55,
+        "far": 6
+      },
+      {
+        "date": "2026-08-11",
+        "n": 5,
+        "far": 0
+      },
+      {
+        "date": "2026-08-12",
+        "n": 1,
+        "far": 0
+      }
+    ],
+    "sgpa_x_cgpa_aug67": [
+      [
+        28,
+        25,
+        36,
+        29
+      ],
+      [
+        29,
+        31,
+        29,
+        27
+      ],
+      [
+        22,
+        25,
+        27,
+        23
+      ],
+      [
+        32,
+        36,
+        29,
+        27
+      ]
+    ],
+    "sgpa_x_cgpa_rest": [
+      [
+        74,
+        24,
+        8,
+        12
+      ],
+      [
+        30,
+        115,
+        30,
+        5
+      ],
+      [
+        11,
+        50,
+        104,
+        21
+      ],
+      [
+        10,
+        14,
+        37,
+        102
+      ]
+    ],
+    "sgpa_x_cgpa_final": [
+      [
+        102,
+        49,
+        8,
+        12
+      ],
+      [
+        59,
+        146,
+        59,
+        5
+      ],
+      [
+        11,
+        75,
+        131,
+        44
+      ],
+      [
+        10,
+        14,
+        66,
+        129
+      ]
+    ],
+    "dropped_by_gap": {
+      "2": 121,
+      "3": 61
+    },
+    "dropped_by_direction": {
+      "SGPA lower than CGPA": 92,
+      "SGPA higher than CGPA": 90
+    },
+    "sgpa_cgpa_rho_aug67": -0.042,
+    "sgpa_cgpa_rho_rest": 0.622,
+    "sgpa_cgpa_rho_final": 0.651
+  },
+  "weka": {
+    "sgpa": {
+      "cv5": {
+        "ZeroR": {
+          "accuracy": 0.2924,
+          "kappa": 0.0,
+          "weighted_f1": 0.1323,
+          "macro_f1": 0.1131,
+          "far_rate": 0.238,
+          "within_1": 0.762,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              0,
+              171,
+              0,
+              0
+            ],
+            [
+              0,
+              269,
+              0,
+              0
+            ],
+            [
+              0,
+              261,
+              0,
+              0
+            ],
+            [
+              0,
+              219,
+              0,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_ZeroR_cv5.txt"
+        },
+        "J48": {
+          "accuracy": 0.263,
+          "kappa": -0.0095,
+          "weighted_f1": 0.2537,
+          "macro_f1": 0.2439,
+          "far_rate": 0.2543,
+          "within_1": 0.7457,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              20,
+              75,
+              48,
+              28
+            ],
+            [
+              26,
+              104,
+              89,
+              50
+            ],
+            [
+              17,
+              120,
+              73,
+              51
+            ],
+            [
+              18,
+              73,
+              83,
+              45
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_J48_cv5.txt"
+        },
+        "RandomForest": {
+          "accuracy": 0.3239,
+          "kappa": 0.0789,
+          "weighted_f1": 0.3183,
+          "macro_f1": 0.3074,
+          "far_rate": 0.2489,
+          "within_1": 0.7511,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              25,
+              73,
+              43,
+              30
+            ],
+            [
+              36,
+              108,
+              82,
+              43
+            ],
+            [
+              24,
+              102,
+              93,
+              42
+            ],
+            [
+              25,
+              64,
+              58,
+              72
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_RandomForest_cv5.txt"
+        },
+        "SMO": {
+          "accuracy": 0.2793,
+          "kappa": -0.003,
+          "weighted_f1": 0.2395,
+          "macro_f1": 0.2162,
+          "far_rate": 0.2098,
+          "within_1": 0.7902,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              0,
+              81,
+              71,
+              19
+            ],
+            [
+              0,
+              104,
+              135,
+              30
+            ],
+            [
+              0,
+              107,
+              121,
+              33
+            ],
+            [
+              0,
+              73,
+              114,
+              32
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_SMO_cv5.txt"
+        },
+        "Logistic": {
+          "accuracy": 0.2902,
+          "kappa": 0.0255,
+          "weighted_f1": 0.2754,
+          "macro_f1": 0.2608,
+          "far_rate": 0.2467,
+          "within_1": 0.7533,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              11,
+              76,
+              54,
+              30
+            ],
+            [
+              13,
+              110,
+              98,
+              48
+            ],
+            [
+              18,
+              107,
+              82,
+              54
+            ],
+            [
+              12,
+              65,
+              78,
+              64
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_Logistic_cv5.txt"
+        },
+        "NaiveBayes": {
+          "accuracy": 0.3,
+          "kappa": 0.0433,
+          "weighted_f1": 0.2914,
+          "macro_f1": 0.2797,
+          "far_rate": 0.2478,
+          "within_1": 0.7522,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              22,
+              76,
+              49,
+              24
+            ],
+            [
+              26,
+              108,
+              98,
+              37
+            ],
+            [
+              29,
+              88,
+              91,
+              53
+            ],
+            [
+              19,
+              70,
+              75,
+              55
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_NaiveBayes_cv5.txt"
+        },
+        "OneR": {
+          "accuracy": 0.2739,
+          "kappa": -0.0104,
+          "weighted_f1": 0.2339,
+          "macro_f1": 0.2101,
+          "far_rate": 0.2457,
+          "within_1": 0.7543,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              0,
+              98,
+              50,
+              23
+            ],
+            [
+              0,
+              126,
+              99,
+              44
+            ],
+            [
+              0,
+              126,
+              97,
+              38
+            ],
+            [
+              0,
+              109,
+              81,
+              29
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_OneR_cv5.txt"
+        }
+      },
+      "split80": {
+        "ZeroR": {
+          "accuracy": 0.3043,
+          "kappa": 0.0,
+          "weighted_f1": 0.142,
+          "macro_f1": 0.1167,
+          "far_rate": 0.2663,
+          "within_1": 0.7337,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              0,
+              28,
+              0,
+              0
+            ],
+            [
+              0,
+              56,
+              0,
+              0
+            ],
+            [
+              0,
+              51,
+              0,
+              0
+            ],
+            [
+              0,
+              49,
+              0,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_ZeroR_split80.txt"
+        },
+        "J48": {
+          "accuracy": 0.2717,
+          "kappa": -0.0287,
+          "weighted_f1": 0.2268,
+          "macro_f1": 0.197,
+          "far_rate": 0.25,
+          "within_1": 0.75,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              0,
+              22,
+              4,
+              2
+            ],
+            [
+              0,
+              33,
+              14,
+              9
+            ],
+            [
+              0,
+              28,
+              9,
+              14
+            ],
+            [
+              0,
+              31,
+              10,
+              8
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_J48_split80.txt"
+        },
+        "RandomForest": {
+          "accuracy": 0.3315,
+          "kappa": 0.0849,
+          "weighted_f1": 0.3203,
+          "macro_f1": 0.2939,
+          "far_rate": 0.2663,
+          "within_1": 0.7337,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              3,
+              11,
+              10,
+              4
+            ],
+            [
+              6,
+              27,
+              16,
+              7
+            ],
+            [
+              6,
+              18,
+              21,
+              6
+            ],
+            [
+              9,
+              13,
+              17,
+              10
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_RandomForest_split80.txt"
+        },
+        "SMO": {
+          "accuracy": 0.2554,
+          "kappa": -0.0479,
+          "weighted_f1": 0.2184,
+          "macro_f1": 0.1904,
+          "far_rate": 0.2228,
+          "within_1": 0.7772,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              0,
+              16,
+              9,
+              3
+            ],
+            [
+              0,
+              24,
+              25,
+              7
+            ],
+            [
+              0,
+              29,
+              18,
+              4
+            ],
+            [
+              0,
+              22,
+              22,
+              5
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_SMO_split80.txt"
+        },
+        "Logistic": {
+          "accuracy": 0.288,
+          "kappa": 0.0139,
+          "weighted_f1": 0.2771,
+          "macro_f1": 0.2509,
+          "far_rate": 0.2717,
+          "within_1": 0.7283,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              1,
+              16,
+              8,
+              3
+            ],
+            [
+              1,
+              21,
+              25,
+              9
+            ],
+            [
+              6,
+              18,
+              17,
+              10
+            ],
+            [
+              4,
+              20,
+              11,
+              14
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_Logistic_split80.txt"
+        },
+        "NaiveBayes": {
+          "accuracy": 0.2663,
+          "kappa": -0.0062,
+          "weighted_f1": 0.2601,
+          "macro_f1": 0.2471,
+          "far_rate": 0.2826,
+          "within_1": 0.7174,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              4,
+              14,
+              8,
+              2
+            ],
+            [
+              4,
+              20,
+              22,
+              10
+            ],
+            [
+              8,
+              18,
+              16,
+              9
+            ],
+            [
+              6,
+              18,
+              16,
+              9
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_NaiveBayes_split80.txt"
+        },
+        "OneR": {
+          "accuracy": 0.2989,
+          "kappa": 0.0148,
+          "weighted_f1": 0.2154,
+          "macro_f1": 0.1865,
+          "far_rate": 0.1957,
+          "within_1": 0.8043,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              0,
+              15,
+              13,
+              0
+            ],
+            [
+              0,
+              21,
+              35,
+              0
+            ],
+            [
+              0,
+              17,
+              34,
+              0
+            ],
+            [
+              0,
+              23,
+              26,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/sgpa_OneR_split80.txt"
+        }
+      }
+    },
+    "questionnaire_cgpa": {
+      "cv5": {
+        "ZeroR": {
+          "accuracy": 0.3087,
+          "kappa": 0.0,
+          "weighted_f1": 0.1456,
+          "macro_f1": 0.1179,
+          "far_rate": 0.2065,
+          "within_1": 0.7935,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              0,
+              182,
+              0,
+              0
+            ],
+            [
+              0,
+              284,
+              0,
+              0
+            ],
+            [
+              0,
+              264,
+              0,
+              0
+            ],
+            [
+              0,
+              190,
+              0,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_ZeroR_cv5.txt"
+        },
+        "J48": {
+          "accuracy": 0.2783,
+          "kappa": 0.0044,
+          "weighted_f1": 0.2655,
+          "macro_f1": 0.2514,
+          "far_rate": 0.2848,
+          "within_1": 0.7152,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              27,
+              76,
+              59,
+              20
+            ],
+            [
+              31,
+              124,
+              90,
+              39
+            ],
+            [
+              32,
+              125,
+              77,
+              30
+            ],
+            [
+              27,
+              85,
+              50,
+              28
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_J48_cv5.txt"
+        },
+        "RandomForest": {
+          "accuracy": 0.3054,
+          "kappa": 0.0465,
+          "weighted_f1": 0.2946,
+          "macro_f1": 0.2796,
+          "far_rate": 0.2783,
+          "within_1": 0.7217,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              32,
+              70,
+              50,
+              30
+            ],
+            [
+              32,
+              134,
+              85,
+              33
+            ],
+            [
+              43,
+              104,
+              81,
+              36
+            ],
+            [
+              25,
+              75,
+              56,
+              34
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_RandomForest_cv5.txt"
+        },
+        "SMO": {
+          "accuracy": 0.2815,
+          "kappa": -0.0239,
+          "weighted_f1": 0.2118,
+          "macro_f1": 0.1804,
+          "far_rate": 0.213,
+          "within_1": 0.787,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              5,
+              110,
+              67,
+              0
+            ],
+            [
+              9,
+              179,
+              96,
+              0
+            ],
+            [
+              8,
+              181,
+              75,
+              0
+            ],
+            [
+              4,
+              117,
+              69,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_SMO_cv5.txt"
+        },
+        "Logistic": {
+          "accuracy": 0.3011,
+          "kappa": 0.0315,
+          "weighted_f1": 0.2855,
+          "macro_f1": 0.2712,
+          "far_rate": 0.2533,
+          "within_1": 0.7467,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              28,
+              83,
+              55,
+              16
+            ],
+            [
+              26,
+              137,
+              95,
+              26
+            ],
+            [
+              34,
+              120,
+              82,
+              28
+            ],
+            [
+              15,
+              87,
+              58,
+              30
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_Logistic_cv5.txt"
+        },
+        "NaiveBayes": {
+          "accuracy": 0.312,
+          "kappa": 0.0516,
+          "weighted_f1": 0.2991,
+          "macro_f1": 0.2884,
+          "far_rate": 0.2576,
+          "within_1": 0.7424,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              38,
+              80,
+              47,
+              17
+            ],
+            [
+              37,
+              145,
+              79,
+              23
+            ],
+            [
+              45,
+              123,
+              68,
+              28
+            ],
+            [
+              20,
+              85,
+              49,
+              36
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_NaiveBayes_cv5.txt"
+        },
+        "OneR": {
+          "accuracy": 0.338,
+          "kappa": 0.0583,
+          "weighted_f1": 0.2603,
+          "macro_f1": 0.2223,
+          "far_rate": 0.2402,
+          "within_1": 0.7598,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              6,
+              106,
+              70,
+              0
+            ],
+            [
+              10,
+              199,
+              75,
+              0
+            ],
+            [
+              15,
+              143,
+              106,
+              0
+            ],
+            [
+              6,
+              130,
+              54,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_OneR_cv5.txt"
+        }
+      },
+      "split80": {
+        "ZeroR": {
+          "accuracy": 0.3587,
+          "kappa": 0.0,
+          "weighted_f1": 0.1894,
+          "macro_f1": 0.132,
+          "far_rate": 0.2011,
+          "within_1": 0.7989,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              0,
+              35,
+              0,
+              0
+            ],
+            [
+              0,
+              66,
+              0,
+              0
+            ],
+            [
+              0,
+              46,
+              0,
+              0
+            ],
+            [
+              0,
+              37,
+              0,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_ZeroR_split80.txt"
+        },
+        "J48": {
+          "accuracy": 0.3315,
+          "kappa": 0.0654,
+          "weighted_f1": 0.3161,
+          "macro_f1": 0.2933,
+          "far_rate": 0.2989,
+          "within_1": 0.7011,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              8,
+              16,
+              6,
+              5
+            ],
+            [
+              7,
+              36,
+              9,
+              14
+            ],
+            [
+              10,
+              21,
+              8,
+              7
+            ],
+            [
+              3,
+              17,
+              8,
+              9
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_J48_split80.txt"
+        },
+        "RandomForest": {
+          "accuracy": 0.2663,
+          "kappa": -0.02,
+          "weighted_f1": 0.2537,
+          "macro_f1": 0.2217,
+          "far_rate": 0.2717,
+          "within_1": 0.7283,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              3,
+              12,
+              15,
+              5
+            ],
+            [
+              9,
+              29,
+              22,
+              6
+            ],
+            [
+              4,
+              21,
+              13,
+              8
+            ],
+            [
+              7,
+              13,
+              13,
+              4
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_RandomForest_split80.txt"
+        },
+        "SMO": {
+          "accuracy": 0.2935,
+          "kappa": -0.0278,
+          "weighted_f1": 0.2237,
+          "macro_f1": 0.1759,
+          "far_rate": 0.1793,
+          "within_1": 0.8207,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              0,
+              21,
+              14,
+              0
+            ],
+            [
+              1,
+              38,
+              27,
+              0
+            ],
+            [
+              0,
+              30,
+              16,
+              0
+            ],
+            [
+              1,
+              18,
+              18,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_SMO_split80.txt"
+        },
+        "Logistic": {
+          "accuracy": 0.2772,
+          "kappa": -0.0022,
+          "weighted_f1": 0.2686,
+          "macro_f1": 0.2397,
+          "far_rate": 0.2337,
+          "within_1": 0.7663,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              5,
+              15,
+              12,
+              3
+            ],
+            [
+              9,
+              29,
+              26,
+              2
+            ],
+            [
+              9,
+              19,
+              13,
+              5
+            ],
+            [
+              8,
+              9,
+              16,
+              4
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_Logistic_split80.txt"
+        },
+        "NaiveBayes": {
+          "accuracy": 0.288,
+          "kappa": 0.0072,
+          "weighted_f1": 0.2767,
+          "macro_f1": 0.2473,
+          "far_rate": 0.2391,
+          "within_1": 0.7609,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              5,
+              19,
+              10,
+              1
+            ],
+            [
+              10,
+              31,
+              25,
+              0
+            ],
+            [
+              13,
+              17,
+              13,
+              3
+            ],
+            [
+              8,
+              12,
+              13,
+              4
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_NaiveBayes_split80.txt"
+        },
+        "OneR": {
+          "accuracy": 0.2554,
+          "kappa": -0.0391,
+          "weighted_f1": 0.2264,
+          "macro_f1": 0.2,
+          "far_rate": 0.2391,
+          "within_1": 0.7609,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              6,
+              13,
+              16,
+              0
+            ],
+            [
+              8,
+              24,
+              34,
+              0
+            ],
+            [
+              8,
+              21,
+              17,
+              0
+            ],
+            [
+              6,
+              14,
+              17,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/questionnaire_cgpa_OneR_split80.txt"
+        }
+      }
+    },
+    "main_cgpa": {
+      "cv5": {
+        "ZeroR": {
+          "accuracy": 0.3087,
+          "kappa": 0.0,
+          "weighted_f1": 0.1456,
+          "macro_f1": 0.1179,
+          "far_rate": 0.2065,
+          "within_1": 0.7935,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              0,
+              182,
+              0,
+              0
+            ],
+            [
+              0,
+              284,
+              0,
+              0
+            ],
+            [
+              0,
+              264,
+              0,
+              0
+            ],
+            [
+              0,
+              190,
+              0,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_ZeroR_cv5.txt"
+        },
+        "J48": {
+          "accuracy": 0.5435,
+          "kappa": 0.384,
+          "weighted_f1": 0.5419,
+          "macro_f1": 0.55,
+          "far_rate": 0.075,
+          "within_1": 0.925,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              102,
+              59,
+              11,
+              10
+            ],
+            [
+              49,
+              155,
+              66,
+              14
+            ],
+            [
+              8,
+              72,
+              119,
+              65
+            ],
+            [
+              12,
+              14,
+              40,
+              124
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_J48_cv5.txt"
+        },
+        "RandomForest": {
+          "accuracy": 0.5424,
+          "kappa": 0.3826,
+          "weighted_f1": 0.5422,
+          "macro_f1": 0.5484,
+          "far_rate": 0.0946,
+          "within_1": 0.9054,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              101,
+              53,
+              20,
+              8
+            ],
+            [
+              51,
+              148,
+              72,
+              13
+            ],
+            [
+              17,
+              59,
+              132,
+              56
+            ],
+            [
+              13,
+              16,
+              43,
+              118
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_RandomForest_cv5.txt"
+        },
+        "SMO": {
+          "accuracy": 0.5522,
+          "kappa": 0.3968,
+          "weighted_f1": 0.5508,
+          "macro_f1": 0.5589,
+          "far_rate": 0.0652,
+          "within_1": 0.9348,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              102,
+              59,
+              11,
+              10
+            ],
+            [
+              49,
+              146,
+              75,
+              14
+            ],
+            [
+              8,
+              59,
+              131,
+              66
+            ],
+            [
+              12,
+              5,
+              44,
+              129
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_SMO_cv5.txt"
+        },
+        "Logistic": {
+          "accuracy": 0.5467,
+          "kappa": 0.3882,
+          "weighted_f1": 0.5462,
+          "macro_f1": 0.5531,
+          "far_rate": 0.0717,
+          "within_1": 0.9283,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              100,
+              60,
+              14,
+              8
+            ],
+            [
+              49,
+              151,
+              71,
+              13
+            ],
+            [
+              9,
+              62,
+              130,
+              63
+            ],
+            [
+              12,
+              10,
+              46,
+              122
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_Logistic_cv5.txt"
+        },
+        "NaiveBayes": {
+          "accuracy": 0.5446,
+          "kappa": 0.3857,
+          "weighted_f1": 0.5442,
+          "macro_f1": 0.5521,
+          "far_rate": 0.0739,
+          "within_1": 0.9261,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              102,
+              57,
+              15,
+              8
+            ],
+            [
+              54,
+              143,
+              74,
+              13
+            ],
+            [
+              12,
+              62,
+              134,
+              56
+            ],
+            [
+              11,
+              9,
+              48,
+              122
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_NaiveBayes_cv5.txt"
+        },
+        "OneR": {
+          "accuracy": 0.5522,
+          "kappa": 0.3968,
+          "weighted_f1": 0.5508,
+          "macro_f1": 0.5589,
+          "far_rate": 0.0652,
+          "within_1": 0.9348,
+          "n": 920,
+          "confusion_matrix": [
+            [
+              102,
+              59,
+              11,
+              10
+            ],
+            [
+              49,
+              146,
+              75,
+              14
+            ],
+            [
+              8,
+              59,
+              131,
+              66
+            ],
+            [
+              12,
+              5,
+              44,
+              129
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_OneR_cv5.txt"
+        }
+      },
+      "split80": {
+        "ZeroR": {
+          "accuracy": 0.3587,
+          "kappa": 0.0,
+          "weighted_f1": 0.1894,
+          "macro_f1": 0.132,
+          "far_rate": 0.2011,
+          "within_1": 0.7989,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              0,
+              35,
+              0,
+              0
+            ],
+            [
+              0,
+              66,
+              0,
+              0
+            ],
+            [
+              0,
+              46,
+              0,
+              0
+            ],
+            [
+              0,
+              37,
+              0,
+              0
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_ZeroR_split80.txt"
+        },
+        "J48": {
+          "accuracy": 0.5109,
+          "kappa": 0.3382,
+          "weighted_f1": 0.5108,
+          "macro_f1": 0.5064,
+          "far_rate": 0.0707,
+          "within_1": 0.9293,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              15,
+              11,
+              4,
+              5
+            ],
+            [
+              10,
+              35,
+              20,
+              1
+            ],
+            [
+              1,
+              10,
+              18,
+              17
+            ],
+            [
+              2,
+              0,
+              9,
+              26
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_J48_split80.txt"
+        },
+        "RandomForest": {
+          "accuracy": 0.4565,
+          "kappa": 0.258,
+          "weighted_f1": 0.4621,
+          "macro_f1": 0.456,
+          "far_rate": 0.0761,
+          "within_1": 0.9239,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              15,
+              12,
+              6,
+              2
+            ],
+            [
+              11,
+              33,
+              20,
+              2
+            ],
+            [
+              0,
+              13,
+              20,
+              13
+            ],
+            [
+              2,
+              2,
+              17,
+              16
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_RandomForest_split80.txt"
+        },
+        "SMO": {
+          "accuracy": 0.5109,
+          "kappa": 0.3382,
+          "weighted_f1": 0.5108,
+          "macro_f1": 0.5064,
+          "far_rate": 0.0707,
+          "within_1": 0.9293,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              15,
+              11,
+              4,
+              5
+            ],
+            [
+              10,
+              35,
+              20,
+              1
+            ],
+            [
+              1,
+              10,
+              18,
+              17
+            ],
+            [
+              2,
+              0,
+              9,
+              26
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_SMO_split80.txt"
+        },
+        "Logistic": {
+          "accuracy": 0.5,
+          "kappa": 0.324,
+          "weighted_f1": 0.4988,
+          "macro_f1": 0.4956,
+          "far_rate": 0.0707,
+          "within_1": 0.9293,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              14,
+              12,
+              4,
+              5
+            ],
+            [
+              12,
+              33,
+              20,
+              1
+            ],
+            [
+              1,
+              10,
+              19,
+              16
+            ],
+            [
+              2,
+              0,
+              9,
+              26
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_Logistic_split80.txt"
+        },
+        "NaiveBayes": {
+          "accuracy": 0.5217,
+          "kappa": 0.3523,
+          "weighted_f1": 0.5227,
+          "macro_f1": 0.5181,
+          "far_rate": 0.0761,
+          "within_1": 0.9239,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              15,
+              11,
+              4,
+              5
+            ],
+            [
+              11,
+              35,
+              19,
+              1
+            ],
+            [
+              2,
+              10,
+              21,
+              13
+            ],
+            [
+              2,
+              0,
+              10,
+              25
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_NaiveBayes_split80.txt"
+        },
+        "OneR": {
+          "accuracy": 0.5109,
+          "kappa": 0.3382,
+          "weighted_f1": 0.5108,
+          "macro_f1": 0.5064,
+          "far_rate": 0.0707,
+          "within_1": 0.9293,
+          "n": 184,
+          "confusion_matrix": [
+            [
+              15,
+              11,
+              4,
+              5
+            ],
+            [
+              10,
+              35,
+              20,
+              1
+            ],
+            [
+              1,
+              10,
+              18,
+              17
+            ],
+            [
+              2,
+              0,
+              9,
+              26
+            ]
+          ],
+          "log": "docs/weka_runs/final/main_cgpa_OneR_split80.txt"
+        }
+      }
+    }
+  },
+  "j48_trees": {
+    "sgpa": {
+      "text": "desired_department_match <= 2\n|   distraction_frequency <= 3: C1 (276.0/173.0)\n|   distraction_frequency > 3: C2 (73.0/48.0)\ndesired_department_match > 2\n|   topic_clarity <= 3\n|   |   study_environment <= 0: C3 (46.0/28.0)\n|   |   study_environment > 0\n|   |   |   attendance <= 3\n|   |   |   |   support_level <= 1: C2 (64.0/42.0)\n|   |   |   |   support_level > 1: C1 (224.0/142.0)\n|   |   |   attendance > 3\n|   |   |   |   weekly_study_time <= 1: C2 (84.0/49.0)\n|   |   |   |   weekly_study_time > 1: C3 (108.0/63.0)\n|   topic_clarity > 3: C0 (45.0/27.0)",
+      "leaves": 8,
+      "size": 15,
+      "dot": "docs/weka_runs/final/sgpa_J48_tree_full.dot"
+    },
+    "questionnaire_cgpa": {
+      "text": "study_environment <= 0\n|   desired_department_match <= 2: C0 (52.0/30.0)\n|   desired_department_match > 2: C3 (54.0/38.0)\nstudy_environment > 0\n|   stress_frequency <= 3\n|   |   weekly_responsibilities <= 1\n|   |   |   weekly_study_time <= 1\n|   |   |   |   topic_clarity <= 1\n|   |   |   |   |   routine_manageability <= 1: C1 (41.0/23.0)\n|   |   |   |   |   routine_manageability > 1: C2 (48.0/29.0)\n|   |   |   |   topic_clarity > 1: C2 (101.0/67.0)\n|   |   |   weekly_study_time > 1\n|   |   |   |   attendance <= 3: C1 (88.0/54.0)\n|   |   |   |   attendance > 3: C3 (81.0/43.0)\n|   |   weekly_responsibilities > 1\n|   |   |   study_environment <= 3\n|   |   |   |   support_level <= 1: C2 (67.0/46.0)\n|   |   |   |   support_level > 1\n|   |   |   |   |   attendance <= 3: C1 (140.0/69.0)\n|   |   |   |   |   attendance > 3: C2 (72.0/44.0)\n|   |   |   study_environment > 3: C0 (46.0/30.0)\n|   stress_frequency > 3: C2 (130.0/84.0)",
+      "leaves": 12,
+      "size": 23,
+      "dot": "docs/weka_runs/final/questionnaire_cgpa_J48_tree_full.dot"
+    },
+    "main_cgpa": {
+      "text": "recent_sgpa_band = C0: C0 (171.0/69.0)\nrecent_sgpa_band = C1: C1 (269.0/123.0)\nrecent_sgpa_band = C2: C2 (261.0/130.0)\nrecent_sgpa_band = C3: C3 (219.0/90.0)",
+      "leaves": 4,
+      "size": 5,
+      "dot": "docs/weka_runs/final/main_cgpa_J48_tree_full.dot"
+    }
+  },
+  "before_check_1102_cv5": {
+    "main": {
+      "ZeroR": {
+        "accuracy": 0.2904,
+        "kappa": 0.0,
+        "far_rate": 0.2232,
+        "confusion_matrix": [
+          [
+            0,
+            236,
+            0,
+            0
+          ],
+          [
+            0,
+            320,
+            0,
+            0
+          ],
+          [
+            0,
+            300,
+            0,
+            0
+          ],
+          [
+            0,
+            246,
+            0,
+            0
+          ]
+        ]
+      },
+      "J48": {
+        "accuracy": 0.4356,
+        "kappa": 0.2414,
+        "far_rate": 0.2205,
+        "confusion_matrix": [
+          [
+            88,
+            68,
+            48,
+            32
+          ],
+          [
+            43,
+            146,
+            93,
+            38
+          ],
+          [
+            43,
+            71,
+            133,
+            53
+          ],
+          [
+            38,
+            44,
+            51,
+            113
+          ]
+        ]
+      },
+      "RandomForest": {
+        "accuracy": 0.4501,
+        "kappa": 0.2609,
+        "far_rate": 0.2105,
+        "confusion_matrix": [
+          [
+            90,
+            74,
+            37,
+            35
+          ],
+          [
+            52,
+            157,
+            80,
+            31
+          ],
+          [
+            40,
+            81,
+            133,
+            46
+          ],
+          [
+            46,
+            43,
+            41,
+            116
+          ]
+        ]
+      },
+      "SMO": {
+        "accuracy": 0.461,
+        "kappa": 0.2795,
+        "far_rate": 0.2196,
+        "confusion_matrix": [
+          [
+            102,
+            59,
+            33,
+            42
+          ],
+          [
+            49,
+            146,
+            75,
+            50
+          ],
+          [
+            44,
+            59,
+            131,
+            66
+          ],
+          [
+            41,
+            32,
+            44,
+            129
+          ]
+        ]
+      },
+      "Logistic": {
+        "accuracy": 0.4637,
+        "kappa": 0.2819,
+        "far_rate": 0.216,
+        "confusion_matrix": [
+          [
+            102,
+            66,
+            32,
+            36
+          ],
+          [
+            46,
+            154,
+            70,
+            50
+          ],
+          [
+            41,
+            65,
+            131,
+            63
+          ],
+          [
+            42,
+            37,
+            43,
+            124
+          ]
+        ]
+      },
+      "NaiveBayes": {
+        "accuracy": 0.4483,
+        "kappa": 0.2619,
+        "far_rate": 0.2323,
+        "confusion_matrix": [
+          [
+            93,
+            66,
+            35,
+            42
+          ],
+          [
+            54,
+            153,
+            67,
+            46
+          ],
+          [
+            54,
+            61,
+            126,
+            59
+          ],
+          [
+            44,
+            35,
+            45,
+            122
+          ]
+        ]
+      }
+    },
+    "quest": {
+      "ZeroR": {
+        "accuracy": 0.2904,
+        "kappa": 0.0,
+        "far_rate": 0.2232,
+        "confusion_matrix": [
+          [
+            0,
+            236,
+            0,
+            0
+          ],
+          [
+            0,
+            320,
+            0,
+            0
+          ],
+          [
+            0,
+            300,
+            0,
+            0
+          ],
+          [
+            0,
+            246,
+            0,
+            0
+          ]
+        ]
+      },
+      "J48": {
+        "accuracy": 0.2804,
+        "kappa": 0.0267,
+        "far_rate": 0.2877,
+        "confusion_matrix": [
+          [
+            45,
+            93,
+            57,
+            41
+          ],
+          [
+            47,
+            115,
+            108,
+            50
+          ],
+          [
+            38,
+            106,
+            92,
+            64
+          ],
+          [
+            38,
+            93,
+            58,
+            57
+          ]
+        ]
+      },
+      "RandomForest": {
+        "accuracy": 0.3103,
+        "kappa": 0.0681,
+        "far_rate": 0.2922,
+        "confusion_matrix": [
+          [
+            46,
+            77,
+            64,
+            49
+          ],
+          [
+            46,
+            142,
+            85,
+            47
+          ],
+          [
+            50,
+            107,
+            92,
+            51
+          ],
+          [
+            39,
+            73,
+            72,
+            62
+          ]
+        ]
+      },
+      "SMO": {
+        "accuracy": 0.2831,
+        "kappa": 0.0071,
+        "far_rate": 0.2205,
+        "confusion_matrix": [
+          [
+            13,
+            145,
+            72,
+            6
+          ],
+          [
+            17,
+            181,
+            113,
+            9
+          ],
+          [
+            14,
+            164,
+            110,
+            12
+          ],
+          [
+            11,
+            131,
+            96,
+            8
+          ]
+        ]
+      },
+      "Logistic": {
+        "accuracy": 0.2877,
+        "kappa": 0.0291,
+        "far_rate": 0.2577,
+        "confusion_matrix": [
+          [
+            32,
+            111,
+            64,
+            29
+          ],
+          [
+            40,
+            135,
+            106,
+            39
+          ],
+          [
+            28,
+            124,
+            99,
+            49
+          ],
+          [
+            19,
+            105,
+            71,
+            51
+          ]
+        ]
+      },
+      "NaiveBayes": {
+        "accuracy": 0.2976,
+        "kappa": 0.0457,
+        "far_rate": 0.2713,
+        "confusion_matrix": [
+          [
+            54,
+            95,
+            55,
+            32
+          ],
+          [
+            54,
+            159,
+            79,
+            28
+          ],
+          [
+            47,
+            133,
+            77,
+            43
+          ],
+          [
+            35,
+            102,
+            71,
+            38
+          ]
+        ]
+      }
+    }
+  },
+  "j48_sizes": {
+    "sgpa_M2": {
+      "leaves": 220,
+      "size": 439,
+      "depth": 19,
+      "cv5_acc": "27.1739"
+    },
+    "sgpa_M40": {
+      "leaves": 8,
+      "size": 15,
+      "depth": 5,
+      "cv5_acc": "26.3043"
+    },
+    "questionnaire_cgpa_M2": {
+      "leaves": 216,
+      "size": 431,
+      "depth": 20,
+      "cv5_acc": "30.8696"
+    },
+    "questionnaire_cgpa_M40": {
+      "leaves": 12,
+      "size": 23,
+      "depth": 6,
+      "cv5_acc": "27.8261"
+    },
+    "main_cgpa_M2": {
+      "leaves": 175,
+      "size": 347,
+      "depth": 21,
+      "cv5_acc": "46.5217"
+    },
+    "main_cgpa_M40": {
+      "leaves": 4,
+      "size": 5,
+      "depth": 1,
+      "cv5_acc": "54.3478"
+    }
+  }
+}

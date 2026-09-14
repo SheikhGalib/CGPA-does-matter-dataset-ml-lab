@@ -1,0 +1,37 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -t <repo>\cleaned-dataset\ours\anomaly\_work\sub_Allsem4_quest.arff -x 5 -s 5 -o -v
+
+
+Time taken to perform cross-validation: 0.56 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances          23               30.6667 %
+Incorrectly Classified Instances        52               69.3333 %
+Kappa statistic                          0.0703
+Mean absolute error                      0.3532
+Root mean squared error                  0.5003
+Relative absolute error                 95.5322 %
+Root relative squared error            116.3688 %
+Total Number of Instances               75     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.300    0.200    0.353      0.300    0.324      0.106    0.547     0.366     C0
+                 0.250    0.222    0.176      0.250    0.207      0.024    0.553     0.288     C1
+                 0.350    0.218    0.368      0.350    0.359      0.134    0.559     0.335     C2
+                 0.304    0.288    0.318      0.304    0.311      0.016    0.513     0.303     C3
+Weighted Avg.    0.307    0.236    0.318      0.307    0.311      0.073    0.541     0.326     
+
+
+=== Confusion Matrix ===
+
+ a b c d   <-- classified as
+ 6 7 1 6 | a = C0
+ 3 3 4 2 | b = C1
+ 2 4 7 7 | c = C2
+ 6 3 7 7 | d = C3
+

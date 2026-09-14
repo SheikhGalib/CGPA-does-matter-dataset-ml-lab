@@ -1,0 +1,37 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 -t <repo>\cleaned-dataset\ours\anomaly\_work\sub_KUETsem7after7Aug_quest.arff -x 5 -s 3 -o -v
+
+
+Time taken to perform cross-validation: 1.12 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances          32               32      %
+Incorrectly Classified Instances        68               68      %
+Kappa statistic                         -0.028 
+Mean absolute error                      0.3461
+Root mean squared error                  0.4342
+Relative absolute error                 99.3928 %
+Root relative squared error            104.2224 %
+Total Number of Instances              100     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.095    0.165    0.133      0.095    0.111      -0.079   0.413     0.182     C0
+                 0.550    0.567    0.393      0.550    0.458      -0.016   0.556     0.488     C1
+                 0.258    0.261    0.308      0.258    0.281      -0.003   0.506     0.311     C2
+                 0.000    0.033    0.000      0.000    0.000      -0.052   0.613     0.142     C3
+Weighted Avg.    0.320    0.345    0.281      0.320    0.294      -0.028   0.515     0.341     
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+  2 12  6  1 |  a = C0
+  7 22 10  1 |  b = C1
+  4 18  8  1 |  c = C2
+  2  4  2  0 |  d = C3
+

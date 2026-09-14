@@ -1,0 +1,37 @@
+# WEKA 3.8.7 command:
+# java -cp weka.jar "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.meta.AttributeSelectedClassifier -E weka.attributeSelection.InfoGainAttributeEval -S "weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N 8" -W weka.classifiers.functions.Logistic -t <repo>\cleaned-dataset\ours\anomaly\main_cgpa_1102.arff -x 10 -s 1 -o -v -- -R 1.0E-8 -M -1
+
+
+Time taken to perform cross-validation: 1.98 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         508               46.098  %
+Incorrectly Classified Instances       594               53.902  %
+Kappa statistic                          0.2794
+Mean absolute error                      0.343 
+Root mean squared error                  0.4165
+Relative absolute error                 91.9714 %
+Root relative squared error             96.4538 %
+Total Number of Instances             1102     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.432    0.155    0.432      0.432    0.432      0.277    0.652     0.326     C0
+                 0.459    0.194    0.492      0.459    0.475      0.271    0.641     0.426     C1
+                 0.437    0.186    0.468      0.437    0.452      0.257    0.609     0.364     C2
+                 0.520    0.186    0.446      0.520    0.480      0.317    0.681     0.422     C3
+Weighted Avg.    0.461    0.182    0.462      0.461    0.461      0.279    0.644     0.387     
+
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+ 102  60  32  42 |   a = C0
+  48 147  74  51 |   b = C1
+  44  59 131  66 |   c = C2
+  42  33  43 128 |   d = C3
+
