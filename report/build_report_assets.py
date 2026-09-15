@@ -478,7 +478,7 @@ plt.close(fig)
 
 # copy the slide figures the report re-uses
 for f in ["rc_university", "rc_cgpa", "gap_distribution_1102", "far_gap_by_university", "far_gap_by_kuet_semester",
-          "kuet_sem7_by_date", "sgpa_x_cgpa_aug67", "sgpa_x_cgpa_rest", "association_strength", "sgpa_vs_cgpa_pattern",
+          "kuet_sem7_by_date", "sgpa_x_cgpa_aug67", "sgpa_x_cgpa_rest", "sgpa_x_cgpa_final", "association_strength", "sgpa_vs_cgpa_pattern",
           "tree_main_cgpa", "tree_questionnaire_cgpa", "tree_sgpa", "weka_output_main_smo_cv5"]:
     shutil.copy2(ROOT / "docs" / "figures" / "final" / f"{f}.png", FIG / "deck" / f"{f}.png")
 

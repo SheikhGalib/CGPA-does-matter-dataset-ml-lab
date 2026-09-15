@@ -487,14 +487,14 @@ Every step is scripted. The cleaning, missing-data, outlier, de-identification a
 \rowcolor{hdr}\hd{Quality dimension} & \hd{Evidence / checks performed} \\ \hline
 \hd{Completeness} & 1,126 responses were received and all 1,126 are in the raw files. 1,108 have a usable CGPA and 1,102 also a real recent SGPA. Blank answers per question are counted in Table~\ref{tab:missing}. The released 920 rows have no missing values; the script stops if any remain. \\ \hline
 \hd{Consistency} & The column map is checked to cover every raw column. Every answer must match a known option, or the encoding step stops. Answer labels are identical across the two forms after the Bangla text is removed. University and department spellings are standardised. Each response has a unique timestamp, so there are no duplicate submissions. \\ \hline
-\hd{Label quality} & Labels are self-reported ranges, not registrar records. We checked them against the linked recent-SGPA question: 78\% of 1,102 students are within one group (Figure~\ref{fig:gap}). Big gaps were concentrated in one batch (Tables~\ref{tab:gapgroups}--\ref{tab:gapdates}), and that batch's answers look randomly spread (Figure~\ref{fig:scatter}). In the final data SGPA and CGPA agree strongly ($\rho=0.65$). \\ \hline
+\hd{Label quality} & Labels are self-reported ranges, not registrar records. We checked them against the linked recent-SGPA question: 78\% of 1,102 students are within one group (Figure~\ref{fig:gap}). Big gaps were concentrated in one batch (Tables~\ref{tab:gapgroups}--\ref{tab:gapsem}). In the final data SGPA and CGPA agree strongly ($\rho=0.65$; Figure~\ref{fig:scatter}). \\ \hline
 \hd{Measurement quality} & Single-choice options with fixed ranges prevent impossible values. Questions were bilingual to avoid misreading. Weak points: self-report, and the different time reference of the CGPA question on the two forms. \\ \hline
 \hd{Integrity} & Raw exports are kept unchanged. Scripts \texttt{assert} that the 1,108 rows line up one-to-one with the raw timestamps and CGPA answers before any merge. All 67 WEKA logs are stored with their exact commands. \\ \hline
 \hd{Representativeness / bias} & KUET is 75\% of rows, and KUET semester 7 dominates it. The sample is convenience-based. Classes are close to balanced (ratio 1.56). CUET has only 25 rows and no C0 student. Gender and income were not collected (Section 12). \\ \hline
 \hd{Reproducibility} & \texttt{final\_weka\_results.py} rebuilds the 920-row CSV and ARFF and every WEKA result from the cleaned file. The notebook rebuilds the cleaned file from \texttt{raw-data/}. \texttt{build\_report\_assets.py} rebuilds every table and figure in this report. Seeds are fixed (WEKA \texttt{-s 1}). \\ \hline
 \end{tabularx}}
 
-\textbf{The SGPA--CGPA check in detail.} A CGPA averages several semesters, so one semester rarely moves it by more than one group. For example, a student with CGPA 3.80 after five semesters who gets SGPA 2.80 in the sixth semester ends with CGPA 3.63, moving only from C3 to C2. Figure~\ref{fig:gap} shows that 860 of the 1,102 students (78\%) are within one group, and 242 are two or three groups apart. Tables~\ref{tab:gapuni}--\ref{tab:gapdates} show where the big gaps come from. There are none at BRAC or CUET, and almost all KUET big gaps are in semester 7. Within semester 7 they appear on 6--7 August, when 455 answers arrived in two days.
+\textbf{The SGPA--CGPA check in detail.} A CGPA averages several semesters, so one semester rarely moves it by more than one group. For example, a student with CGPA 3.80 after five semesters who gets SGPA 2.80 in the sixth semester ends with CGPA 3.63, moving only from C3 to C2. Figure~\ref{fig:gap} shows that 860 of the 1,102 students (78\%) are within one group, and 242 are two or three groups apart. Tables~\ref{tab:gapuni} and \ref{tab:gapsem} show where the big gaps come from. There are none at BRAC or CUET, and almost all KUET big gaps are in semester 7. Within semester 7 they appear on 6--7 August, when 455 answers arrived in two days (Table~\ref{tab:gapgroups}).
 
 \begin{figure}[!htbp]
 \centering
@@ -516,7 +516,7 @@ Every step is scripted. The cleaning, missing-data, outlier, de-identification a
 
 \begin{table}[!htbp]
 \centering\small
-\begin{minipage}[t]{0.29\linewidth}\centering
+\begin{minipage}[t]{0.45\linewidth}\centering
 \captionof{table}{Big gaps (2--3) by university.}\label{tab:gapuni}
 \begin{tabular}{|l|r|r|r|}
 \hline
@@ -524,29 +524,20 @@ Every step is scripted. The cleaning, missing-data, outlier, de-identification a
 \tabinput{tables/gap_university.tex}
 \end{tabular}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.29\linewidth}\centering
+\begin{minipage}[t]{0.45\linewidth}\centering
 \captionof{table}{Big gaps by KUET semester.}\label{tab:gapsem}
 \begin{tabular}{|c|r|r|r|}
 \hline
 \rowcolor{hdr}\hd{Sem} & \hd{n} & \hd{Big} & \hd{\%} \\ \hline
 \tabinput{tables/gap_kuet_semester.tex}
 \end{tabular}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.38\linewidth}\centering
-\captionof{table}{KUET semester 7 by submission date.}\label{tab:gapdates}
-\begin{tabular}{|l|r|r|r|r|}
-\hline
-\rowcolor{hdr}\hd{Date} & \hd{n} & \hd{Big} & \hd{\%} & \hd{Removed} \\ \hline
-\tabinput{tables/gap_kuet_dates.tex}
-\end{tabular}
 \end{minipage}
 \end{table}
 
 \begin{figure}[!htbp]
 \centering
-\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{figures/deck/sgpa_x_cgpa_aug67.png}\caption{6--7 Aug KUET semester 7 (455 rows)}\end{subfigure}\hfill
-\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{figures/deck/sgpa_x_cgpa_rest.png}\caption{All other students (647 rows)}\end{subfigure}
-\caption{Recent SGPA group (rows) against CGPA group (columns). In the checked batch the answers are spread over every cell, as random choices would be. For everyone else most answers lie on or next to the diagonal.}
+\includegraphics[width=0.6\linewidth]{figures/deck/sgpa_x_cgpa_final.png}
+\caption{Recent SGPA group (rows) against CGPA group (columns) for the 920 students in the final dataset. Blue cells are the same group or one group apart (860 students, 93.5\%).}
 \label{fig:scatter}
 \end{figure}
 

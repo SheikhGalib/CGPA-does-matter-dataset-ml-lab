@@ -425,4 +425,5 @@ def grid_image(table, name, w, h):
 
 grid_image(G["sgpa_x_cgpa_aug67"], "sgpa_x_cgpa_aug67", 1196, 832)
 grid_image(G["sgpa_x_cgpa_rest"], "sgpa_x_cgpa_rest", 1196, 832)
+grid_image(G["sgpa_x_cgpa_final"], "sgpa_x_cgpa_final", 1196, 832)
 print("done")
