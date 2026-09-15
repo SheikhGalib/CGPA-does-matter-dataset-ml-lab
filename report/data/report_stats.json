@@ -1,0 +1,2229 @@
+{
+ "sources": [
+  {
+   "key": "multi_uni",
+   "label": "A: University Student Performance Analysis Form",
+   "universities": "BUET, BRAC, CUET",
+   "raw": 230,
+   "cols": 22,
+   "start": "22 Aug 2026",
+   "end": "03 Sep 2026",
+   "clean": 230,
+   "base": 230,
+   "final": 230
+  },
+  {
+   "key": "kuet",
+   "label": "B: Student Performance Analysis Form (KUET)",
+   "universities": "KUET",
+   "raw": 896,
+   "cols": 21,
+   "start": "31 Jul 2026",
+   "end": "13 Aug 2026",
+   "clean": 878,
+   "base": 872,
+   "final": 690
+  }
+ ],
+ "funnel": [
+  [
+   "Raw responses from the two Google Forms",
+   1126,
+   "--"
+  ],
+  [
+   "Remove responses with no usable CGPA answer (blank or ``I don't know'')",
+   1108,
+   18
+  ],
+  [
+   "Remove responses with no real recent-SGPA answer",
+   1102,
+   6
+  ],
+  [
+   "Remove 6--7 Aug KUET semester-7 answers whose SGPA and CGPA bands are 2--3 apart",
+   920,
+   182
+  ]
+ ],
+ "raw_missing": [
+  {
+   "field": "department",
+   "a": 56,
+   "b": 16,
+   "total": 72,
+   "pct": 6.394316163410302
+  },
+  {
+   "field": "semester",
+   "a": 0,
+   "b": 2,
+   "total": 2,
+   "pct": 0.17761989342806395
+  },
+  {
+   "field": "recent_sgpa",
+   "a": 0,
+   "b": 23,
+   "total": 23,
+   "pct": 2.0426287744227354
+  },
+  {
+   "field": "cgpa",
+   "a": 0,
+   "b": 17,
+   "total": 17,
+   "pct": 1.5097690941385435
+  },
+  {
+   "field": "desired_department_match",
+   "a": 0,
+   "b": 2,
+   "total": 2,
+   "pct": 0.17761989342806395
+  },
+  {
+   "field": "attendance",
+   "a": 0,
+   "b": 1,
+   "total": 1,
+   "pct": 0.08880994671403197
+  },
+  {
+   "field": "weekly_study_time",
+   "a": 0,
+   "b": 1,
+   "total": 1,
+   "pct": 0.08880994671403197
+  },
+  {
+   "field": "study_style",
+   "a": 0,
+   "b": 1,
+   "total": 1,
+   "pct": 0.08880994671403197
+  },
+  {
+   "field": "topic_clarity",
+   "a": 0,
+   "b": 2,
+   "total": 2,
+   "pct": 0.17761989342806395
+  },
+  {
+   "field": "sleep_duration",
+   "a": 0,
+   "b": 1,
+   "total": 1,
+   "pct": 0.08880994671403197
+  },
+  {
+   "field": "stress_frequency",
+   "a": 0,
+   "b": 1,
+   "total": 1,
+   "pct": 0.08880994671403197
+  },
+  {
+   "field": "weekly_responsibilities",
+   "a": 0,
+   "b": 3,
+   "total": 3,
+   "pct": 0.2664298401420959
+  },
+  {
+   "field": "distraction_frequency",
+   "a": 0,
+   "b": 1,
+   "total": 1,
+   "pct": 0.08880994671403197
+  },
+  {
+   "field": "study_environment",
+   "a": 0,
+   "b": 1,
+   "total": 1,
+   "pct": 0.08880994671403197
+  },
+  {
+   "field": "support_level",
+   "a": 0,
+   "b": 3,
+   "total": 3,
+   "pct": 0.2664298401420959
+  },
+  {
+   "field": "routine_manageability",
+   "a": 0,
+   "b": 11,
+   "total": 11,
+   "pct": 0.9769094138543517
+  },
+  {
+   "field": "admission_satisfaction",
+   "a": 0,
+   "b": 1,
+   "total": 1,
+   "pct": 0.08880994671403197
+  },
+  {
+   "field": "career_expectation",
+   "a": 0,
+   "b": 2,
+   "total": 2,
+   "pct": 0.17761989342806395
+  },
+  {
+   "field": "result_satisfaction",
+   "a": 0,
+   "b": 14,
+   "total": 14,
+   "pct": 1.2433392539964476
+  }
+ ],
+ "raw_a_weekly_responsibilities_values": {
+  "6-10 hrs": 60,
+  "1-5 hrs": 57,
+  "None": 44,
+  "11-15 hrs": 40,
+  "More than 15 hrs": 29
+ },
+ "raw_a_department_other_blank": 174,
+ "raw_b_email_blank": 896,
+ "university_cgpa": {
+  "KUET": [
+   130,
+   223,
+   203,
+   134
+  ],
+  "BUET": [
+   36,
+   24,
+   16,
+   28
+  ],
+  "BRAC": [
+   16,
+   28,
+   31,
+   26
+  ],
+  "CUET": [
+   0,
+   9,
+   14,
+   2
+  ]
+ },
+ "semester_university": {
+  "1": [
+   43,
+   10,
+   0,
+   0
+  ],
+  "2": [
+   7,
+   3,
+   0,
+   0
+  ],
+  "3": [
+   44,
+   8,
+   0,
+   0
+  ],
+  "4": [
+   67,
+   8,
+   0,
+   0
+  ],
+  "5": [
+   28,
+   14,
+   0,
+   0
+  ],
+  "6": [
+   8,
+   8,
+   0,
+   0
+  ],
+  "7": [
+   493,
+   17,
+   0,
+   25
+  ],
+  "8": [
+   0,
+   6,
+   0,
+   0
+  ],
+  "9": [
+   0,
+   6,
+   0,
+   0
+  ],
+  "10": [
+   0,
+   7,
+   48,
+   0
+  ],
+  "11": [
+   0,
+   8,
+   53,
+   0
+  ],
+  "12": [
+   0,
+   9,
+   0,
+   0
+  ]
+ },
+ "departments": {
+  "CSE": 305,
+  "EEE": 107,
+  "ME": 84,
+  "ECE": 74,
+  "CE": 58,
+  "MSE": 51,
+  "URP": 29,
+  "IEM": 26,
+  "BECM": 21,
+  "LE": 20,
+  "ChE": 19,
+  "BME": 18,
+  "TE": 18,
+  "ARCH": 17,
+  "Unknown": 15,
+  "MTE": 14,
+  "ESE": 9,
+  "MME": 6,
+  "NCE": 6,
+  "PMRE": 6,
+  "IPE": 5,
+  "NAME": 4,
+  "MIE": 4,
+  "WRE": 4
+ },
+ "final_gap": {
+  "0": 508,
+  "1": 352,
+  "2": 38,
+  "3": 22
+ },
+ "sgpa_bands": [
+  171,
+  269,
+  261,
+  219
+ ],
+ "dropped": {
+  "n": 182,
+  "by_gap": {
+   "2": 121,
+   "3": 61
+  },
+  "by_date": {
+   "2026-08-06": 131,
+   "2026-08-07": 51
+  },
+  "sgpa_lower": 92,
+  "sgpa_higher": 90,
+  "cgpa_band": [
+   54,
+   36,
+   36,
+   56
+  ],
+  "sgpa_band": [
+   65,
+   27,
+   22,
+   68
+  ]
+ },
+ "questions": {
+  "desired_department_match": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Not at all what I wanted",
+     "n": 110,
+     "pct": 11.956521739130435,
+     "mix": [
+      26.4,
+      32.7,
+      26.4,
+      14.5
+     ],
+     "mean_cgpa_code": 1.290909090909091
+    },
+    {
+     "code": 1,
+     "answer": "Mostly different",
+     "n": 101,
+     "pct": 10.978260869565217,
+     "mix": [
+      33.7,
+      22.8,
+      23.8,
+      19.8
+     ],
+     "mean_cgpa_code": 1.297029702970297
+    },
+    {
+     "code": 2,
+     "answer": "Somewhat different",
+     "n": 138,
+     "pct": 15.0,
+     "mix": [
+      21.0,
+      38.4,
+      26.1,
+      14.5
+     ],
+     "mean_cgpa_code": 1.3405797101449275
+    },
+    {
+     "code": 3,
+     "answer": "Close to what I wanted",
+     "n": 212,
+     "pct": 23.043478260869566,
+     "mix": [
+      17.9,
+      28.8,
+      28.8,
+      24.5
+     ],
+     "mean_cgpa_code": 1.599056603773585
+    },
+    {
+     "code": 4,
+     "answer": "Yes, exactly what I wanted",
+     "n": 359,
+     "pct": 39.02173913043478,
+     "mix": [
+      14.5,
+      30.9,
+      31.8,
+      22.8
+     ],
+     "mean_cgpa_code": 1.6295264623955432
+    }
+   ],
+   "mode": "Yes, exactly what I wanted",
+   "median": "Close to what I wanted",
+   "mean": 2.6619565217391306,
+   "sd": 1.394013501862223,
+   "rho_cgpa": 0.1336,
+   "rho_sgpa": 0.1371,
+   "q": 0.00058,
+   "reliable": "yes",
+   "max_shift_pp": 2.45186617217707,
+   "raw_blank_a": 0,
+   "raw_blank_b": 2
+  },
+  "attendance": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Less than 40%",
+     "n": 6,
+     "pct": 0.6521739130434783,
+     "mix": [
+      33.3,
+      16.7,
+      33.3,
+      16.7
+     ],
+     "mean_cgpa_code": 1.3333333333333333
+    },
+    {
+     "code": 1,
+     "answer": "40-59%",
+     "n": 19,
+     "pct": 2.0652173913043477,
+     "mix": [
+      21.1,
+      36.8,
+      26.3,
+      15.8
+     ],
+     "mean_cgpa_code": 1.368421052631579
+    },
+    {
+     "code": 2,
+     "answer": "60-74%",
+     "n": 223,
+     "pct": 24.23913043478261,
+     "mix": [
+      22.4,
+      31.4,
+      29.6,
+      16.6
+     ],
+     "mean_cgpa_code": 1.4035874439461884
+    },
+    {
+     "code": 3,
+     "answer": "75-89%",
+     "n": 323,
+     "pct": 35.108695652173914,
+     "mix": [
+      20.1,
+      33.7,
+      27.6,
+      18.6
+     ],
+     "mean_cgpa_code": 1.4458204334365325
+    },
+    {
+     "code": 4,
+     "answer": "90% or more",
+     "n": 349,
+     "pct": 37.93478260869565,
+     "mix": [
+      17.5,
+      27.8,
+      29.2,
+      25.5
+     ],
+     "mean_cgpa_code": 1.6275071633237823
+    }
+   ],
+   "mode": "90% or more",
+   "median": "75-89%",
+   "mean": 3.0760869565217392,
+   "sd": 0.8706768926573649,
+   "rho_cgpa": 0.0926,
+   "rho_sgpa": 0.1113,
+   "q": 0.02973,
+   "reliable": "yes",
+   "max_shift_pp": 0.806241616034086,
+   "raw_blank_a": 0,
+   "raw_blank_b": 1
+  },
+  "weekly_study_time": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Less than 3 hrs",
+     "n": 194,
+     "pct": 21.08695652173913,
+     "mix": [
+      22.7,
+      28.9,
+      31.4,
+      17.0
+     ],
+     "mean_cgpa_code": 1.4278350515463918
+    },
+    {
+     "code": 1,
+     "answer": "3-6 hrs",
+     "n": 237,
+     "pct": 25.76086956521739,
+     "mix": [
+      23.6,
+      30.4,
+      28.7,
+      17.3
+     ],
+     "mean_cgpa_code": 1.3966244725738397
+    },
+    {
+     "code": 2,
+     "answer": "7-10 hrs",
+     "n": 217,
+     "pct": 23.58695652173913,
+     "mix": [
+      14.3,
+      32.3,
+      30.0,
+      23.5
+     ],
+     "mean_cgpa_code": 1.6267281105990783
+    },
+    {
+     "code": 3,
+     "answer": "11-15 hrs",
+     "n": 142,
+     "pct": 15.434782608695652,
+     "mix": [
+      18.3,
+      34.5,
+      25.4,
+      21.8
+     ],
+     "mean_cgpa_code": 1.5070422535211268
+    },
+    {
+     "code": 4,
+     "answer": "More than 15 hrs",
+     "n": 130,
+     "pct": 14.130434782608695,
+     "mix": [
+      19.2,
+      28.5,
+      26.2,
+      26.2
+     ],
+     "mean_cgpa_code": 1.5923076923076922
+    }
+   ],
+   "mode": "3-6 hrs",
+   "median": "7-10 hrs",
+   "mean": 1.757608695652174,
+   "sd": 1.328087278983934,
+   "rho_cgpa": 0.062,
+   "rho_sgpa": 0.0603,
+   "q": 0.18085,
+   "reliable": "no",
+   "max_shift_pp": 1.3528761934822064,
+   "raw_blank_a": 0,
+   "raw_blank_b": 1
+  },
+  "study_style": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Occasionally when necessary",
+     "n": 240,
+     "pct": 26.08695652173913,
+     "mix": [
+      20.0,
+      24.2,
+      30.8,
+      25.0
+     ],
+     "mean_cgpa_code": 1.6083333333333334
+    },
+    {
+     "code": 1,
+     "answer": "Mostly just before exams",
+     "n": 257,
+     "pct": 27.934782608695652,
+     "mix": [
+      24.5,
+      33.9,
+      26.1,
+      15.6
+     ],
+     "mean_cgpa_code": 1.3268482490272373
+    },
+    {
+     "code": 2,
+     "answer": "Regularly but not every day",
+     "n": 218,
+     "pct": 23.695652173913043,
+     "mix": [
+      16.1,
+      38.1,
+      27.5,
+      18.3
+     ],
+     "mean_cgpa_code": 1.481651376146789
+    },
+    {
+     "code": 3,
+     "answer": "Mostly consistent routine",
+     "n": 110,
+     "pct": 11.956521739130435,
+     "mix": [
+      19.1,
+      29.1,
+      30.0,
+      21.8
+     ],
+     "mean_cgpa_code": 1.5454545454545454
+    },
+    {
+     "code": 4,
+     "answer": "Consistent throughout the semester",
+     "n": 95,
+     "pct": 10.326086956521738,
+     "mix": [
+      15.8,
+      25.3,
+      31.6,
+      27.4
+     ],
+     "mean_cgpa_code": 1.7052631578947368
+    }
+   ],
+   "mode": "Mostly just before exams",
+   "median": "Mostly just before exams",
+   "mean": 1.525,
+   "sd": 1.277334428665829,
+   "rho_cgpa": 0.0163,
+   "rho_sgpa": 0.0144,
+   "q": 0.67876,
+   "reliable": "no",
+   "max_shift_pp": 2.199558115679002,
+   "raw_blank_a": 0,
+   "raw_blank_b": 1
+  },
+  "topic_clarity": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Almost nothing",
+     "n": 149,
+     "pct": 16.195652173913043,
+     "mix": [
+      21.5,
+      33.6,
+      26.8,
+      18.1
+     ],
+     "mean_cgpa_code": 1.4161073825503356
+    },
+    {
+     "code": 1,
+     "answer": "A little",
+     "n": 220,
+     "pct": 23.91304347826087,
+     "mix": [
+      20.9,
+      29.1,
+      26.4,
+      23.6
+     ],
+     "mean_cgpa_code": 1.5272727272727273
+    },
+    {
+     "code": 2,
+     "answer": "About half",
+     "n": 267,
+     "pct": 29.02173913043478,
+     "mix": [
+      18.4,
+      33.3,
+      31.1,
+      17.2
+     ],
+     "mean_cgpa_code": 1.4719101123595506
+    },
+    {
+     "code": 3,
+     "answer": "Most of it",
+     "n": 191,
+     "pct": 20.76086956521739,
+     "mix": [
+      17.8,
+      28.8,
+      32.5,
+      20.9
+     ],
+     "mean_cgpa_code": 1.5654450261780104
+    },
+    {
+     "code": 4,
+     "answer": "Almost everything",
+     "n": 93,
+     "pct": 10.108695652173912,
+     "mix": [
+      22.6,
+      28.0,
+      22.6,
+      26.9
+     ],
+     "mean_cgpa_code": 1.5376344086021505
+    }
+   ],
+   "mode": "About half",
+   "median": "About half",
+   "mean": 1.8467391304347827,
+   "sd": 1.2153310727174829,
+   "rho_cgpa": 0.0337,
+   "rho_sgpa": -0.0165,
+   "q": 0.45981,
+   "reliable": "no",
+   "max_shift_pp": 1.9602698650674668,
+   "raw_blank_a": 0,
+   "raw_blank_b": 2
+  },
+  "sleep_duration": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Less than 5 hrs",
+     "n": 146,
+     "pct": 15.869565217391305,
+     "mix": [
+      18.5,
+      38.4,
+      24.7,
+      18.5
+     ],
+     "mean_cgpa_code": 1.4315068493150684
+    },
+    {
+     "code": 1,
+     "answer": "5-6 hrs",
+     "n": 262,
+     "pct": 28.47826086956522,
+     "mix": [
+      20.2,
+      27.5,
+      32.4,
+      19.8
+     ],
+     "mean_cgpa_code": 1.5190839694656488
+    },
+    {
+     "code": 2,
+     "answer": "6-7 hrs",
+     "n": 255,
+     "pct": 27.717391304347824,
+     "mix": [
+      19.2,
+      34.1,
+      27.5,
+      19.2
+     ],
+     "mean_cgpa_code": 1.4666666666666666
+    },
+    {
+     "code": 3,
+     "answer": "7-8 hrs",
+     "n": 177,
+     "pct": 19.23913043478261,
+     "mix": [
+      18.1,
+      27.7,
+      28.2,
+      26.0
+     ],
+     "mean_cgpa_code": 1.6214689265536724
+    },
+    {
+     "code": 4,
+     "answer": "More than 8 hrs",
+     "n": 80,
+     "pct": 8.695652173913043,
+     "mix": [
+      26.2,
+      25.0,
+      28.7,
+      20.0
+     ],
+     "mean_cgpa_code": 1.425
+    }
+   ],
+   "mode": "5-6 hrs",
+   "median": "6-7 hrs",
+   "mean": 1.7641304347826088,
+   "sd": 1.1856121059043048,
+   "rho_cgpa": 0.0255,
+   "rho_sgpa": 0.0192,
+   "q": 0.52845,
+   "reliable": "no",
+   "max_shift_pp": 1.8553223388305824,
+   "raw_blank_a": 0,
+   "raw_blank_b": 1
+  },
+  "stress_frequency": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Never",
+     "n": 101,
+     "pct": 10.978260869565217,
+     "mix": [
+      20.8,
+      32.7,
+      24.8,
+      21.8
+     ],
+     "mean_cgpa_code": 1.4752475247524752
+    },
+    {
+     "code": 1,
+     "answer": "Rarely",
+     "n": 184,
+     "pct": 20.0,
+     "mix": [
+      17.9,
+      27.7,
+      37.5,
+      16.8
+     ],
+     "mean_cgpa_code": 1.5326086956521738
+    },
+    {
+     "code": 2,
+     "answer": "Sometimes",
+     "n": 259,
+     "pct": 28.152173913043477,
+     "mix": [
+      15.8,
+      34.4,
+      26.6,
+      23.2
+     ],
+     "mean_cgpa_code": 1.5714285714285714
+    },
+    {
+     "code": 3,
+     "answer": "Often",
+     "n": 218,
+     "pct": 23.695652173913043,
+     "mix": [
+      20.2,
+      35.3,
+      22.5,
+      22.0
+     ],
+     "mean_cgpa_code": 1.463302752293578
+    },
+    {
+     "code": 4,
+     "answer": "Almost always",
+     "n": 158,
+     "pct": 17.17391304347826,
+     "mix": [
+      27.2,
+      21.5,
+      32.9,
+      18.4
+     ],
+     "mean_cgpa_code": 1.4240506329113924
+    }
+   ],
+   "mode": "Sometimes",
+   "median": "Sometimes",
+   "mean": 2.1608695652173915,
+   "sd": 1.240498734493732,
+   "rho_cgpa": -0.0303,
+   "rho_sgpa": -0.0,
+   "q": 0.47789,
+   "reliable": "no",
+   "max_shift_pp": 1.4156079854809427,
+   "raw_blank_a": 0,
+   "raw_blank_b": 1
+  },
+  "weekly_responsibilities": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "None",
+     "n": 234,
+     "pct": 25.434782608695652,
+     "mix": [
+      19.7,
+      25.6,
+      28.6,
+      26.1
+     ],
+     "mean_cgpa_code": 1.6111111111111112
+    },
+    {
+     "code": 1,
+     "answer": "1-5 hrs",
+     "n": 231,
+     "pct": 25.108695652173914,
+     "mix": [
+      19.9,
+      28.6,
+      27.7,
+      23.8
+     ],
+     "mean_cgpa_code": 1.5541125541125542
+    },
+    {
+     "code": 2,
+     "answer": "6-10 hrs",
+     "n": 195,
+     "pct": 21.195652173913043,
+     "mix": [
+      16.4,
+      36.9,
+      30.3,
+      16.4
+     ],
+     "mean_cgpa_code": 1.4666666666666666
+    },
+    {
+     "code": 3,
+     "answer": "11-15 hrs",
+     "n": 147,
+     "pct": 15.978260869565217,
+     "mix": [
+      22.4,
+      31.3,
+      29.9,
+      16.3
+     ],
+     "mean_cgpa_code": 1.401360544217687
+    },
+    {
+     "code": 4,
+     "answer": "More than 15 hrs",
+     "n": 113,
+     "pct": 12.282608695652174,
+     "mix": [
+      22.1,
+      35.4,
+      26.5,
+      15.9
+     ],
+     "mean_cgpa_code": 1.3628318584070795
+    }
+   ],
+   "mode": "None",
+   "median": "1-5 hrs",
+   "mean": 1.6456521739130434,
+   "sd": 1.3401324414011524,
+   "rho_cgpa": -0.0864,
+   "rho_sgpa": -0.0668,
+   "q": 0.03498,
+   "reliable": "yes",
+   "max_shift_pp": 1.2631184407796123,
+   "raw_blank_a": 0,
+   "raw_blank_b": 3
+  },
+  "distraction_frequency": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Never",
+     "n": 84,
+     "pct": 9.130434782608695,
+     "mix": [
+      21.4,
+      20.2,
+      33.3,
+      25.0
+     ],
+     "mean_cgpa_code": 1.619047619047619
+    },
+    {
+     "code": 1,
+     "answer": "Rarely",
+     "n": 133,
+     "pct": 14.456521739130435,
+     "mix": [
+      21.1,
+      27.1,
+      34.6,
+      17.3
+     ],
+     "mean_cgpa_code": 1.481203007518797
+    },
+    {
+     "code": 2,
+     "answer": "Sometimes",
+     "n": 255,
+     "pct": 27.717391304347824,
+     "mix": [
+      17.3,
+      36.1,
+      29.0,
+      17.6
+     ],
+     "mean_cgpa_code": 1.4705882352941178
+    },
+    {
+     "code": 3,
+     "answer": "Often",
+     "n": 249,
+     "pct": 27.065217391304348,
+     "mix": [
+      18.9,
+      32.9,
+      26.1,
+      22.1
+     ],
+     "mean_cgpa_code": 1.5140562248995983
+    },
+    {
+     "code": 4,
+     "answer": "Almost every day",
+     "n": 199,
+     "pct": 21.630434782608695,
+     "mix": [
+      22.6,
+      28.6,
+      25.6,
+      23.1
+     ],
+     "mean_cgpa_code": 1.4924623115577889
+    }
+   ],
+   "mode": "Sometimes",
+   "median": "Sometimes",
+   "mean": 2.376086956521739,
+   "sd": 1.2271298080805213,
+   "rho_cgpa": -0.0131,
+   "rho_sgpa": -0.0132,
+   "q": 0.69114,
+   "reliable": "no",
+   "max_shift_pp": 1.577369210131776,
+   "raw_blank_a": 0,
+   "raw_blank_b": 1
+  },
+  "study_environment": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Very distracting",
+     "n": 106,
+     "pct": 11.521739130434783,
+     "mix": [
+      33.0,
+      23.6,
+      22.6,
+      20.8
+     ],
+     "mean_cgpa_code": 1.3113207547169812
+    },
+    {
+     "code": 1,
+     "answer": "Somewhat distracting",
+     "n": 151,
+     "pct": 16.41304347826087,
+     "mix": [
+      21.2,
+      32.5,
+      24.5,
+      21.9
+     ],
+     "mean_cgpa_code": 1.4701986754966887
+    },
+    {
+     "code": 2,
+     "answer": "Neither good nor bad",
+     "n": 221,
+     "pct": 24.02173913043478,
+     "mix": [
+      15.4,
+      35.3,
+      30.8,
+      18.6
+     ],
+     "mean_cgpa_code": 1.5248868778280542
+    },
+    {
+     "code": 3,
+     "answer": "Mostly suitable",
+     "n": 310,
+     "pct": 33.69565217391305,
+     "mix": [
+      14.5,
+      30.6,
+      34.2,
+      20.6
+     ],
+     "mean_cgpa_code": 1.6096774193548387
+    },
+    {
+     "code": 4,
+     "answer": "Excellent for focused study",
+     "n": 132,
+     "pct": 14.347826086956522,
+     "mix": [
+      27.3,
+      28.0,
+      22.0,
+      22.7
+     ],
+     "mean_cgpa_code": 1.4015151515151516
+    }
+   ],
+   "mode": "Mostly suitable",
+   "median": "Neither good nor bad",
+   "mean": 2.2293478260869564,
+   "sd": 1.2185578128686438,
+   "rho_cgpa": 0.0399,
+   "rho_sgpa": 0.0542,
+   "q": 0.38851,
+   "reliable": "no",
+   "max_shift_pp": 2.7519135169257503,
+   "raw_blank_a": 0,
+   "raw_blank_b": 1
+  },
+  "support_level": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "No support",
+     "n": 116,
+     "pct": 12.608695652173912,
+     "mix": [
+      23.3,
+      25.9,
+      31.0,
+      19.8
+     ],
+     "mean_cgpa_code": 1.4741379310344827
+    },
+    {
+     "code": 1,
+     "answer": "Very little support",
+     "n": 128,
+     "pct": 13.91304347826087,
+     "mix": [
+      26.6,
+      27.3,
+      26.6,
+      19.5
+     ],
+     "mean_cgpa_code": 1.390625
+    },
+    {
+     "code": 2,
+     "answer": "Some support",
+     "n": 233,
+     "pct": 25.32608695652174,
+     "mix": [
+      18.5,
+      39.9,
+      24.5,
+      17.2
+     ],
+     "mean_cgpa_code": 1.4034334763948497
+    },
+    {
+     "code": 3,
+     "answer": "Good support",
+     "n": 278,
+     "pct": 30.217391304347824,
+     "mix": [
+      15.1,
+      28.8,
+      31.7,
+      24.5
+     ],
+     "mean_cgpa_code": 1.6546762589928057
+    },
+    {
+     "code": 4,
+     "answer": "Strong support",
+     "n": 165,
+     "pct": 17.934782608695652,
+     "mix": [
+      21.8,
+      27.9,
+      29.7,
+      20.6
+     ],
+     "mean_cgpa_code": 1.490909090909091
+    }
+   ],
+   "mode": "Good support",
+   "median": "Some support",
+   "mean": 2.2695652173913046,
+   "sd": 1.2617878683386399,
+   "rho_cgpa": 0.0553,
+   "rho_sgpa": 0.0683,
+   "q": 0.19871,
+   "reliable": "no",
+   "max_shift_pp": 1.9052315947289493,
+   "raw_blank_a": 0,
+   "raw_blank_b": 3
+  },
+  "routine_manageability": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Completely unmanageable",
+     "n": 127,
+     "pct": 13.804347826086957,
+     "mix": [
+      26.8,
+      32.3,
+      30.7,
+      10.2
+     ],
+     "mean_cgpa_code": 1.2440944881889764
+    },
+    {
+     "code": 1,
+     "answer": "Difficult to manage",
+     "n": 226,
+     "pct": 24.565217391304348,
+     "mix": [
+      21.2,
+      29.6,
+      21.2,
+      27.9
+     ],
+     "mean_cgpa_code": 1.5575221238938053
+    },
+    {
+     "code": 2,
+     "answer": "Average",
+     "n": 290,
+     "pct": 31.52173913043478,
+     "mix": [
+      16.2,
+      33.1,
+      31.7,
+      19.0
+     ],
+     "mean_cgpa_code": 1.5344827586206897
+    },
+    {
+     "code": 3,
+     "answer": "Mostly manageable",
+     "n": 195,
+     "pct": 21.195652173913043,
+     "mix": [
+      16.9,
+      29.7,
+      31.8,
+      21.5
+     ],
+     "mean_cgpa_code": 1.5794871794871794
+    },
+    {
+     "code": 4,
+     "answer": "Very healthy and balanced",
+     "n": 82,
+     "pct": 8.91304347826087,
+     "mix": [
+      24.4,
+      26.8,
+      28.0,
+      20.7
+     ],
+     "mean_cgpa_code": 1.451219512195122
+    }
+   ],
+   "mode": "Average",
+   "median": "Average",
+   "mean": 1.8684782608695651,
+   "sd": 1.1620990864791463,
+   "rho_cgpa": 0.0544,
+   "rho_sgpa": 0.0594,
+   "q": 0.19871,
+   "reliable": "no",
+   "max_shift_pp": 1.7576737946816046,
+   "raw_blank_a": 0,
+   "raw_blank_b": 11
+  },
+  "admission_satisfaction": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Very dissatisfied",
+     "n": 280,
+     "pct": 30.434782608695652,
+     "mix": [
+      18.2,
+      31.1,
+      32.1,
+      18.6
+     ],
+     "mean_cgpa_code": 1.5107142857142857
+    },
+    {
+     "code": 1,
+     "answer": "Dissatisfied",
+     "n": 41,
+     "pct": 4.456521739130435,
+     "mix": [
+      26.8,
+      22.0,
+      24.4,
+      26.8
+     ],
+     "mean_cgpa_code": 1.5121951219512195
+    },
+    {
+     "code": 2,
+     "answer": "Neutral",
+     "n": 263,
+     "pct": 28.58695652173913,
+     "mix": [
+      21.7,
+      34.2,
+      28.1,
+      16.0
+     ],
+     "mean_cgpa_code": 1.3840304182509506
+    },
+    {
+     "code": 3,
+     "answer": "Satisfied",
+     "n": 191,
+     "pct": 20.76086956521739,
+     "mix": [
+      12.0,
+      35.1,
+      29.3,
+      23.6
+     ],
+     "mean_cgpa_code": 1.643979057591623
+    },
+    {
+     "code": 4,
+     "answer": "Very satisfied",
+     "n": 145,
+     "pct": 15.76086956521739,
+     "mix": [
+      27.6,
+      21.4,
+      23.4,
+      27.6
+     ],
+     "mean_cgpa_code": 1.5103448275862068
+    }
+   ],
+   "mode": "Very dissatisfied",
+   "median": "Neutral",
+   "mean": 1.8695652173913044,
+   "sd": 1.4440406321191421,
+   "rho_cgpa": 0.022489306921690558,
+   "rho_sgpa": 0.012698338321185493,
+   "q": 0.4956859696102414,
+   "reliable": "not used",
+   "max_shift_pp": 5.136905231594728,
+   "raw_blank_a": 0,
+   "raw_blank_b": 1
+  },
+  "career_expectation": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Not at all",
+     "n": 114,
+     "pct": 12.391304347826088,
+     "mix": [
+      25.4,
+      32.5,
+      25.4,
+      16.7
+     ],
+     "mean_cgpa_code": 1.3333333333333333
+    },
+    {
+     "code": 1,
+     "answer": "Slightly",
+     "n": 167,
+     "pct": 18.152173913043477,
+     "mix": [
+      22.2,
+      33.5,
+      23.4,
+      21.0
+     ],
+     "mean_cgpa_code": 1.4311377245508983
+    },
+    {
+     "code": 2,
+     "answer": "Somewhat",
+     "n": 272,
+     "pct": 29.565217391304348,
+     "mix": [
+      16.5,
+      36.8,
+      29.8,
+      16.9
+     ],
+     "mean_cgpa_code": 1.4705882352941178
+    },
+    {
+     "code": 3,
+     "answer": "Mostly",
+     "n": 246,
+     "pct": 26.73913043478261,
+     "mix": [
+      17.1,
+      25.6,
+      35.4,
+      22.0
+     ],
+     "mean_cgpa_code": 1.6219512195121952
+    },
+    {
+     "code": 4,
+     "answer": "Completely",
+     "n": 121,
+     "pct": 13.152173913043478,
+     "mix": [
+      24.0,
+      23.1,
+      23.1,
+      29.8
+     ],
+     "mean_cgpa_code": 1.5867768595041323
+    }
+   ],
+   "mode": "Somewhat",
+   "median": "Somewhat",
+   "mean": 2.101086956521739,
+   "sd": 1.2091413301612477,
+   "rho_cgpa": 0.09031581658251131,
+   "rho_sgpa": 0.09255557027968316,
+   "q": 0.006119772065255314,
+   "reliable": "not used",
+   "max_shift_pp": 1.797522291485837,
+   "raw_blank_a": 0,
+   "raw_blank_b": 2
+  },
+  "result_satisfaction": {
+   "answers": [
+    {
+     "code": 0,
+     "answer": "Very dissatisfied",
+     "n": 322,
+     "pct": 35.0,
+     "mix": [
+      25.5,
+      29.2,
+      28.6,
+      16.8
+     ],
+     "mean_cgpa_code": 1.3664596273291925
+    },
+    {
+     "code": 1,
+     "answer": "Dissatisfied",
+     "n": 77,
+     "pct": 8.369565217391305,
+     "mix": [
+      26.0,
+      32.5,
+      27.3,
+      14.3
+     ],
+     "mean_cgpa_code": 1.2987012987012987
+    },
+    {
+     "code": 2,
+     "answer": "Neutral",
+     "n": 252,
+     "pct": 27.391304347826086,
+     "mix": [
+      13.5,
+      38.5,
+      29.4,
+      18.7
+     ],
+     "mean_cgpa_code": 1.5317460317460319
+    },
+    {
+     "code": 3,
+     "answer": "Satisfied",
+     "n": 140,
+     "pct": 15.217391304347826,
+     "mix": [
+      17.1,
+      30.0,
+      29.3,
+      23.6
+     ],
+     "mean_cgpa_code": 1.5928571428571427
+    },
+    {
+     "code": 4,
+     "answer": "Very satisfied",
+     "n": 129,
+     "pct": 14.021739130434783,
+     "mix": [
+      17.1,
+      20.2,
+      27.9,
+      34.9
+     ],
+     "mean_cgpa_code": 1.806201550387597
+    }
+   ],
+   "mode": "Very dissatisfied",
+   "median": "Neutral",
+   "mean": 1.6489130434782608,
+   "sd": 1.4407405426568467,
+   "rho_cgpa": 0.13820316881017858,
+   "rho_sgpa": 0.220874717676476,
+   "q": 2.594579756248792e-05,
+   "reliable": "not used",
+   "max_shift_pp": 4.201451905626136,
+   "raw_blank_a": 0,
+   "raw_blank_b": 14
+  }
+ },
+ "before_check_1102_cv5": {
+  "main": {
+   "ZeroR": {
+    "accuracy": 0.2904,
+    "kappa": 0.0,
+    "far_rate": 0.2232,
+    "confusion_matrix": [
+     [
+      0,
+      236,
+      0,
+      0
+     ],
+     [
+      0,
+      320,
+      0,
+      0
+     ],
+     [
+      0,
+      300,
+      0,
+      0
+     ],
+     [
+      0,
+      246,
+      0,
+      0
+     ]
+    ]
+   },
+   "J48": {
+    "accuracy": 0.4356,
+    "kappa": 0.2414,
+    "far_rate": 0.2205,
+    "confusion_matrix": [
+     [
+      88,
+      68,
+      48,
+      32
+     ],
+     [
+      43,
+      146,
+      93,
+      38
+     ],
+     [
+      43,
+      71,
+      133,
+      53
+     ],
+     [
+      38,
+      44,
+      51,
+      113
+     ]
+    ]
+   },
+   "RandomForest": {
+    "accuracy": 0.4501,
+    "kappa": 0.2609,
+    "far_rate": 0.2105,
+    "confusion_matrix": [
+     [
+      90,
+      74,
+      37,
+      35
+     ],
+     [
+      52,
+      157,
+      80,
+      31
+     ],
+     [
+      40,
+      81,
+      133,
+      46
+     ],
+     [
+      46,
+      43,
+      41,
+      116
+     ]
+    ]
+   },
+   "SMO": {
+    "accuracy": 0.461,
+    "kappa": 0.2795,
+    "far_rate": 0.2196,
+    "confusion_matrix": [
+     [
+      102,
+      59,
+      33,
+      42
+     ],
+     [
+      49,
+      146,
+      75,
+      50
+     ],
+     [
+      44,
+      59,
+      131,
+      66
+     ],
+     [
+      41,
+      32,
+      44,
+      129
+     ]
+    ]
+   },
+   "Logistic": {
+    "accuracy": 0.4637,
+    "kappa": 0.2819,
+    "far_rate": 0.216,
+    "confusion_matrix": [
+     [
+      102,
+      66,
+      32,
+      36
+     ],
+     [
+      46,
+      154,
+      70,
+      50
+     ],
+     [
+      41,
+      65,
+      131,
+      63
+     ],
+     [
+      42,
+      37,
+      43,
+      124
+     ]
+    ]
+   },
+   "NaiveBayes": {
+    "accuracy": 0.4483,
+    "kappa": 0.2619,
+    "far_rate": 0.2323,
+    "confusion_matrix": [
+     [
+      93,
+      66,
+      35,
+      42
+     ],
+     [
+      54,
+      153,
+      67,
+      46
+     ],
+     [
+      54,
+      61,
+      126,
+      59
+     ],
+     [
+      44,
+      35,
+      45,
+      122
+     ]
+    ]
+   }
+  },
+  "quest": {
+   "ZeroR": {
+    "accuracy": 0.2904,
+    "kappa": 0.0,
+    "far_rate": 0.2232,
+    "confusion_matrix": [
+     [
+      0,
+      236,
+      0,
+      0
+     ],
+     [
+      0,
+      320,
+      0,
+      0
+     ],
+     [
+      0,
+      300,
+      0,
+      0
+     ],
+     [
+      0,
+      246,
+      0,
+      0
+     ]
+    ]
+   },
+   "J48": {
+    "accuracy": 0.2804,
+    "kappa": 0.0267,
+    "far_rate": 0.2877,
+    "confusion_matrix": [
+     [
+      45,
+      93,
+      57,
+      41
+     ],
+     [
+      47,
+      115,
+      108,
+      50
+     ],
+     [
+      38,
+      106,
+      92,
+      64
+     ],
+     [
+      38,
+      93,
+      58,
+      57
+     ]
+    ]
+   },
+   "RandomForest": {
+    "accuracy": 0.3103,
+    "kappa": 0.0681,
+    "far_rate": 0.2922,
+    "confusion_matrix": [
+     [
+      46,
+      77,
+      64,
+      49
+     ],
+     [
+      46,
+      142,
+      85,
+      47
+     ],
+     [
+      50,
+      107,
+      92,
+      51
+     ],
+     [
+      39,
+      73,
+      72,
+      62
+     ]
+    ]
+   },
+   "SMO": {
+    "accuracy": 0.2831,
+    "kappa": 0.0071,
+    "far_rate": 0.2205,
+    "confusion_matrix": [
+     [
+      13,
+      145,
+      72,
+      6
+     ],
+     [
+      17,
+      181,
+      113,
+      9
+     ],
+     [
+      14,
+      164,
+      110,
+      12
+     ],
+     [
+      11,
+      131,
+      96,
+      8
+     ]
+    ]
+   },
+   "Logistic": {
+    "accuracy": 0.2877,
+    "kappa": 0.0291,
+    "far_rate": 0.2577,
+    "confusion_matrix": [
+     [
+      32,
+      111,
+      64,
+      29
+     ],
+     [
+      40,
+      135,
+      106,
+      39
+     ],
+     [
+      28,
+      124,
+      99,
+      49
+     ],
+     [
+      19,
+      105,
+      71,
+      51
+     ]
+    ]
+   },
+   "NaiveBayes": {
+    "accuracy": 0.2976,
+    "kappa": 0.0457,
+    "far_rate": 0.2713,
+    "confusion_matrix": [
+     [
+      54,
+      95,
+      55,
+      32
+     ],
+     [
+      54,
+      159,
+      79,
+      28
+     ],
+     [
+      47,
+      133,
+      77,
+      43
+     ],
+     [
+      35,
+      102,
+      71,
+      38
+     ]
+    ]
+   }
+  }
+ },
+ "j48_sizes": {
+  "sgpa_M2": {
+   "leaves": 220,
+   "size": 439,
+   "depth": 19,
+   "cv5_acc": "27.1739"
+  },
+  "sgpa_M40": {
+   "leaves": 8,
+   "size": 15,
+   "depth": 5,
+   "cv5_acc": "26.3043"
+  },
+  "questionnaire_cgpa_M2": {
+   "leaves": 216,
+   "size": 431,
+   "depth": 20,
+   "cv5_acc": "30.8696"
+  },
+  "questionnaire_cgpa_M40": {
+   "leaves": 12,
+   "size": 23,
+   "depth": 6,
+   "cv5_acc": "27.8261"
+  },
+  "main_cgpa_M2": {
+   "leaves": 175,
+   "size": 347,
+   "depth": 21,
+   "cv5_acc": "46.5217"
+  },
+  "main_cgpa_M40": {
+   "leaves": 4,
+   "size": 5,
+   "depth": 1,
+   "cv5_acc": "54.3478"
+  }
+ },
+ "weka_main_cv5": {
+  "ZeroR": {
+   "accuracy": 0.3087,
+   "kappa": 0.0,
+   "weighted_f1": 0.1456,
+   "macro_f1": 0.1179,
+   "far_rate": 0.2065,
+   "within_1": 0.7935,
+   "n": 920,
+   "confusion_matrix": [
+    [
+     0,
+     182,
+     0,
+     0
+    ],
+    [
+     0,
+     284,
+     0,
+     0
+    ],
+    [
+     0,
+     264,
+     0,
+     0
+    ],
+    [
+     0,
+     190,
+     0,
+     0
+    ]
+   ],
+   "log": "docs/weka_runs/final/main_cgpa_ZeroR_cv5.txt"
+  },
+  "OneR": {
+   "accuracy": 0.5522,
+   "kappa": 0.3968,
+   "weighted_f1": 0.5508,
+   "macro_f1": 0.5589,
+   "far_rate": 0.0652,
+   "within_1": 0.9348,
+   "n": 920,
+   "confusion_matrix": [
+    [
+     102,
+     59,
+     11,
+     10
+    ],
+    [
+     49,
+     146,
+     75,
+     14
+    ],
+    [
+     8,
+     59,
+     131,
+     66
+    ],
+    [
+     12,
+     5,
+     44,
+     129
+    ]
+   ],
+   "log": "docs/weka_runs/final/main_cgpa_OneR_cv5.txt"
+  },
+  "J48": {
+   "accuracy": 0.5435,
+   "kappa": 0.384,
+   "weighted_f1": 0.5419,
+   "macro_f1": 0.55,
+   "far_rate": 0.075,
+   "within_1": 0.925,
+   "n": 920,
+   "confusion_matrix": [
+    [
+     102,
+     59,
+     11,
+     10
+    ],
+    [
+     49,
+     155,
+     66,
+     14
+    ],
+    [
+     8,
+     72,
+     119,
+     65
+    ],
+    [
+     12,
+     14,
+     40,
+     124
+    ]
+   ],
+   "log": "docs/weka_runs/final/main_cgpa_J48_cv5.txt"
+  },
+  "RandomForest": {
+   "accuracy": 0.5424,
+   "kappa": 0.3826,
+   "weighted_f1": 0.5422,
+   "macro_f1": 0.5484,
+   "far_rate": 0.0946,
+   "within_1": 0.9054,
+   "n": 920,
+   "confusion_matrix": [
+    [
+     101,
+     53,
+     20,
+     8
+    ],
+    [
+     51,
+     148,
+     72,
+     13
+    ],
+    [
+     17,
+     59,
+     132,
+     56
+    ],
+    [
+     13,
+     16,
+     43,
+     118
+    ]
+   ],
+   "log": "docs/weka_runs/final/main_cgpa_RandomForest_cv5.txt"
+  },
+  "SMO": {
+   "accuracy": 0.5522,
+   "kappa": 0.3968,
+   "weighted_f1": 0.5508,
+   "macro_f1": 0.5589,
+   "far_rate": 0.0652,
+   "within_1": 0.9348,
+   "n": 920,
+   "confusion_matrix": [
+    [
+     102,
+     59,
+     11,
+     10
+    ],
+    [
+     49,
+     146,
+     75,
+     14
+    ],
+    [
+     8,
+     59,
+     131,
+     66
+    ],
+    [
+     12,
+     5,
+     44,
+     129
+    ]
+   ],
+   "log": "docs/weka_runs/final/main_cgpa_SMO_cv5.txt"
+  },
+  "Logistic": {
+   "accuracy": 0.5467,
+   "kappa": 0.3882,
+   "weighted_f1": 0.5462,
+   "macro_f1": 0.5531,
+   "far_rate": 0.0717,
+   "within_1": 0.9283,
+   "n": 920,
+   "confusion_matrix": [
+    [
+     100,
+     60,
+     14,
+     8
+    ],
+    [
+     49,
+     151,
+     71,
+     13
+    ],
+    [
+     9,
+     62,
+     130,
+     63
+    ],
+    [
+     12,
+     10,
+     46,
+     122
+    ]
+   ],
+   "log": "docs/weka_runs/final/main_cgpa_Logistic_cv5.txt"
+  },
+  "NaiveBayes": {
+   "accuracy": 0.5446,
+   "kappa": 0.3857,
+   "weighted_f1": 0.5442,
+   "macro_f1": 0.5521,
+   "far_rate": 0.0739,
+   "within_1": 0.9261,
+   "n": 920,
+   "confusion_matrix": [
+    [
+     102,
+     57,
+     15,
+     8
+    ],
+    [
+     54,
+     143,
+     74,
+     13
+    ],
+    [
+     12,
+     62,
+     134,
+     56
+    ],
+    [
+     11,
+     9,
+     48,
+     122
+    ]
+   ],
+   "log": "docs/weka_runs/final/main_cgpa_NaiveBayes_cv5.txt"
+  }
+ }
+}
