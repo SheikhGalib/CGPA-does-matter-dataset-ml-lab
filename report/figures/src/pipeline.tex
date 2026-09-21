@@ -1,0 +1,17 @@
+% Figure 1(b): technical pipeline of the ML method.
+\begin{tikzpicture}[x=1mm,y=1mm]
+% row 1: left -> right
+\pnode{b1}{at={(0,0)}}{s1}{\faFileCsv}{Raw data}{1,126 responses, two Google Forms: \textbf{A} 230 (BUET, BRAC, CUET) and \textbf{B} 896 (KUET).}
+\pnode{b2}{at={(43,0)}}{s2}{\faSearch}{Quality checks}{17 shared columns; 110 department spellings; blank CGPA/SGPA; SGPA--CGPA gap.}
+\pnode{b3}{at={(86,0)}}{s3}{\faFilter}{Preprocessing}{One schema; Bangla text stripped; answers coded 0--4; CGPA $\rightarrow$ C0--C3; 1,126 $\rightarrow$ \textbf{920} rows.}
+\pnode{b4}{at={(129,0)}}{s4}{\faRandom}{Partitioning}{Stratified \textbf{5-fold CV} (seed 1); 80/20 split as backup; one row per student, so no leakage.}
+% row 2: right -> left
+\pnode{b5}{at={(129,-29.5)}}{s5}{\faTable}{Representation}{12 ordinal answers + recent SGPA group; target \texttt{cgpa\_band}; result satisfaction not used.}
+\pnode{b6}{at={(86,-29.5)}}{s4}{\faProjectDiagram}{ML models}{WEKA 3.8.7: ZeroR, OneR, J48 (\texttt{-M 40}), Random Forest, SMO, Logistic, Naive Bayes.}
+\pnode{b7}{at={(43,-29.5)}}{s2}{\faChartBar}{Evaluation}{Accuracy, Cohen's kappa, macro-F1, confusion matrix, within-one-group rate.}
+\pnode{b8}{at={(0,-29.5)}}{s1}{\faLightbulb}{Interpretation}{SMO 55.22\%, J48 54.35\% vs.\ ZeroR 30.87\%; 93.5\% within one group; J48 rules.}
+\foreach \b/\c/\n in {b1/s1/1,b2/s2/2,b3/s3/3,b4/s4/4,b5/s5/5,b6/s4/6,b7/s2/7,b8/s1/8}{ \node[num=\c] at (\b.north west) {\n}; }
+\foreach \x in {39,82,125}{ \draw[arr, ink] (\x+0.2,-12) -- (\x+3.8,-12); \draw[arr, ink] (\x+3.8,-41.5) -- (\x+0.2,-41.5); }
+\draw[arr, ink] (b4.south) -- (b5.north);
+
+\end{tikzpicture}

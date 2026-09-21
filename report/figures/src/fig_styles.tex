@@ -1,0 +1,30 @@
+% Shared by CSE_4112_Dataset_Report.tex (page 1) and the standalone PNG exports in this folder.
+\usepackage{fontawesome5}
+\usetikzlibrary{shapes.misc,shadows}
+\definecolor{s1}{HTML}{2A78D6}  % need
+\definecolor{s2}{HTML}{0F9488}  % acquisition
+\definecolor{s3}{HTML}{2E9E4F}  % curated dataset
+\definecolor{s4}{HTML}{E0781F}  % ML
+\definecolor{s5}{HTML}{7A4FC2}  % impact
+\definecolor{ink}{HTML}{25303B}
+\tikzset{
+  arr/.style={-{Stealth[length=2.2mm]}, line width=0.7pt},
+  num/.style={circle, fill=#1, text=white, font=\sffamily\bfseries\scriptsize, inner sep=0pt, minimum size=4.2mm},
+  chip/.style={rounded corners=1pt, draw=#1, fill=#1!10, font=\sffamily\tiny, inner sep=1pt, minimum height=3.2mm, text=ink},
+  tinytxt/.style={font=\sffamily\tiny, text=ink, align=center},
+  smalltxt/.style={font=\sffamily\scriptsize, text=ink, align=center},
+  pbox/.style={draw=#1, fill=#1!6, rounded corners=2pt, line width=0.7pt, minimum width=39mm, text width=37mm,
+               align=left, anchor=north west, font=\sffamily\scriptsize, text=ink, inner sep=1.5mm},
+}
+% \stage{x-offset mm}{number}{title}{color}{height mm} -- one panel of Figure 1(a)
+\newcommand{\stage}[5]{%
+  \draw[#4, line width=0.7pt, rounded corners=3pt, fill=#4!5] (#1mm,0) rectangle ++(31mm,-#5mm);
+  \fill[#4!18, rounded corners=3pt] (#1mm,0) rectangle ++(31mm,-7mm);
+  \fill[#4!18] (#1mm,-3.5mm) rectangle ++(31mm,-3.5mm);
+  \node[num=#4] at (#1mm+3.8mm,-3.5mm) {#2};
+  \node[anchor=west, font=\sffamily\bfseries\scriptsize, text=ink] at (#1mm+6.5mm,-3.5mm) {#3};
+}
+% \pnode{name}{position options}{color}{icon}{title}{body} -- one box of Figure 1(b)
+\newcommand{\pnode}[6]{%
+  \node[pbox=#3, #2] (#1) {\parbox[t][20.5mm][t]{37mm}{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000{\color{#3}\large #4}\hspace{1.2mm}\textbf{\small #5}\\[1pt] #6}};
+}

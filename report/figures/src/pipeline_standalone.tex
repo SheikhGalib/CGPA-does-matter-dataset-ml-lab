@@ -1,0 +1,11 @@
+% Standalone build of pipeline.tex -> ../pipeline.pdf/.png (see build_figures.ps1)
+\documentclass[11pt,border=2mm]{standalone}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\usepackage{xcolor,tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\input{fig_styles.tex}
+\begin{document}
+\input{pipeline.tex}
+\end{document}

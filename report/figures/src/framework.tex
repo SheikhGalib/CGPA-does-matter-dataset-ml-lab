@@ -1,0 +1,70 @@
+% Figure 1(a): framework illustrating the practical application of the data.
+\begin{tikzpicture}[x=1mm,y=1mm]
+% ---------- 1. Problem & need
+\stage{0}{1}{Problem \& need}{s1}{56}
+\node[text=s1] at (10,-16) {\fontsize{22}{22}\selectfont\faUserGraduate};
+\node[draw=s1, fill=white, rounded corners=2pt, font=\sffamily\bfseries\scriptsize, text=s1, inner sep=1.2pt] (q) at (23,-11.5) {CGPA?};
+\draw[s1, line width=0.5pt] (q.south west) -- (16,-14.5);
+\node[smalltxt, text width=29mm] at (15.5,-26) {Which habits go with a higher CGPA?};
+\node[text=s1] at (5.5,-33) {\faBed};   \node[text=s1] at (12,-33) {\faMobile*};
+\node[text=s1] at (18.5,-33) {\faBookOpen}; \node[text=s1] at (25,-33) {\faClock};
+\node[tinytxt] at (5.5,-37) {sleep}; \node[tinytxt] at (12,-37) {phone};
+\node[tinytxt] at (18.5,-37) {study}; \node[tinytxt] at (25,-37) {routine};
+\draw[s1!40, dashed] (2,-40.5) -- (29,-40.5);
+\node[text=s1] at (8,-44.5) {\faChalkboardTeacher}; \node[text=s1] at (15.5,-44.5) {\faUniversity}; \node[text=s1] at (23,-44.5) {\faUserFriends};
+\node[tinytxt, text width=29mm] at (15.5,-50.5) {Advisers, departments and students need early, simple signals};
+% ---------- 2. Data acquisition
+\stage{34.5}{2}{Data acquisition}{s2}{56}
+\node[chip=s2, text width=12.5mm, align=center] (fa) at (42.7,-15.5) {{\color{s2}\faWpforms}\,\textbf{Form A}\\BUET\\BRAC\\CUET\\\textbf{230}};
+\node[chip=s2, text width=12.5mm, align=center] (fb) at (57.3,-15.5) {{\color{s2}\faWpforms}\,\textbf{Form B}\\KUET\\\phantom{C}\\\phantom{C}\\\textbf{896}};
+\draw[arr, s2] (fa.south) -- (48.5,-26.5); \draw[arr, s2] (fb.south) -- (51.5,-26.5);
+\node[text=s2] at (50,-30.5) {\fontsize{15}{15}\selectfont\faDatabase};
+\node[smalltxt] at (50,-36.5) {\textbf{1,126} raw responses};
+\draw[s2!40, dashed] (36.5,-40.5) -- (63.5,-40.5);
+\node[tinytxt, anchor=west, align=left] at (37,-44.3) {{\color{s2}\faLanguage}\ \ English + Bangla};
+\node[tinytxt, anchor=west, align=left] at (37,-48.3) {{\color{s2}\faUserSecret}\ \ anonymous, voluntary};
+\node[tinytxt, anchor=west, align=left] at (37,-52.3) {{\color{s2}\faListUl}\ \ same 19 core questions};
+% ---------- 3. Curated dataset
+\stage{69}{3}{Curated dataset}{s3}{56}
+\draw[s3, line width=1.3pt, rounded corners=3pt] (69,0) rectangle ++(31,-56);
+\node[text=s3] at (74,-13.5) {\fontsize{15}{15}\selectfont\faFilter};
+\node[tinytxt, anchor=west, align=left] at (78,-13.5) {merge 2 forms\\fix dept.\ names\\answers coded 0--4};
+\node[tinytxt, text=s3!60!black] at (84.5,-23) {--18 no CGPA \ \textperiodcentered\ \ --6 no SGPA\\--182 SGPA--CGPA gap 2--3};
+% class-balance bars: C0 182, C1 284, C2 264, C3 190 (max 284 -> 10 mm)
+\foreach \i/\n/\h in {0/182/6.41,1/284/10.0,2/264/9.30,3/190/6.69}{
+  \fill[s3!70] (74.5+\i*6,-41) rectangle ++(4.2,\h);
+  \node[font=\sffamily\tiny, text=ink] at (76.6+\i*6,-41+\h+1.4) {\n};
+  \node[font=\sffamily\tiny\bfseries, text=ink] at (76.6+\i*6,-43) {C\i};
+}
+\draw[ink!60] (73.5,-41) -- (98,-41);
+\node[fill=s3, text=white, rounded corners=2pt, font=\sffamily\bfseries\scriptsize, inner sep=1.5pt] at (84.5,-48.3) {\faCheckCircle\ 920 students};
+\node[tinytxt] at (84.5,-53) {CSV + ARFF files};
+% ---------- 4. ML adaptation
+\stage{103.5}{4}{ML adaptation}{s4}{56}
+\node[text=s4] at (109.5,-13.5) {\fontsize{15}{15}\selectfont\faCogs};
+\node[tinytxt, anchor=west, align=left] at (114.5,-13.5) {\textbf{WEKA 3.8.7}\\predict CGPA\\group C0--C3};
+\foreach \k in {0,...,4}{ \draw[s4, fill=s4!15] (106+\k*5.2,-21) rectangle ++(4.6,-3.4); }
+\fill[s4] (106+2*5.2,-21) rectangle ++(4.6,-3.4);
+\node[tinytxt] at (119,-27) {stratified 5-fold CV, seed 1};
+\node[chip=s4] at (110,-32) {ZeroR}; \node[chip=s4] at (119,-32) {OneR}; \node[chip=s4] at (128,-32) {J48};
+\node[chip=s4] at (110,-36.8) {RF};    \node[chip=s4] at (119,-36.8) {SMO};  \node[chip=s4] at (128,-36.8) {Logistic};
+\node[chip=s4] at (119,-41.6) {Naive Bayes};
+\node[text=s4] at (110,-50) {\large\faSitemap};
+\node[tinytxt, anchor=west, align=left] at (114.5,-50) {J48 rules explain\\each prediction};
+% ---------- 5. Practical impact
+\stage{138}{5}{Practical impact}{s5}{56}
+% accuracy bars (5-fold CV): ZeroR 30.87, SMO 55.22 (60% -> 20 mm)
+\fill[s5!30] (142,-30) rectangle ++(6,10.29); \fill[s5] (151,-30) rectangle ++(6,18.41);
+\node[font=\sffamily\tiny, text=ink] at (145,-18.4) {30.9\%}; \node[font=\sffamily\tiny\bfseries, text=ink] at (154,-10.3) {55.2\%};
+\node[font=\sffamily\tiny, text=ink] at (145,-32) {ZeroR}; \node[font=\sffamily\tiny, text=ink] at (154,-32) {SMO};
+\draw[ink!60] (141,-30) -- (159,-30);
+\node[tinytxt, text width=9mm, align=left, anchor=west] at (159.5,-21) {93.5\% within one group};
+\node[text=s5] at (142.5,-38) {\faHandsHelping};
+\node[tinytxt, anchor=west, align=left] at (145.5,-38) {advisers flag students\\who may need support};
+\node[text=s5] at (142.5,-44.5) {\faLightbulb};
+\node[tinytxt, anchor=west, align=left] at (145.5,-44.5) {study-habit guidance\\for students};
+\node[text=s5] at (142.5,-51) {\faShareSquare};
+\node[tinytxt, anchor=west, align=left] at (145.5,-51) {reusable dataset\\CSV, ARFF, scripts};
+% ---------- arrows between stages
+\foreach \x in {31,65.5,100,134.5}{ \draw[arr, ink] (\x+0.4,-28) -- (\x+3.1,-28); }
+\end{tikzpicture}
